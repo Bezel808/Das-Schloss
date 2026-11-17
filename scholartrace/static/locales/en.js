@@ -728,5 +728,19 @@ window.SCHLOSS_EN={
  "输入 API Key": "Enter API key",
  "例如：gravitational waves 或 quantum theory": "For example: gravitational waves or quantum theory",
  "既有成员 / 结构窗口（年）": "Established-member / structure window (years)",
- "已有论文足以排除科研早期（年限/篇数下界）": "Observed career-age or paper-count bounds rule out early-career status"
+ "已有论文足以排除科研早期（年限/篇数下界）": "Observed career-age or paper-count bounds rule out early-career status",
+ "算法灵感与来源": "Algorithmic inspirations & sources",
+ "从方法到功能：下面列出实际使用的算法，以及只用于启发设计的工作。": "From methods to features: these are the algorithms we use and the works that informed our design.",
+ "合作图交互｜CoAuthra": "Graph interaction | CoAuthra",
+ "借鉴其以学者为入口、共同论文加权、社区着色和联动筛选的交互思路；本项目独立实现，并增加逐年回放、边的含义与论文证据。": "Inspired by its researcher-centered exploration, shared-paper weights, community colors, and linked filters. Our independent implementation adds year playback, explicit link meanings, and paper evidence.",
+ "合作权重｜Newman": "Collaboration weights | Newman",
+ "以共同署名建立无向图，同时保留共同论文数与分数权重：一篇 n 位作者的论文为每对作者贡献 1/(n−1)，再跨论文求和。这样可以减轻大型作者团队对连线强度的放大。": "Joint authorship creates an undirected graph. We retain shared-paper counts and fractional weights: a paper with n authors contributes 1/(n−1) to each author pair, summed across papers. This reduces the inflation of link strength by large author teams.",
+ "合作子群｜Louvain": "Collaboration subgroups | Louvain",
+ "使用 Blondel 等的 Louvain 社区检测，按加权连接划分子群。合作网络先移除目标作者再划分；团队与新人使用目标作者未署名的成员合作论文。图上颜色表示合作结构，不是已确认的实验室名单。": "We use Blondel et al.’s Louvain community detection on weighted links. The collaboration network removes the focal author before partitioning; Teams & newcomers uses member papers without that author. Colors describe collaboration structure, not verified lab membership.",
+ "新人观察｜团队形成研究": "Newcomer analysis | Team assembly research",
+ "Guimerà 等（2005）启发我们区分新人、既有成员与重复合作；Xing 等（2025）启发我们分别观察合作规模、持续发表和后续产出。本项目按个人合作圈构造年度进入队列，采用可调的发表年限与论文数阈值；未复现原文的团队生成模型或师生绩效预测。": "Guimerà et al. (2005) inform our distinction between newcomers, incumbents, and repeated collaboration. Xing et al. (2025) motivate observing collaboration size, continued publishing, and later output separately. We build annual entry cohorts around a researcher, with adjustable career-year and paper-count thresholds; we do not reproduce their team-generation model or mentorship outcome predictions.",
+ "年度网络位置｜社区角色与结构洞": "Annual network position | Community roles and structural holes",
+ "借鉴 Guimerà 与 Amaral 的社区内连接 z 值和参与系数，以及 Burt 的结构洞研究，计算关系约束与有效规模，用于观察圈内连接和跨群连接的变化。这些指标受已采集网络范围影响，不直接表示撮合行为或晋升机会。": "Drawing on Guimerà and Amaral’s within-module z-score and participation coefficient, and Burt’s structural-hole research, we also calculate constraint and effective size to track within-group and cross-group connections. These measures depend on the collected network boundary; they do not directly establish brokerage behavior or promotion opportunities.",
+ "论文检索｜BM25": "Paper retrieval | BM25",
+ "采用 Robertson 与 Zaragoza 综述的 BM25 方法，对标题、摘要和主题的关键词匹配排序，使用词频、逆文档频率和长度归一化。当前是无需 LLM 的关键词检索，不生成回答，也不提供跨语言语义匹配。": "We use BM25, reviewed by Robertson and Zaragoza, to rank keyword matches in titles, abstracts, and topics using term frequency, inverse document frequency, and length normalization. This is LLM-free keyword retrieval; it neither generates answers nor provides cross-language semantic matching."
 };
