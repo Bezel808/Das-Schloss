@@ -1,0 +1,2212 @@
+{
+  "protocol": {
+    "dataset": "coauth-DBLP",
+    "cutoff": 2008,
+    "targets": 256,
+    "seed": 42,
+    "stage": "development",
+    "implementation_sha256": "805c9fc69d0cc983cdc72f1355cd1ab4da5f2a678f61fb5f5c30efd9f8d709a0",
+    "policies": [
+      "random",
+      "observed_degree",
+      "uncertainty",
+      "neighbor_random",
+      "neighbor_degree",
+      "uniform_cover",
+      "ambiguity_cover"
+    ],
+    "budgets": [
+      0,
+      5,
+      10,
+      20,
+      40
+    ],
+    "version": "author-query-cn-3",
+    "cohort": [
+      4551,
+      27523,
+      35952,
+      218183,
+      124413,
+      108050,
+      949744,
+      104582,
+      131841,
+      108271,
+      332770,
+      1241921,
+      85106,
+      44325,
+      105586,
+      53451,
+      371499,
+      87665,
+      629288,
+      36335,
+      97680,
+      479051,
+      711399,
+      720791,
+      208439,
+      145244,
+      135214,
+      169623,
+      1603604,
+      28445,
+      7863,
+      459414,
+      1285606,
+      855692,
+      158092,
+      482054,
+      1125933,
+      303939,
+      272463,
+      163611,
+      485759,
+      44849,
+      1031505,
+      474432,
+      318709,
+      115151,
+      1088654,
+      386757,
+      217530,
+      101313,
+      486583,
+      1007699,
+      486565,
+      25909,
+      879175,
+      77849,
+      1418401,
+      556653,
+      54177,
+      106993,
+      441581,
+      858777,
+      604425,
+      175019,
+      556766,
+      1466839,
+      469505,
+      981961,
+      114053,
+      640916,
+      75996,
+      4513,
+      331741,
+      4447,
+      1031559,
+      1109164,
+      517584,
+      752327,
+      11763,
+      178666,
+      71609,
+      996544,
+      6967,
+      1376753,
+      314569,
+      367610,
+      406992,
+      628744,
+      325441,
+      17430,
+      151611,
+      1451072,
+      45506,
+      1282722,
+      188205,
+      1271130,
+      1370610,
+      701812,
+      817037,
+      431034,
+      58771,
+      1762421,
+      416345,
+      721774,
+      718255,
+      211367,
+      169403,
+      578403,
+      348385,
+      164544,
+      29169,
+      7638,
+      130845,
+      344302,
+      386078,
+      115448,
+      148252,
+      75390,
+      66787,
+      294867,
+      1052571,
+      709559,
+      474803,
+      640996,
+      1222977,
+      5968,
+      866599,
+      305901,
+      1423215,
+      4194,
+      315828,
+      276949,
+      55270,
+      1319996,
+      165884,
+      43724,
+      556996,
+      111216,
+      1088238,
+      129287,
+      719248,
+      134951,
+      8599,
+      664170,
+      342324,
+      113472,
+      153592,
+      108119,
+      378512,
+      859530,
+      329782,
+      140209,
+      785685,
+      26976,
+      853267,
+      831619,
+      28703,
+      583250,
+      87074,
+      87856,
+      1146150,
+      434346,
+      375677,
+      717921,
+      807727,
+      399347,
+      589882,
+      72107,
+      217855,
+      255062,
+      27530,
+      1437072,
+      1285368,
+      44665,
+      688182,
+      424219,
+      501580,
+      728368,
+      190960,
+      147171,
+      1416534,
+      234522,
+      37544,
+      724824,
+      296401,
+      395597,
+      73618,
+      1409243,
+      172010,
+      419213,
+      1840699,
+      1611007,
+      6349,
+      656321,
+      722127,
+      291498,
+      48723,
+      1432878,
+      406764,
+      31371,
+      386079,
+      318091,
+      278805,
+      583997,
+      287320,
+      775863,
+      57983,
+      729478,
+      144377,
+      601459,
+      376463,
+      138444,
+      1564484,
+      147394,
+      61360,
+      417147,
+      419446,
+      664966,
+      244008,
+      331566,
+      557973,
+      263732,
+      98854,
+      1405487,
+      97712,
+      177197,
+      246058,
+      747917,
+      1445790,
+      64981,
+      1197230,
+      603372,
+      563213,
+      367596,
+      244813,
+      12905,
+      311471,
+      118984,
+      1456947,
+      124190,
+      26392,
+      585775,
+      199176,
+      299417,
+      142842,
+      1186669,
+      1186681,
+      687299,
+      933023,
+      83437,
+      816981,
+      60909,
+      287664,
+      1255831,
+      7652,
+      384880
+    ],
+    "task": "next-year new edges among historically seen authors; cold-start and repeated ties separately counted",
+    "sampling": "at least three papers in trailing five years and two historical neighbors; SHA256 order, no future labels",
+    "source": {
+      "dataset": "coauth-DBLP",
+      "events": 3700067,
+      "nodes": 1924991,
+      "incidences": 10304422,
+      "min_team": 1,
+      "max_team": 25,
+      "year_counts": {
+        "1936": 12,
+        "1937": 15,
+        "1938": 10,
+        "1939": 18,
+        "1940": 10,
+        "1941": 13,
+        "1942": 13,
+        "1943": 8,
+        "1944": 5,
+        "1945": 9,
+        "1946": 31,
+        "1947": 10,
+        "1948": 15,
+        "1949": 23,
+        "1950": 24,
+        "1951": 19,
+        "1952": 34,
+        "1953": 110,
+        "1954": 158,
+        "1955": 149,
+        "1956": 206,
+        "1957": 241,
+        "1958": 267,
+        "1959": 453,
+        "1960": 422,
+        "1961": 625,
+        "1962": 934,
+        "1963": 794,
+        "1964": 792,
+        "1965": 950,
+        "1966": 1114,
+        "1967": 1432,
+        "1968": 1853,
+        "1969": 1728,
+        "1970": 1770,
+        "1971": 2354,
+        "1972": 2805,
+        "1973": 3274,
+        "1974": 3806,
+        "1975": 3956,
+        "1976": 4526,
+        "1977": 4983,
+        "1978": 5211,
+        "1979": 5674,
+        "1980": 6542,
+        "1981": 6919,
+        "1982": 7823,
+        "1983": 8872,
+        "1984": 10450,
+        "1985": 11115,
+        "1986": 13310,
+        "1987": 14193,
+        "1988": 16851,
+        "1989": 19441,
+        "1990": 22042,
+        "1991": 25495,
+        "1992": 28536,
+        "1993": 34197,
+        "1994": 38831,
+        "1995": 40593,
+        "1996": 44629,
+        "1997": 48994,
+        "1998": 54643,
+        "1999": 61146,
+        "2000": 69765,
+        "2001": 74825,
+        "2002": 83970,
+        "2003": 99931,
+        "2004": 120785,
+        "2005": 140696,
+        "2006": 154714,
+        "2007": 171374,
+        "2008": 182433,
+        "2009": 197964,
+        "2010": 206182,
+        "2011": 223522,
+        "2012": 234672,
+        "2013": 244821,
+        "2014": 253369,
+        "2015": 262304,
+        "2016": 266983,
+        "2017": 146113,
+        "2018": 166
+      },
+      "source_sha256": "0cf134f8342690e76e5f54b634d851a5b5b498eb8f3b2a608d80e63353f38071",
+      "processed_sha256": "421e6747a3ec2f8aaad404a706d7c25904d7b42df7b81db3380bc1255efd10c8"
+    }
+  },
+  "summary": [
+    {
+      "policy": "ambiguity_cover",
+      "budget": 0,
+      "n_targets": 256,
+      "targets_with_new_seen_edges": 93,
+      "gold_new_seen": 296,
+      "gold_new_cold": 151,
+      "certified_top10_rate": 0.0,
+      "mean_observed_papers": 13.9921875,
+      "mean_returned_papers_with_repeats": 13.9921875,
+      "oracle_cn_recall_at_10": 0.057432432432432436,
+      "oracle_strict_top10_possible_rate": 0.07421875,
+      "mean_actual_queries": 0.0,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        }
+      }
+    },
+    {
+      "policy": "ambiguity_cover",
+      "budget": 5,
+      "n_targets": 256,
+      "targets_with_new_seen_edges": 93,
+      "gold_new_seen": 296,
+      "gold_new_cold": 151,
+      "certified_top10_rate": 0.0078125,
+      "mean_observed_papers": 125.44140625,
+      "mean_returned_papers_with_repeats": 141.046875,
+      "oracle_cn_recall_at_10": 0.057432432432432436,
+      "oracle_strict_top10_possible_rate": 0.07421875,
+      "mean_actual_queries": 4.640625,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.07094594594594594,
+          "candidate_recall": 0.16891891891891891,
+          "macro_average_precision_positive_targets": 0.04282352570132868,
+          "precision_at_10_all_targets": 0.008203125000000002
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.07432432432432433,
+          "candidate_recall": 0.16891891891891891,
+          "macro_average_precision_positive_targets": 0.039329605951560556,
+          "precision_at_10_all_targets": 0.00859375
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.07094594594594594,
+          "candidate_recall": 0.16891891891891891,
+          "macro_average_precision_positive_targets": 0.037952021903514856,
+          "precision_at_10_all_targets": 0.008203125
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.05067567567567568,
+          "candidate_recall": 0.16891891891891891,
+          "macro_average_precision_positive_targets": 0.034186891055138564,
+          "precision_at_10_all_targets": 0.005859375
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.030405405405405407,
+          "candidate_recall": 0.16891891891891891,
+          "macro_average_precision_positive_targets": 0.025066942082685718,
+          "precision_at_10_all_targets": 0.003515625
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.030405405405405407,
+          "candidate_recall": 0.16891891891891891,
+          "macro_average_precision_positive_targets": 0.025066942082685718,
+          "precision_at_10_all_targets": 0.003515625
+        }
+      }
+    },
+    {
+      "policy": "ambiguity_cover",
+      "budget": 10,
+      "n_targets": 256,
+      "targets_with_new_seen_edges": 93,
+      "gold_new_seen": 296,
+      "gold_new_cold": 151,
+      "certified_top10_rate": 0.01953125,
+      "mean_observed_papers": 171.02734375,
+      "mean_returned_papers_with_repeats": 196.27734375,
+      "oracle_cn_recall_at_10": 0.057432432432432436,
+      "oracle_strict_top10_possible_rate": 0.07421875,
+      "mean_actual_queries": 7.7265625,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.06418918918918919,
+          "candidate_recall": 0.19256756756756757,
+          "macro_average_precision_positive_targets": 0.04212957833936734,
+          "precision_at_10_all_targets": 0.0074218750000000005
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.07094594594594594,
+          "candidate_recall": 0.19256756756756757,
+          "macro_average_precision_positive_targets": 0.04182227839401106,
+          "precision_at_10_all_targets": 0.008203125
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.07432432432432433,
+          "candidate_recall": 0.19256756756756757,
+          "macro_average_precision_positive_targets": 0.038943125359200775,
+          "precision_at_10_all_targets": 0.00859375
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.04391891891891892,
+          "candidate_recall": 0.19256756756756757,
+          "macro_average_precision_positive_targets": 0.03189966642518502,
+          "precision_at_10_all_targets": 0.005078125
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.02364864864864865,
+          "candidate_recall": 0.19256756756756757,
+          "macro_average_precision_positive_targets": 0.020198968356704497,
+          "precision_at_10_all_targets": 0.0027343750000000003
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.02364864864864865,
+          "candidate_recall": 0.19256756756756757,
+          "macro_average_precision_positive_targets": 0.020198968356704497,
+          "precision_at_10_all_targets": 0.0027343750000000003
+        }
+      }
+    },
+    {
+      "policy": "ambiguity_cover",
+      "budget": 20,
+      "n_targets": 256,
+      "targets_with_new_seen_edges": 93,
+      "gold_new_seen": 296,
+      "gold_new_cold": 151,
+      "certified_top10_rate": 0.04296875,
+      "mean_observed_papers": 223.65234375,
+      "mean_returned_papers_with_repeats": 263.8203125,
+      "oracle_cn_recall_at_10": 0.057432432432432436,
+      "oracle_strict_top10_possible_rate": 0.07421875,
+      "mean_actual_queries": 11.328125,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.060810810810810814,
+          "candidate_recall": 0.22297297297297297,
+          "macro_average_precision_positive_targets": 0.05079724828336171,
+          "precision_at_10_all_targets": 0.00703125
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.06756756756756757,
+          "candidate_recall": 0.22297297297297297,
+          "macro_average_precision_positive_targets": 0.04971830670004969,
+          "precision_at_10_all_targets": 0.0078125
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.06756756756756757,
+          "candidate_recall": 0.22297297297297297,
+          "macro_average_precision_positive_targets": 0.04566836357177956,
+          "precision_at_10_all_targets": 0.0078125
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.04391891891891892,
+          "candidate_recall": 0.22297297297297297,
+          "macro_average_precision_positive_targets": 0.028151441783205593,
+          "precision_at_10_all_targets": 0.005078125
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.02364864864864865,
+          "candidate_recall": 0.22297297297297297,
+          "macro_average_precision_positive_targets": 0.01914935500337761,
+          "precision_at_10_all_targets": 0.0027343750000000003
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.02364864864864865,
+          "candidate_recall": 0.22297297297297297,
+          "macro_average_precision_positive_targets": 0.01914935500337761,
+          "precision_at_10_all_targets": 0.0027343750000000003
+        }
+      }
+    },
+    {
+      "policy": "ambiguity_cover",
+      "budget": 40,
+      "n_targets": 256,
+      "targets_with_new_seen_edges": 93,
+      "gold_new_seen": 296,
+      "gold_new_cold": 151,
+      "certified_top10_rate": 0.0625,
+      "mean_observed_papers": 279.59375,
+      "mean_returned_papers_with_repeats": 337.28515625,
+      "oracle_cn_recall_at_10": 0.057432432432432436,
+      "oracle_strict_top10_possible_rate": 0.07421875,
+      "mean_actual_queries": 14.046875,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.057432432432432436,
+          "candidate_recall": 0.25,
+          "macro_average_precision_positive_targets": 0.050296373589323394,
+          "precision_at_10_all_targets": 0.006640625000000001
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.06418918918918919,
+          "candidate_recall": 0.25,
+          "macro_average_precision_positive_targets": 0.05010321836080647,
+          "precision_at_10_all_targets": 0.007421875
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.06418918918918919,
+          "candidate_recall": 0.25,
+          "macro_average_precision_positive_targets": 0.043134805090638974,
+          "precision_at_10_all_targets": 0.0074218750000000005
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.04391891891891892,
+          "candidate_recall": 0.25,
+          "macro_average_precision_positive_targets": 0.027826193158036847,
+          "precision_at_10_all_targets": 0.005078125
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.02364864864864865,
+          "candidate_recall": 0.25,
+          "macro_average_precision_positive_targets": 0.018631337065403868,
+          "precision_at_10_all_targets": 0.0027343750000000003
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.02364864864864865,
+          "candidate_recall": 0.25,
+          "macro_average_precision_positive_targets": 0.018631337065403868,
+          "precision_at_10_all_targets": 0.0027343750000000003
+        }
+      }
+    },
+    {
+      "policy": "neighbor_degree",
+      "budget": 0,
+      "n_targets": 256,
+      "targets_with_new_seen_edges": 93,
+      "gold_new_seen": 296,
+      "gold_new_cold": 151,
+      "certified_top10_rate": 0.0,
+      "mean_observed_papers": 13.9921875,
+      "mean_returned_papers_with_repeats": 13.9921875,
+      "oracle_cn_recall_at_10": 0.057432432432432436,
+      "oracle_strict_top10_possible_rate": 0.07421875,
+      "mean_actual_queries": 0.0,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        }
+      }
+    },
+    {
+      "policy": "neighbor_degree",
+      "budget": 5,
+      "n_targets": 256,
+      "targets_with_new_seen_edges": 93,
+      "gold_new_seen": 296,
+      "gold_new_cold": 151,
+      "certified_top10_rate": 0.0078125,
+      "mean_observed_papers": 141.98046875,
+      "mean_returned_papers_with_repeats": 171.1953125,
+      "oracle_cn_recall_at_10": 0.057432432432432436,
+      "oracle_strict_top10_possible_rate": 0.07421875,
+      "mean_actual_queries": 4.640625,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.057432432432432436,
+          "candidate_recall": 0.17905405405405406,
+          "macro_average_precision_positive_targets": 0.03895911598852373,
+          "precision_at_10_all_targets": 0.006640625000000001
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.060810810810810814,
+          "candidate_recall": 0.17905405405405406,
+          "macro_average_precision_positive_targets": 0.03719232910817616,
+          "precision_at_10_all_targets": 0.007031250000000001
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.07094594594594594,
+          "candidate_recall": 0.17905405405405406,
+          "macro_average_precision_positive_targets": 0.03718053710460316,
+          "precision_at_10_all_targets": 0.008203125
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.04391891891891892,
+          "candidate_recall": 0.17905405405405406,
+          "macro_average_precision_positive_targets": 0.02978640250453491,
+          "precision_at_10_all_targets": 0.005078125
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.02364864864864865,
+          "candidate_recall": 0.17905405405405406,
+          "macro_average_precision_positive_targets": 0.018778341580670887,
+          "precision_at_10_all_targets": 0.0027343750000000003
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.02364864864864865,
+          "candidate_recall": 0.17905405405405406,
+          "macro_average_precision_positive_targets": 0.018778341580670887,
+          "precision_at_10_all_targets": 0.0027343750000000003
+        }
+      }
+    },
+    {
+      "policy": "neighbor_degree",
+      "budget": 10,
+      "n_targets": 256,
+      "targets_with_new_seen_edges": 93,
+      "gold_new_seen": 296,
+      "gold_new_cold": 151,
+      "certified_top10_rate": 0.01953125,
+      "mean_observed_papers": 190.44921875,
+      "mean_returned_papers_with_repeats": 232.515625,
+      "oracle_cn_recall_at_10": 0.057432432432432436,
+      "oracle_strict_top10_possible_rate": 0.07421875,
+      "mean_actual_queries": 7.71484375,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.06418918918918919,
+          "candidate_recall": 0.2195945945945946,
+          "macro_average_precision_positive_targets": 0.04061857566897493,
+          "precision_at_10_all_targets": 0.007421875
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.07094594594594594,
+          "candidate_recall": 0.2195945945945946,
+          "macro_average_precision_positive_targets": 0.03778344943978988,
+          "precision_at_10_all_targets": 0.008203125
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.07094594594594594,
+          "candidate_recall": 0.2195945945945946,
+          "macro_average_precision_positive_targets": 0.03453635292589256,
+          "precision_at_10_all_targets": 0.008203125
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.0472972972972973,
+          "candidate_recall": 0.2195945945945946,
+          "macro_average_precision_positive_targets": 0.030144224135798217,
+          "precision_at_10_all_targets": 0.0054687500000000005
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.02364864864864865,
+          "candidate_recall": 0.2195945945945946,
+          "macro_average_precision_positive_targets": 0.019600555708131594,
+          "precision_at_10_all_targets": 0.0027343750000000003
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.02364864864864865,
+          "candidate_recall": 0.2195945945945946,
+          "macro_average_precision_positive_targets": 0.019600555708131594,
+          "precision_at_10_all_targets": 0.0027343750000000003
+        }
+      }
+    },
+    {
+      "policy": "neighbor_degree",
+      "budget": 20,
+      "n_targets": 256,
+      "targets_with_new_seen_edges": 93,
+      "gold_new_seen": 296,
+      "gold_new_cold": 151,
+      "certified_top10_rate": 0.0390625,
+      "mean_observed_papers": 248.015625,
+      "mean_returned_papers_with_repeats": 301.91015625,
+      "oracle_cn_recall_at_10": 0.057432432432432436,
+      "oracle_strict_top10_possible_rate": 0.07421875,
+      "mean_actual_queries": 11.23828125,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.06418918918918919,
+          "candidate_recall": 0.26013513513513514,
+          "macro_average_precision_positive_targets": 0.05125560218716982,
+          "precision_at_10_all_targets": 0.007421875
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.06756756756756757,
+          "candidate_recall": 0.26013513513513514,
+          "macro_average_precision_positive_targets": 0.0505028295867935,
+          "precision_at_10_all_targets": 0.0078125
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.0777027027027027,
+          "candidate_recall": 0.26013513513513514,
+          "macro_average_precision_positive_targets": 0.044170493279326595,
+          "precision_at_10_all_targets": 0.008984375
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.0472972972972973,
+          "candidate_recall": 0.26013513513513514,
+          "macro_average_precision_positive_targets": 0.030990595327875067,
+          "precision_at_10_all_targets": 0.0054687500000000005
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.02364864864864865,
+          "candidate_recall": 0.26013513513513514,
+          "macro_average_precision_positive_targets": 0.01943239448271875,
+          "precision_at_10_all_targets": 0.0027343750000000003
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.02364864864864865,
+          "candidate_recall": 0.26013513513513514,
+          "macro_average_precision_positive_targets": 0.01943239448271875,
+          "precision_at_10_all_targets": 0.0027343750000000003
+        }
+      }
+    },
+    {
+      "policy": "neighbor_degree",
+      "budget": 40,
+      "n_targets": 256,
+      "targets_with_new_seen_edges": 93,
+      "gold_new_seen": 296,
+      "gold_new_cold": 151,
+      "certified_top10_rate": 0.0625,
+      "mean_observed_papers": 288.4296875,
+      "mean_returned_papers_with_repeats": 350.4375,
+      "oracle_cn_recall_at_10": 0.057432432432432436,
+      "oracle_strict_top10_possible_rate": 0.07421875,
+      "mean_actual_queries": 13.8203125,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.057432432432432436,
+          "candidate_recall": 0.2668918918918919,
+          "macro_average_precision_positive_targets": 0.05059141461889342,
+          "precision_at_10_all_targets": 0.006640625000000001
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.06756756756756757,
+          "candidate_recall": 0.2668918918918919,
+          "macro_average_precision_positive_targets": 0.05044075641140925,
+          "precision_at_10_all_targets": 0.0078125
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.06418918918918919,
+          "candidate_recall": 0.2668918918918919,
+          "macro_average_precision_positive_targets": 0.043446882930677715,
+          "precision_at_10_all_targets": 0.0074218750000000005
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.0472972972972973,
+          "candidate_recall": 0.2668918918918919,
+          "macro_average_precision_positive_targets": 0.02913957583820222,
+          "precision_at_10_all_targets": 0.0054687500000000005
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.02364864864864865,
+          "candidate_recall": 0.2668918918918919,
+          "macro_average_precision_positive_targets": 0.018700090063903836,
+          "precision_at_10_all_targets": 0.0027343750000000003
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.02364864864864865,
+          "candidate_recall": 0.2668918918918919,
+          "macro_average_precision_positive_targets": 0.018700090063903836,
+          "precision_at_10_all_targets": 0.0027343750000000003
+        }
+      }
+    },
+    {
+      "policy": "neighbor_random",
+      "budget": 0,
+      "n_targets": 256,
+      "targets_with_new_seen_edges": 93,
+      "gold_new_seen": 296,
+      "gold_new_cold": 151,
+      "certified_top10_rate": 0.0,
+      "mean_observed_papers": 13.9921875,
+      "mean_returned_papers_with_repeats": 13.9921875,
+      "oracle_cn_recall_at_10": 0.057432432432432436,
+      "oracle_strict_top10_possible_rate": 0.07421875,
+      "mean_actual_queries": 0.0,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        }
+      }
+    },
+    {
+      "policy": "neighbor_random",
+      "budget": 5,
+      "n_targets": 256,
+      "targets_with_new_seen_edges": 93,
+      "gold_new_seen": 296,
+      "gold_new_cold": 151,
+      "certified_top10_rate": 0.0078125,
+      "mean_observed_papers": 101.9765625,
+      "mean_returned_papers_with_repeats": 114.6171875,
+      "oracle_cn_recall_at_10": 0.057432432432432436,
+      "oracle_strict_top10_possible_rate": 0.07421875,
+      "mean_actual_queries": 4.640625,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.05067567567567568,
+          "candidate_recall": 0.12837837837837837,
+          "macro_average_precision_positive_targets": 0.036361788932654605,
+          "precision_at_10_all_targets": 0.005859375
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.05067567567567568,
+          "candidate_recall": 0.12837837837837837,
+          "macro_average_precision_positive_targets": 0.03230458366251045,
+          "precision_at_10_all_targets": 0.005859375
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.05067567567567568,
+          "candidate_recall": 0.12837837837837837,
+          "macro_average_precision_positive_targets": 0.026341290128301966,
+          "precision_at_10_all_targets": 0.005859375
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.0472972972972973,
+          "candidate_recall": 0.12837837837837837,
+          "macro_average_precision_positive_targets": 0.027214300434997122,
+          "precision_at_10_all_targets": 0.00546875
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.02364864864864865,
+          "candidate_recall": 0.12837837837837837,
+          "macro_average_precision_positive_targets": 0.016211455191791298,
+          "precision_at_10_all_targets": 0.0027343750000000003
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.02364864864864865,
+          "candidate_recall": 0.12837837837837837,
+          "macro_average_precision_positive_targets": 0.016211455191791298,
+          "precision_at_10_all_targets": 0.0027343750000000003
+        }
+      }
+    },
+    {
+      "policy": "neighbor_random",
+      "budget": 10,
+      "n_targets": 256,
+      "targets_with_new_seen_edges": 93,
+      "gold_new_seen": 296,
+      "gold_new_cold": 151,
+      "certified_top10_rate": 0.01953125,
+      "mean_observed_papers": 158.63671875,
+      "mean_returned_papers_with_repeats": 183.97265625,
+      "oracle_cn_recall_at_10": 0.057432432432432436,
+      "oracle_strict_top10_possible_rate": 0.07421875,
+      "mean_actual_queries": 7.71484375,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.06418918918918919,
+          "candidate_recall": 0.18243243243243243,
+          "macro_average_precision_positive_targets": 0.049564093240875406,
+          "precision_at_10_all_targets": 0.007421875
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.05067567567567568,
+          "candidate_recall": 0.18243243243243243,
+          "macro_average_precision_positive_targets": 0.04800406870690873,
+          "precision_at_10_all_targets": 0.005859375
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.05405405405405406,
+          "candidate_recall": 0.18243243243243243,
+          "macro_average_precision_positive_targets": 0.043308065836520394,
+          "precision_at_10_all_targets": 0.00625
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.05405405405405406,
+          "candidate_recall": 0.18243243243243243,
+          "macro_average_precision_positive_targets": 0.03264184400517973,
+          "precision_at_10_all_targets": 0.00625
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.030405405405405407,
+          "candidate_recall": 0.18243243243243243,
+          "macro_average_precision_positive_targets": 0.021058655796669084,
+          "precision_at_10_all_targets": 0.003515625
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.030405405405405407,
+          "candidate_recall": 0.18243243243243243,
+          "macro_average_precision_positive_targets": 0.021058655796669084,
+          "precision_at_10_all_targets": 0.003515625
+        }
+      }
+    },
+    {
+      "policy": "neighbor_random",
+      "budget": 20,
+      "n_targets": 256,
+      "targets_with_new_seen_edges": 93,
+      "gold_new_seen": 296,
+      "gold_new_cold": 151,
+      "certified_top10_rate": 0.04296875,
+      "mean_observed_papers": 224.4140625,
+      "mean_returned_papers_with_repeats": 267.296875,
+      "oracle_cn_recall_at_10": 0.057432432432432436,
+      "oracle_strict_top10_possible_rate": 0.07421875,
+      "mean_actual_queries": 11.23828125,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.060810810810810814,
+          "candidate_recall": 0.23986486486486486,
+          "macro_average_precision_positive_targets": 0.050710833080222055,
+          "precision_at_10_all_targets": 0.00703125
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.06418918918918919,
+          "candidate_recall": 0.23986486486486486,
+          "macro_average_precision_positive_targets": 0.05034217048499493,
+          "precision_at_10_all_targets": 0.0074218750000000005
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.060810810810810814,
+          "candidate_recall": 0.23986486486486486,
+          "macro_average_precision_positive_targets": 0.04280787518483405,
+          "precision_at_10_all_targets": 0.007031250000000001
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.0472972972972973,
+          "candidate_recall": 0.23986486486486486,
+          "macro_average_precision_positive_targets": 0.032384154114831726,
+          "precision_at_10_all_targets": 0.0054687500000000005
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.02364864864864865,
+          "candidate_recall": 0.23986486486486486,
+          "macro_average_precision_positive_targets": 0.019299399158737122,
+          "precision_at_10_all_targets": 0.0027343750000000003
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.02364864864864865,
+          "candidate_recall": 0.23986486486486486,
+          "macro_average_precision_positive_targets": 0.019299399158737122,
+          "precision_at_10_all_targets": 0.0027343750000000003
+        }
+      }
+    },
+    {
+      "policy": "neighbor_random",
+      "budget": 40,
+      "n_targets": 256,
+      "targets_with_new_seen_edges": 93,
+      "gold_new_seen": 296,
+      "gold_new_cold": 151,
+      "certified_top10_rate": 0.0625,
+      "mean_observed_papers": 276.83203125,
+      "mean_returned_papers_with_repeats": 334.6484375,
+      "oracle_cn_recall_at_10": 0.057432432432432436,
+      "oracle_strict_top10_possible_rate": 0.07421875,
+      "mean_actual_queries": 13.8203125,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.057432432432432436,
+          "candidate_recall": 0.2533783783783784,
+          "macro_average_precision_positive_targets": 0.05066749819387088,
+          "precision_at_10_all_targets": 0.006640625000000001
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.06418918918918919,
+          "candidate_recall": 0.2533783783783784,
+          "macro_average_precision_positive_targets": 0.05016164248709692,
+          "precision_at_10_all_targets": 0.007421875
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.060810810810810814,
+          "candidate_recall": 0.2533783783783784,
+          "macro_average_precision_positive_targets": 0.042953593580012626,
+          "precision_at_10_all_targets": 0.00703125
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.05067567567567568,
+          "candidate_recall": 0.2533783783783784,
+          "macro_average_precision_positive_targets": 0.029225047312198948,
+          "precision_at_10_all_targets": 0.005859375
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.02364864864864865,
+          "candidate_recall": 0.2533783783783784,
+          "macro_average_precision_positive_targets": 0.0186492400074434,
+          "precision_at_10_all_targets": 0.0027343750000000003
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.02364864864864865,
+          "candidate_recall": 0.2533783783783784,
+          "macro_average_precision_positive_targets": 0.0186492400074434,
+          "precision_at_10_all_targets": 0.0027343750000000003
+        }
+      }
+    },
+    {
+      "policy": "observed_degree",
+      "budget": 0,
+      "n_targets": 256,
+      "targets_with_new_seen_edges": 93,
+      "gold_new_seen": 296,
+      "gold_new_cold": 151,
+      "certified_top10_rate": 0.0,
+      "mean_observed_papers": 13.9921875,
+      "mean_returned_papers_with_repeats": 13.9921875,
+      "oracle_cn_recall_at_10": 0.057432432432432436,
+      "oracle_strict_top10_possible_rate": 0.07421875,
+      "mean_actual_queries": 0.0,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        }
+      }
+    },
+    {
+      "policy": "observed_degree",
+      "budget": 5,
+      "n_targets": 256,
+      "targets_with_new_seen_edges": 93,
+      "gold_new_seen": 296,
+      "gold_new_cold": 151,
+      "certified_top10_rate": 0.0,
+      "mean_observed_papers": 194.16015625,
+      "mean_returned_papers_with_repeats": 242.375,
+      "oracle_cn_recall_at_10": 0.057432432432432436,
+      "oracle_strict_top10_possible_rate": 0.07421875,
+      "mean_actual_queries": 4.98046875,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.060810810810810814,
+          "candidate_recall": 0.17229729729729729,
+          "macro_average_precision_positive_targets": 0.040813039116235315,
+          "precision_at_10_all_targets": 0.007031250000000001
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.06418918918918919,
+          "candidate_recall": 0.17229729729729729,
+          "macro_average_precision_positive_targets": 0.03953077122370883,
+          "precision_at_10_all_targets": 0.0074218750000000005
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.06756756756756757,
+          "candidate_recall": 0.17229729729729729,
+          "macro_average_precision_positive_targets": 0.040342662665655254,
+          "precision_at_10_all_targets": 0.0078125
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.02702702702702703,
+          "candidate_recall": 0.17229729729729729,
+          "macro_average_precision_positive_targets": 0.022510702195522835,
+          "precision_at_10_all_targets": 0.003125
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.010135135135135136,
+          "candidate_recall": 0.17229729729729729,
+          "macro_average_precision_positive_targets": 0.01059587369249885,
+          "precision_at_10_all_targets": 0.0011718750000000002
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.010135135135135136,
+          "candidate_recall": 0.17229729729729729,
+          "macro_average_precision_positive_targets": 0.01059587369249885,
+          "precision_at_10_all_targets": 0.0011718750000000002
+        }
+      }
+    },
+    {
+      "policy": "observed_degree",
+      "budget": 10,
+      "n_targets": 256,
+      "targets_with_new_seen_edges": 93,
+      "gold_new_seen": 296,
+      "gold_new_cold": 151,
+      "certified_top10_rate": 0.0,
+      "mean_observed_papers": 391.2734375,
+      "mean_returned_papers_with_repeats": 506.6171875,
+      "oracle_cn_recall_at_10": 0.057432432432432436,
+      "oracle_strict_top10_possible_rate": 0.07421875,
+      "mean_actual_queries": 9.89453125,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.060810810810810814,
+          "candidate_recall": 0.17567567567567569,
+          "macro_average_precision_positive_targets": 0.04050365697322503,
+          "precision_at_10_all_targets": 0.007031250000000001
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.06418918918918919,
+          "candidate_recall": 0.17567567567567569,
+          "macro_average_precision_positive_targets": 0.038146042018324465,
+          "precision_at_10_all_targets": 0.0074218750000000005
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.07094594594594594,
+          "candidate_recall": 0.17567567567567569,
+          "macro_average_precision_positive_targets": 0.04012013399980191,
+          "precision_at_10_all_targets": 0.008203125
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.02027027027027027,
+          "candidate_recall": 0.17567567567567569,
+          "macro_average_precision_positive_targets": 0.012441788351693775,
+          "precision_at_10_all_targets": 0.0023437500000000003
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.010135135135135136,
+          "candidate_recall": 0.17567567567567569,
+          "macro_average_precision_positive_targets": 0.006485967225665732,
+          "precision_at_10_all_targets": 0.0011718750000000002
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.010135135135135136,
+          "candidate_recall": 0.17567567567567569,
+          "macro_average_precision_positive_targets": 0.006485967225665732,
+          "precision_at_10_all_targets": 0.0011718750000000002
+        }
+      }
+    },
+    {
+      "policy": "observed_degree",
+      "budget": 20,
+      "n_targets": 256,
+      "targets_with_new_seen_edges": 93,
+      "gold_new_seen": 296,
+      "gold_new_cold": 151,
+      "certified_top10_rate": 0.0,
+      "mean_observed_papers": 784.6953125,
+      "mean_returned_papers_with_repeats": 1052.0703125,
+      "oracle_cn_recall_at_10": 0.057432432432432436,
+      "oracle_strict_top10_possible_rate": 0.07421875,
+      "mean_actual_queries": 19.69921875,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.060810810810810814,
+          "candidate_recall": 0.18243243243243243,
+          "macro_average_precision_positive_targets": 0.04068931037772699,
+          "precision_at_10_all_targets": 0.007031250000000001
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.06418918918918919,
+          "candidate_recall": 0.18243243243243243,
+          "macro_average_precision_positive_targets": 0.03839310886287855,
+          "precision_at_10_all_targets": 0.0074218750000000005
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.07094594594594594,
+          "candidate_recall": 0.18243243243243243,
+          "macro_average_precision_positive_targets": 0.039297978937377825,
+          "precision_at_10_all_targets": 0.008203125
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.016891891891891893,
+          "candidate_recall": 0.18243243243243243,
+          "macro_average_precision_positive_targets": 0.008938880980395499,
+          "precision_at_10_all_targets": 0.001953125
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.010135135135135136,
+          "candidate_recall": 0.18243243243243243,
+          "macro_average_precision_positive_targets": 0.0050262218336763155,
+          "precision_at_10_all_targets": 0.0011718750000000002
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.010135135135135136,
+          "candidate_recall": 0.18243243243243243,
+          "macro_average_precision_positive_targets": 0.0050262218336763155,
+          "precision_at_10_all_targets": 0.0011718750000000002
+        }
+      }
+    },
+    {
+      "policy": "observed_degree",
+      "budget": 40,
+      "n_targets": 256,
+      "targets_with_new_seen_edges": 93,
+      "gold_new_seen": 296,
+      "gold_new_cold": 151,
+      "certified_top10_rate": 0.0,
+      "mean_observed_papers": 1661.859375,
+      "mean_returned_papers_with_repeats": 2272.1328125,
+      "oracle_cn_recall_at_10": 0.057432432432432436,
+      "oracle_strict_top10_possible_rate": 0.07421875,
+      "mean_actual_queries": 39.30859375,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.060810810810810814,
+          "candidate_recall": 0.19594594594594594,
+          "macro_average_precision_positive_targets": 0.04048243398308574,
+          "precision_at_10_all_targets": 0.007031250000000001
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.06418918918918919,
+          "candidate_recall": 0.19594594594594594,
+          "macro_average_precision_positive_targets": 0.03763968511560573,
+          "precision_at_10_all_targets": 0.0074218750000000005
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.06418918918918919,
+          "candidate_recall": 0.19594594594594594,
+          "macro_average_precision_positive_targets": 0.03710146654239452,
+          "precision_at_10_all_targets": 0.007421875
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.010135135135135136,
+          "candidate_recall": 0.19594594594594594,
+          "macro_average_precision_positive_targets": 0.005137465070358577,
+          "precision_at_10_all_targets": 0.0011718750000000002
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.0033783783783783786,
+          "candidate_recall": 0.19594594594594594,
+          "macro_average_precision_positive_targets": 0.0032485692249083374,
+          "precision_at_10_all_targets": 0.000390625
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.0033783783783783786,
+          "candidate_recall": 0.19594594594594594,
+          "macro_average_precision_positive_targets": 0.0032485692249083374,
+          "precision_at_10_all_targets": 0.000390625
+        }
+      }
+    },
+    {
+      "policy": "random",
+      "budget": 0,
+      "n_targets": 256,
+      "targets_with_new_seen_edges": 93,
+      "gold_new_seen": 296,
+      "gold_new_cold": 151,
+      "certified_top10_rate": 0.0,
+      "mean_observed_papers": 13.9921875,
+      "mean_returned_papers_with_repeats": 13.9921875,
+      "oracle_cn_recall_at_10": 0.057432432432432436,
+      "oracle_strict_top10_possible_rate": 0.07421875,
+      "mean_actual_queries": 0.0,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        }
+      }
+    },
+    {
+      "policy": "random",
+      "budget": 5,
+      "n_targets": 256,
+      "targets_with_new_seen_edges": 93,
+      "gold_new_seen": 296,
+      "gold_new_cold": 151,
+      "certified_top10_rate": 0.0,
+      "mean_observed_papers": 112.5234375,
+      "mean_returned_papers_with_repeats": 123.4140625,
+      "oracle_cn_recall_at_10": 0.057432432432432436,
+      "oracle_strict_top10_possible_rate": 0.07421875,
+      "mean_actual_queries": 4.98046875,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.04054054054054054,
+          "candidate_recall": 0.08783783783783784,
+          "macro_average_precision_positive_targets": 0.03257063455344224,
+          "precision_at_10_all_targets": 0.004687500000000001
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.04054054054054054,
+          "candidate_recall": 0.08783783783783784,
+          "macro_average_precision_positive_targets": 0.03566354005952288,
+          "precision_at_10_all_targets": 0.004687500000000001
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.04054054054054054,
+          "candidate_recall": 0.08783783783783784,
+          "macro_average_precision_positive_targets": 0.035628924570123406,
+          "precision_at_10_all_targets": 0.004687500000000001
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.02702702702702703,
+          "candidate_recall": 0.08783783783783784,
+          "macro_average_precision_positive_targets": 0.031057171541738118,
+          "precision_at_10_all_targets": 0.003125
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.02364864864864865,
+          "candidate_recall": 0.08783783783783784,
+          "macro_average_precision_positive_targets": 0.021284840110572963,
+          "precision_at_10_all_targets": 0.0027343750000000003
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.02364864864864865,
+          "candidate_recall": 0.08783783783783784,
+          "macro_average_precision_positive_targets": 0.021284840110572963,
+          "precision_at_10_all_targets": 0.0027343750000000003
+        }
+      }
+    },
+    {
+      "policy": "random",
+      "budget": 10,
+      "n_targets": 256,
+      "targets_with_new_seen_edges": 93,
+      "gold_new_seen": 296,
+      "gold_new_cold": 151,
+      "certified_top10_rate": 0.0,
+      "mean_observed_papers": 212.453125,
+      "mean_returned_papers_with_repeats": 234.31640625,
+      "oracle_cn_recall_at_10": 0.057432432432432436,
+      "oracle_strict_top10_possible_rate": 0.07421875,
+      "mean_actual_queries": 9.89453125,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.037162162162162164,
+          "candidate_recall": 0.10810810810810811,
+          "macro_average_precision_positive_targets": 0.034095934200068796,
+          "precision_at_10_all_targets": 0.004296875
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.04391891891891892,
+          "candidate_recall": 0.10810810810810811,
+          "macro_average_precision_positive_targets": 0.03564704418646981,
+          "precision_at_10_all_targets": 0.005078125
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.0472972972972973,
+          "candidate_recall": 0.10810810810810811,
+          "macro_average_precision_positive_targets": 0.04212897317006079,
+          "precision_at_10_all_targets": 0.00546875
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.02364864864864865,
+          "candidate_recall": 0.10810810810810811,
+          "macro_average_precision_positive_targets": 0.014436627070755093,
+          "precision_at_10_all_targets": 0.002734375
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.010135135135135136,
+          "candidate_recall": 0.10810810810810811,
+          "macro_average_precision_positive_targets": 0.010808112969158921,
+          "precision_at_10_all_targets": 0.0011718750000000002
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.010135135135135136,
+          "candidate_recall": 0.10810810810810811,
+          "macro_average_precision_positive_targets": 0.010808112969158921,
+          "precision_at_10_all_targets": 0.0011718750000000002
+        }
+      }
+    },
+    {
+      "policy": "random",
+      "budget": 20,
+      "n_targets": 256,
+      "targets_with_new_seen_edges": 93,
+      "gold_new_seen": 296,
+      "gold_new_cold": 151,
+      "certified_top10_rate": 0.0,
+      "mean_observed_papers": 430.09765625,
+      "mean_returned_papers_with_repeats": 472.953125,
+      "oracle_cn_recall_at_10": 0.057432432432432436,
+      "oracle_strict_top10_possible_rate": 0.07421875,
+      "mean_actual_queries": 19.69921875,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.037162162162162164,
+          "candidate_recall": 0.11824324324324324,
+          "macro_average_precision_positive_targets": 0.03426198206819619,
+          "precision_at_10_all_targets": 0.004296875
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.04391891891891892,
+          "candidate_recall": 0.11824324324324324,
+          "macro_average_precision_positive_targets": 0.034830004199268516,
+          "precision_at_10_all_targets": 0.005078125
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.0472972972972973,
+          "candidate_recall": 0.11824324324324324,
+          "macro_average_precision_positive_targets": 0.04106218214363605,
+          "precision_at_10_all_targets": 0.0054687500000000005
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.02364864864864865,
+          "candidate_recall": 0.11824324324324324,
+          "macro_average_precision_positive_targets": 0.01586550987045994,
+          "precision_at_10_all_targets": 0.0027343750000000003
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.013513513513513514,
+          "candidate_recall": 0.11824324324324324,
+          "macro_average_precision_positive_targets": 0.007855973166393172,
+          "precision_at_10_all_targets": 0.0015625
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.013513513513513514,
+          "candidate_recall": 0.11824324324324324,
+          "macro_average_precision_positive_targets": 0.007855973166393172,
+          "precision_at_10_all_targets": 0.0015625
+        }
+      }
+    },
+    {
+      "policy": "random",
+      "budget": 40,
+      "n_targets": 256,
+      "targets_with_new_seen_edges": 93,
+      "gold_new_seen": 296,
+      "gold_new_cold": 151,
+      "certified_top10_rate": 0.0,
+      "mean_observed_papers": 929.71484375,
+      "mean_returned_papers_with_repeats": 1018.9765625,
+      "oracle_cn_recall_at_10": 0.057432432432432436,
+      "oracle_strict_top10_possible_rate": 0.07421875,
+      "mean_actual_queries": 39.30859375,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.04391891891891892,
+          "candidate_recall": 0.15878378378378377,
+          "macro_average_precision_positive_targets": 0.040081453919308944,
+          "precision_at_10_all_targets": 0.005078125000000001
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.0472972972972973,
+          "candidate_recall": 0.15878378378378377,
+          "macro_average_precision_positive_targets": 0.0412855258392345,
+          "precision_at_10_all_targets": 0.0054687500000000005
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.05067567567567568,
+          "candidate_recall": 0.15878378378378377,
+          "macro_average_precision_positive_targets": 0.0433235035057135,
+          "precision_at_10_all_targets": 0.005859375
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.013513513513513514,
+          "candidate_recall": 0.15878378378378377,
+          "macro_average_precision_positive_targets": 0.006504087889198579,
+          "precision_at_10_all_targets": 0.0015625
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.0033783783783783786,
+          "candidate_recall": 0.15878378378378377,
+          "macro_average_precision_positive_targets": 0.003910009280499765,
+          "precision_at_10_all_targets": 0.000390625
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.0033783783783783786,
+          "candidate_recall": 0.15878378378378377,
+          "macro_average_precision_positive_targets": 0.003910009280499765,
+          "precision_at_10_all_targets": 0.000390625
+        }
+      }
+    },
+    {
+      "policy": "uncertainty",
+      "budget": 0,
+      "n_targets": 256,
+      "targets_with_new_seen_edges": 93,
+      "gold_new_seen": 296,
+      "gold_new_cold": 151,
+      "certified_top10_rate": 0.0,
+      "mean_observed_papers": 13.9921875,
+      "mean_returned_papers_with_repeats": 13.9921875,
+      "oracle_cn_recall_at_10": 0.057432432432432436,
+      "oracle_strict_top10_possible_rate": 0.07421875,
+      "mean_actual_queries": 0.0,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        }
+      }
+    },
+    {
+      "policy": "uncertainty",
+      "budget": 5,
+      "n_targets": 256,
+      "targets_with_new_seen_edges": 93,
+      "gold_new_seen": 296,
+      "gold_new_cold": 151,
+      "certified_top10_rate": 0.0,
+      "mean_observed_papers": 261.48046875,
+      "mean_returned_papers_with_repeats": 279.015625,
+      "oracle_cn_recall_at_10": 0.057432432432432436,
+      "oracle_strict_top10_possible_rate": 0.07421875,
+      "mean_actual_queries": 4.98046875,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.06756756756756757,
+          "candidate_recall": 0.12162162162162163,
+          "macro_average_precision_positive_targets": 0.038077341964977196,
+          "precision_at_10_all_targets": 0.0078125
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.060810810810810814,
+          "candidate_recall": 0.12162162162162163,
+          "macro_average_precision_positive_targets": 0.036075288854284855,
+          "precision_at_10_all_targets": 0.007031250000000001
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.060810810810810814,
+          "candidate_recall": 0.12162162162162163,
+          "macro_average_precision_positive_targets": 0.03610975259842602,
+          "precision_at_10_all_targets": 0.007031250000000001
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.04054054054054054,
+          "candidate_recall": 0.12162162162162163,
+          "macro_average_precision_positive_targets": 0.029349952321342875,
+          "precision_at_10_all_targets": 0.004687500000000001
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.013513513513513514,
+          "candidate_recall": 0.12162162162162163,
+          "macro_average_precision_positive_targets": 0.013486129904232183,
+          "precision_at_10_all_targets": 0.0015625
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.013513513513513514,
+          "candidate_recall": 0.12162162162162163,
+          "macro_average_precision_positive_targets": 0.013486129904232183,
+          "precision_at_10_all_targets": 0.0015625
+        }
+      }
+    },
+    {
+      "policy": "uncertainty",
+      "budget": 10,
+      "n_targets": 256,
+      "targets_with_new_seen_edges": 93,
+      "gold_new_seen": 296,
+      "gold_new_cold": 151,
+      "certified_top10_rate": 0.0,
+      "mean_observed_papers": 461.359375,
+      "mean_returned_papers_with_repeats": 498.09375,
+      "oracle_cn_recall_at_10": 0.057432432432432436,
+      "oracle_strict_top10_possible_rate": 0.07421875,
+      "mean_actual_queries": 9.89453125,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.06756756756756757,
+          "candidate_recall": 0.13851351351351351,
+          "macro_average_precision_positive_targets": 0.03801667068982129,
+          "precision_at_10_all_targets": 0.0078125
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.060810810810810814,
+          "candidate_recall": 0.13851351351351351,
+          "macro_average_precision_positive_targets": 0.03606805129793752,
+          "precision_at_10_all_targets": 0.007031250000000001
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.057432432432432436,
+          "candidate_recall": 0.13851351351351351,
+          "macro_average_precision_positive_targets": 0.03589255972459648,
+          "precision_at_10_all_targets": 0.006640625000000001
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.030405405405405407,
+          "candidate_recall": 0.13851351351351351,
+          "macro_average_precision_positive_targets": 0.019962953900600783,
+          "precision_at_10_all_targets": 0.003515625
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.010135135135135136,
+          "candidate_recall": 0.13851351351351351,
+          "macro_average_precision_positive_targets": 0.009622286302928908,
+          "precision_at_10_all_targets": 0.0011718750000000002
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.010135135135135136,
+          "candidate_recall": 0.13851351351351351,
+          "macro_average_precision_positive_targets": 0.009622286302928908,
+          "precision_at_10_all_targets": 0.0011718750000000002
+        }
+      }
+    },
+    {
+      "policy": "uncertainty",
+      "budget": 20,
+      "n_targets": 256,
+      "targets_with_new_seen_edges": 93,
+      "gold_new_seen": 296,
+      "gold_new_cold": 151,
+      "certified_top10_rate": 0.0,
+      "mean_observed_papers": 848.7421875,
+      "mean_returned_papers_with_repeats": 929.73828125,
+      "oracle_cn_recall_at_10": 0.057432432432432436,
+      "oracle_strict_top10_possible_rate": 0.07421875,
+      "mean_actual_queries": 19.69921875,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.06756756756756757,
+          "candidate_recall": 0.14189189189189189,
+          "macro_average_precision_positive_targets": 0.03775543098556142,
+          "precision_at_10_all_targets": 0.0078125
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.060810810810810814,
+          "candidate_recall": 0.14189189189189189,
+          "macro_average_precision_positive_targets": 0.03575471001356247,
+          "precision_at_10_all_targets": 0.007031250000000001
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.057432432432432436,
+          "candidate_recall": 0.14189189189189189,
+          "macro_average_precision_positive_targets": 0.035539393669213874,
+          "precision_at_10_all_targets": 0.006640625000000001
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.02364864864864865,
+          "candidate_recall": 0.14189189189189189,
+          "macro_average_precision_positive_targets": 0.01365148841226405,
+          "precision_at_10_all_targets": 0.0027343750000000003
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.006756756756756757,
+          "candidate_recall": 0.14189189189189189,
+          "macro_average_precision_positive_targets": 0.004618827923591446,
+          "precision_at_10_all_targets": 0.00078125
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.006756756756756757,
+          "candidate_recall": 0.14189189189189189,
+          "macro_average_precision_positive_targets": 0.004618827923591446,
+          "precision_at_10_all_targets": 0.00078125
+        }
+      }
+    },
+    {
+      "policy": "uncertainty",
+      "budget": 40,
+      "n_targets": 256,
+      "targets_with_new_seen_edges": 93,
+      "gold_new_seen": 296,
+      "gold_new_cold": 151,
+      "certified_top10_rate": 0.0,
+      "mean_observed_papers": 1729.4375,
+      "mean_returned_papers_with_repeats": 1926.2265625,
+      "oracle_cn_recall_at_10": 0.057432432432432436,
+      "oracle_strict_top10_possible_rate": 0.07421875,
+      "mean_actual_queries": 39.30859375,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.06756756756756757,
+          "candidate_recall": 0.15878378378378377,
+          "macro_average_precision_positive_targets": 0.03762573854767943,
+          "precision_at_10_all_targets": 0.0078125
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.060810810810810814,
+          "candidate_recall": 0.15878378378378377,
+          "macro_average_precision_positive_targets": 0.03560405716988703,
+          "precision_at_10_all_targets": 0.007031250000000001
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.057432432432432436,
+          "candidate_recall": 0.15878378378378377,
+          "macro_average_precision_positive_targets": 0.03536295041319256,
+          "precision_at_10_all_targets": 0.006640625000000001
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.013513513513513514,
+          "candidate_recall": 0.15878378378378377,
+          "macro_average_precision_positive_targets": 0.009642168497475385,
+          "precision_at_10_all_targets": 0.0015625
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.0033783783783783786,
+          "candidate_recall": 0.15878378378378377,
+          "macro_average_precision_positive_targets": 0.002915977974925488,
+          "precision_at_10_all_targets": 0.000390625
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.0033783783783783786,
+          "candidate_recall": 0.15878378378378377,
+          "macro_average_precision_positive_targets": 0.002915977974925488,
+          "precision_at_10_all_targets": 0.000390625
+        }
+      }
+    },
+    {
+      "policy": "uniform_cover",
+      "budget": 0,
+      "n_targets": 256,
+      "targets_with_new_seen_edges": 93,
+      "gold_new_seen": 296,
+      "gold_new_cold": 151,
+      "certified_top10_rate": 0.0,
+      "mean_observed_papers": 13.9921875,
+      "mean_returned_papers_with_repeats": 13.9921875,
+      "oracle_cn_recall_at_10": 0.057432432432432436,
+      "oracle_strict_top10_possible_rate": 0.07421875,
+      "mean_actual_queries": 0.0,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        }
+      }
+    },
+    {
+      "policy": "uniform_cover",
+      "budget": 5,
+      "n_targets": 256,
+      "targets_with_new_seen_edges": 93,
+      "gold_new_seen": 296,
+      "gold_new_cold": 151,
+      "certified_top10_rate": 0.0078125,
+      "mean_observed_papers": 136.40625,
+      "mean_returned_papers_with_repeats": 152.24609375,
+      "oracle_cn_recall_at_10": 0.057432432432432436,
+      "oracle_strict_top10_possible_rate": 0.07421875,
+      "mean_actual_queries": 4.64453125,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.07094594594594594,
+          "candidate_recall": 0.16891891891891891,
+          "macro_average_precision_positive_targets": 0.04288789627419908,
+          "precision_at_10_all_targets": 0.008203125000000002
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.07432432432432433,
+          "candidate_recall": 0.16891891891891891,
+          "macro_average_precision_positive_targets": 0.03967858651081051,
+          "precision_at_10_all_targets": 0.00859375
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.07094594594594594,
+          "candidate_recall": 0.16891891891891891,
+          "macro_average_precision_positive_targets": 0.03831455627138502,
+          "precision_at_10_all_targets": 0.008203125
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.05067567567567568,
+          "candidate_recall": 0.16891891891891891,
+          "macro_average_precision_positive_targets": 0.031962696737466365,
+          "precision_at_10_all_targets": 0.005859375
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.02702702702702703,
+          "candidate_recall": 0.16891891891891891,
+          "macro_average_precision_positive_targets": 0.022795214817356448,
+          "precision_at_10_all_targets": 0.003125
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.02702702702702703,
+          "candidate_recall": 0.16891891891891891,
+          "macro_average_precision_positive_targets": 0.022795214817356448,
+          "precision_at_10_all_targets": 0.003125
+        }
+      }
+    },
+    {
+      "policy": "uniform_cover",
+      "budget": 10,
+      "n_targets": 256,
+      "targets_with_new_seen_edges": 93,
+      "gold_new_seen": 296,
+      "gold_new_cold": 151,
+      "certified_top10_rate": 0.01953125,
+      "mean_observed_papers": 180.39453125,
+      "mean_returned_papers_with_repeats": 205.91796875,
+      "oracle_cn_recall_at_10": 0.057432432432432436,
+      "oracle_strict_top10_possible_rate": 0.07421875,
+      "mean_actual_queries": 7.76953125,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.06418918918918919,
+          "candidate_recall": 0.19594594594594594,
+          "macro_average_precision_positive_targets": 0.04246746857506769,
+          "precision_at_10_all_targets": 0.0074218750000000005
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.07432432432432433,
+          "candidate_recall": 0.19594594594594594,
+          "macro_average_precision_positive_targets": 0.04217015265307115,
+          "precision_at_10_all_targets": 0.00859375
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.07432432432432433,
+          "candidate_recall": 0.19594594594594594,
+          "macro_average_precision_positive_targets": 0.03921653794912228,
+          "precision_at_10_all_targets": 0.00859375
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.0472972972972973,
+          "candidate_recall": 0.19594594594594594,
+          "macro_average_precision_positive_targets": 0.031070941349954303,
+          "precision_at_10_all_targets": 0.00546875
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.02702702702702703,
+          "candidate_recall": 0.19594594594594594,
+          "macro_average_precision_positive_targets": 0.020614013189049284,
+          "precision_at_10_all_targets": 0.003125
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.02702702702702703,
+          "candidate_recall": 0.19594594594594594,
+          "macro_average_precision_positive_targets": 0.020614013189049284,
+          "precision_at_10_all_targets": 0.003125
+        }
+      }
+    },
+    {
+      "policy": "uniform_cover",
+      "budget": 20,
+      "n_targets": 256,
+      "targets_with_new_seen_edges": 93,
+      "gold_new_seen": 296,
+      "gold_new_cold": 151,
+      "certified_top10_rate": 0.04296875,
+      "mean_observed_papers": 234.57421875,
+      "mean_returned_papers_with_repeats": 274.98828125,
+      "oracle_cn_recall_at_10": 0.057432432432432436,
+      "oracle_strict_top10_possible_rate": 0.07421875,
+      "mean_actual_queries": 11.45703125,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.060810810810810814,
+          "candidate_recall": 0.22297297297297297,
+          "macro_average_precision_positive_targets": 0.05082073852984057,
+          "precision_at_10_all_targets": 0.00703125
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.07094594594594594,
+          "candidate_recall": 0.22297297297297297,
+          "macro_average_precision_positive_targets": 0.04984688449259951,
+          "precision_at_10_all_targets": 0.008203125
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.06756756756756757,
+          "candidate_recall": 0.22297297297297297,
+          "macro_average_precision_positive_targets": 0.0456862769391488,
+          "precision_at_10_all_targets": 0.0078125
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.04054054054054054,
+          "candidate_recall": 0.22297297297297297,
+          "macro_average_precision_positive_targets": 0.027312359154794484,
+          "precision_at_10_all_targets": 0.0046875
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.02364864864864865,
+          "candidate_recall": 0.22297297297297297,
+          "macro_average_precision_positive_targets": 0.018616612601616858,
+          "precision_at_10_all_targets": 0.0027343750000000003
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.02364864864864865,
+          "candidate_recall": 0.22297297297297297,
+          "macro_average_precision_positive_targets": 0.018616612601616858,
+          "precision_at_10_all_targets": 0.0027343750000000003
+        }
+      }
+    },
+    {
+      "policy": "uniform_cover",
+      "budget": 40,
+      "n_targets": 256,
+      "targets_with_new_seen_edges": 93,
+      "gold_new_seen": 296,
+      "gold_new_cold": 151,
+      "certified_top10_rate": 0.0625,
+      "mean_observed_papers": 289.32421875,
+      "mean_returned_papers_with_repeats": 345.9453125,
+      "oracle_cn_recall_at_10": 0.057432432432432436,
+      "oracle_strict_top10_possible_rate": 0.07421875,
+      "mean_actual_queries": 14.26953125,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.057432432432432436,
+          "candidate_recall": 0.25,
+          "macro_average_precision_positive_targets": 0.05029712701936629,
+          "precision_at_10_all_targets": 0.006640625000000001
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.06418918918918919,
+          "candidate_recall": 0.25,
+          "macro_average_precision_positive_targets": 0.05010380657183232,
+          "precision_at_10_all_targets": 0.007421875
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.06418918918918919,
+          "candidate_recall": 0.25,
+          "macro_average_precision_positive_targets": 0.04313539330166482,
+          "precision_at_10_all_targets": 0.0074218750000000005
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.04054054054054054,
+          "candidate_recall": 0.25,
+          "macro_average_precision_positive_targets": 0.027228158691751252,
+          "precision_at_10_all_targets": 0.0046875
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.02364864864864865,
+          "candidate_recall": 0.25,
+          "macro_average_precision_positive_targets": 0.01835462146692873,
+          "precision_at_10_all_targets": 0.0027343750000000003
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.02364864864864865,
+          "candidate_recall": 0.25,
+          "macro_average_precision_positive_targets": 0.01835462146692873,
+          "precision_at_10_all_targets": 0.0027343750000000003
+        }
+      }
+    }
+  ],
+  "rows_path": "data/research/temporal/runs/coauth-DBLP-2008-n256-s42-author-query-cn-3",
+  "peak_rss_platform_units": 535363584,
+  "limitations": [
+    "Development results only, not a frozen test or paper-ready claim.",
+    "Author responses are complete relative to the published dataset; real source completeness must be audited separately.",
+    "Scores with ties use fixed author ID ordering; EdgeBank has no discrimination for new edges.",
+    "No binary accuracy on arbitrary sampled nonedges; fixed future positives remain in recall denominator."
+  ]
+}

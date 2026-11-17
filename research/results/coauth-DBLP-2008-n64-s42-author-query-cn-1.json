@@ -1,0 +1,1423 @@
+{
+  "protocol": {
+    "dataset": "coauth-DBLP",
+    "cutoff": 2008,
+    "targets": 64,
+    "seed": 42,
+    "stage": "development",
+    "policies": [
+      "random",
+      "observed_degree",
+      "uncertainty",
+      "uniform_cover",
+      "ambiguity_cover"
+    ],
+    "budgets": [
+      0,
+      5,
+      10,
+      20,
+      40
+    ],
+    "version": "author-query-cn-1",
+    "cohort": [
+      4551,
+      27523,
+      35952,
+      218183,
+      124413,
+      108050,
+      949744,
+      104582,
+      131841,
+      108271,
+      332770,
+      1241921,
+      85106,
+      44325,
+      105586,
+      53451,
+      371499,
+      87665,
+      629288,
+      36335,
+      97680,
+      479051,
+      711399,
+      720791,
+      208439,
+      145244,
+      135214,
+      169623,
+      1603604,
+      28445,
+      7863,
+      459414,
+      1285606,
+      855692,
+      158092,
+      482054,
+      1125933,
+      303939,
+      272463,
+      163611,
+      485759,
+      44849,
+      1031505,
+      474432,
+      318709,
+      115151,
+      1088654,
+      386757,
+      217530,
+      101313,
+      486583,
+      1007699,
+      486565,
+      25909,
+      879175,
+      77849,
+      1418401,
+      556653,
+      54177,
+      106993,
+      441581,
+      858777,
+      604425,
+      175019
+    ],
+    "task": "next-year new edges among historically seen authors; cold-start and repeated ties separately counted",
+    "sampling": "at least three papers in trailing five years and two historical neighbors; SHA256 order, no future labels",
+    "source": {
+      "dataset": "coauth-DBLP",
+      "events": 3700067,
+      "nodes": 1924991,
+      "incidences": 10304422,
+      "min_team": 1,
+      "max_team": 25,
+      "year_counts": {
+        "1936": 12,
+        "1937": 15,
+        "1938": 10,
+        "1939": 18,
+        "1940": 10,
+        "1941": 13,
+        "1942": 13,
+        "1943": 8,
+        "1944": 5,
+        "1945": 9,
+        "1946": 31,
+        "1947": 10,
+        "1948": 15,
+        "1949": 23,
+        "1950": 24,
+        "1951": 19,
+        "1952": 34,
+        "1953": 110,
+        "1954": 158,
+        "1955": 149,
+        "1956": 206,
+        "1957": 241,
+        "1958": 267,
+        "1959": 453,
+        "1960": 422,
+        "1961": 625,
+        "1962": 934,
+        "1963": 794,
+        "1964": 792,
+        "1965": 950,
+        "1966": 1114,
+        "1967": 1432,
+        "1968": 1853,
+        "1969": 1728,
+        "1970": 1770,
+        "1971": 2354,
+        "1972": 2805,
+        "1973": 3274,
+        "1974": 3806,
+        "1975": 3956,
+        "1976": 4526,
+        "1977": 4983,
+        "1978": 5211,
+        "1979": 5674,
+        "1980": 6542,
+        "1981": 6919,
+        "1982": 7823,
+        "1983": 8872,
+        "1984": 10450,
+        "1985": 11115,
+        "1986": 13310,
+        "1987": 14193,
+        "1988": 16851,
+        "1989": 19441,
+        "1990": 22042,
+        "1991": 25495,
+        "1992": 28536,
+        "1993": 34197,
+        "1994": 38831,
+        "1995": 40593,
+        "1996": 44629,
+        "1997": 48994,
+        "1998": 54643,
+        "1999": 61146,
+        "2000": 69765,
+        "2001": 74825,
+        "2002": 83970,
+        "2003": 99931,
+        "2004": 120785,
+        "2005": 140696,
+        "2006": 154714,
+        "2007": 171374,
+        "2008": 182433,
+        "2009": 197964,
+        "2010": 206182,
+        "2011": 223522,
+        "2012": 234672,
+        "2013": 244821,
+        "2014": 253369,
+        "2015": 262304,
+        "2016": 266983,
+        "2017": 146113,
+        "2018": 166
+      },
+      "source_sha256": "0cf134f8342690e76e5f54b634d851a5b5b498eb8f3b2a608d80e63353f38071",
+      "processed_sha256": "421e6747a3ec2f8aaad404a706d7c25904d7b42df7b81db3380bc1255efd10c8"
+    }
+  },
+  "summary": [
+    {
+      "policy": "ambiguity_cover",
+      "budget": 0,
+      "n_targets": 64,
+      "targets_with_new_seen_edges": 23,
+      "gold_new_seen": 74,
+      "gold_new_cold": 39,
+      "certified_top10_rate": 0.0,
+      "mean_observed_papers": 16.375,
+      "mean_actual_queries": 0.0,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        }
+      }
+    },
+    {
+      "policy": "ambiguity_cover",
+      "budget": 5,
+      "n_targets": 64,
+      "targets_with_new_seen_edges": 23,
+      "gold_new_seen": 74,
+      "gold_new_cold": 39,
+      "certified_top10_rate": 0.0,
+      "mean_observed_papers": 144.609375,
+      "mean_actual_queries": 5.0,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.10810810810810811,
+          "candidate_recall": 0.21621621621621623,
+          "macro_average_precision_positive_targets": 0.054120066843427926,
+          "precision_at_10_all_targets": 0.0125
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.0945945945945946,
+          "candidate_recall": 0.21621621621621623,
+          "macro_average_precision_positive_targets": 0.04709411831245982,
+          "precision_at_10_all_targets": 0.010937500000000001
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.06756756756756757,
+          "candidate_recall": 0.21621621621621623,
+          "macro_average_precision_positive_targets": 0.03982791407055225,
+          "precision_at_10_all_targets": 0.0078125
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.04054054054054054,
+          "candidate_recall": 0.21621621621621623,
+          "macro_average_precision_positive_targets": 0.02793831155413959,
+          "precision_at_10_all_targets": 0.004687500000000001
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.02702702702702703,
+          "candidate_recall": 0.21621621621621623,
+          "macro_average_precision_positive_targets": 0.023763630872186522,
+          "precision_at_10_all_targets": 0.003125
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.02702702702702703,
+          "candidate_recall": 0.21621621621621623,
+          "macro_average_precision_positive_targets": 0.023763630872186522,
+          "precision_at_10_all_targets": 0.003125
+        }
+      }
+    },
+    {
+      "policy": "ambiguity_cover",
+      "budget": 10,
+      "n_targets": 63,
+      "targets_with_new_seen_edges": 23,
+      "gold_new_seen": 74,
+      "gold_new_cold": 39,
+      "certified_top10_rate": 0.015873015873015872,
+      "mean_observed_papers": 263.04761904761904,
+      "mean_actual_queries": 10.0,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.0945945945945946,
+          "candidate_recall": 0.28378378378378377,
+          "macro_average_precision_positive_targets": 0.04481167769805511,
+          "precision_at_10_all_targets": 0.011111111111111112
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.05405405405405406,
+          "candidate_recall": 0.28378378378378377,
+          "macro_average_precision_positive_targets": 0.04220679515216811,
+          "precision_at_10_all_targets": 0.006349206349206349
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.06756756756756757,
+          "candidate_recall": 0.28378378378378377,
+          "macro_average_precision_positive_targets": 0.04422172704970764,
+          "precision_at_10_all_targets": 0.007936507936507936
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.04054054054054054,
+          "candidate_recall": 0.28378378378378377,
+          "macro_average_precision_positive_targets": 0.03006029376044379,
+          "precision_at_10_all_targets": 0.004761904761904762
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.013513513513513514,
+          "candidate_recall": 0.28378378378378377,
+          "macro_average_precision_positive_targets": 0.014816778532186652,
+          "precision_at_10_all_targets": 0.0015873015873015873
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.013513513513513514,
+          "candidate_recall": 0.28378378378378377,
+          "macro_average_precision_positive_targets": 0.014816778532186652,
+          "precision_at_10_all_targets": 0.0015873015873015873
+        }
+      }
+    },
+    {
+      "policy": "ambiguity_cover",
+      "budget": 20,
+      "n_targets": 63,
+      "targets_with_new_seen_edges": 23,
+      "gold_new_seen": 74,
+      "gold_new_cold": 39,
+      "certified_top10_rate": 0.015873015873015872,
+      "mean_observed_papers": 550.7460317460317,
+      "mean_actual_queries": 20.0,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.08108108108108109,
+          "candidate_recall": 0.2972972972972973,
+          "macro_average_precision_positive_targets": 0.050086483581745174,
+          "precision_at_10_all_targets": 0.009523809523809523
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.08108108108108109,
+          "candidate_recall": 0.2972972972972973,
+          "macro_average_precision_positive_targets": 0.047327494710070486,
+          "precision_at_10_all_targets": 0.009523809523809523
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.06756756756756757,
+          "candidate_recall": 0.2972972972972973,
+          "macro_average_precision_positive_targets": 0.04855997227988539,
+          "precision_at_10_all_targets": 0.007936507936507936
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.02702702702702703,
+          "candidate_recall": 0.2972972972972973,
+          "macro_average_precision_positive_targets": 0.0204726965552712,
+          "precision_at_10_all_targets": 0.0031746031746031746
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.2972972972972973,
+          "macro_average_precision_positive_targets": 0.0041266184228313865,
+          "precision_at_10_all_targets": 0.0
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.2972972972972973,
+          "macro_average_precision_positive_targets": 0.0041266184228313865,
+          "precision_at_10_all_targets": 0.0
+        }
+      }
+    },
+    {
+      "policy": "ambiguity_cover",
+      "budget": 40,
+      "n_targets": 63,
+      "targets_with_new_seen_edges": 23,
+      "gold_new_seen": 74,
+      "gold_new_cold": 39,
+      "certified_top10_rate": 0.015873015873015872,
+      "mean_observed_papers": 1371.3650793650793,
+      "mean_actual_queries": 40.0,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.06756756756756757,
+          "candidate_recall": 0.3783783783783784,
+          "macro_average_precision_positive_targets": 0.0483745138193329,
+          "precision_at_10_all_targets": 0.007936507936507936
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.08108108108108109,
+          "candidate_recall": 0.3783783783783784,
+          "macro_average_precision_positive_targets": 0.04916989752068979,
+          "precision_at_10_all_targets": 0.009523809523809523
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.06756756756756757,
+          "candidate_recall": 0.3783783783783784,
+          "macro_average_precision_positive_targets": 0.039235871122603246,
+          "precision_at_10_all_targets": 0.007936507936507936
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.013513513513513514,
+          "candidate_recall": 0.3783783783783784,
+          "macro_average_precision_positive_targets": 0.017296588628367405,
+          "precision_at_10_all_targets": 0.0015873015873015873
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.3783783783783784,
+          "macro_average_precision_positive_targets": 0.0023782799851417694,
+          "precision_at_10_all_targets": 0.0
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.3783783783783784,
+          "macro_average_precision_positive_targets": 0.0023782799851417694,
+          "precision_at_10_all_targets": 0.0
+        }
+      }
+    },
+    {
+      "policy": "observed_degree",
+      "budget": 0,
+      "n_targets": 64,
+      "targets_with_new_seen_edges": 23,
+      "gold_new_seen": 74,
+      "gold_new_cold": 39,
+      "certified_top10_rate": 0.0,
+      "mean_observed_papers": 16.375,
+      "mean_actual_queries": 0.0,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        }
+      }
+    },
+    {
+      "policy": "observed_degree",
+      "budget": 5,
+      "n_targets": 64,
+      "targets_with_new_seen_edges": 23,
+      "gold_new_seen": 74,
+      "gold_new_cold": 39,
+      "certified_top10_rate": 0.0,
+      "mean_observed_papers": 189.59375,
+      "mean_actual_queries": 5.0,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.05405405405405406,
+          "candidate_recall": 0.1891891891891892,
+          "macro_average_precision_positive_targets": 0.04037876522534748,
+          "precision_at_10_all_targets": 0.00625
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.04054054054054054,
+          "candidate_recall": 0.1891891891891892,
+          "macro_average_precision_positive_targets": 0.03810453519645831,
+          "precision_at_10_all_targets": 0.004687500000000001
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.04054054054054054,
+          "candidate_recall": 0.1891891891891892,
+          "macro_average_precision_positive_targets": 0.0377546770567451,
+          "precision_at_10_all_targets": 0.004687500000000001
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.04054054054054054,
+          "candidate_recall": 0.1891891891891892,
+          "macro_average_precision_positive_targets": 0.044352365126257745,
+          "precision_at_10_all_targets": 0.004687500000000001
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.013513513513513514,
+          "candidate_recall": 0.1891891891891892,
+          "macro_average_precision_positive_targets": 0.012406905815700277,
+          "precision_at_10_all_targets": 0.0015625
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.013513513513513514,
+          "candidate_recall": 0.1891891891891892,
+          "macro_average_precision_positive_targets": 0.012406905815700277,
+          "precision_at_10_all_targets": 0.0015625
+        }
+      }
+    },
+    {
+      "policy": "observed_degree",
+      "budget": 10,
+      "n_targets": 63,
+      "targets_with_new_seen_edges": 23,
+      "gold_new_seen": 74,
+      "gold_new_cold": 39,
+      "certified_top10_rate": 0.0,
+      "mean_observed_papers": 348.22222222222223,
+      "mean_actual_queries": 10.0,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.05405405405405406,
+          "candidate_recall": 0.1891891891891892,
+          "macro_average_precision_positive_targets": 0.04022689855672713,
+          "precision_at_10_all_targets": 0.006349206349206349
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.04054054054054054,
+          "candidate_recall": 0.1891891891891892,
+          "macro_average_precision_positive_targets": 0.03795266852783796,
+          "precision_at_10_all_targets": 0.004761904761904762
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.04054054054054054,
+          "candidate_recall": 0.1891891891891892,
+          "macro_average_precision_positive_targets": 0.03760281038812475,
+          "precision_at_10_all_targets": 0.004761904761904762
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.04054054054054054,
+          "candidate_recall": 0.1891891891891892,
+          "macro_average_precision_positive_targets": 0.025374220393523956,
+          "precision_at_10_all_targets": 0.004761904761904762
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.013513513513513514,
+          "candidate_recall": 0.1891891891891892,
+          "macro_average_precision_positive_targets": 0.008313033379757022,
+          "precision_at_10_all_targets": 0.0015873015873015873
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.013513513513513514,
+          "candidate_recall": 0.1891891891891892,
+          "macro_average_precision_positive_targets": 0.008313033379757022,
+          "precision_at_10_all_targets": 0.0015873015873015873
+        }
+      }
+    },
+    {
+      "policy": "observed_degree",
+      "budget": 20,
+      "n_targets": 63,
+      "targets_with_new_seen_edges": 23,
+      "gold_new_seen": 74,
+      "gold_new_cold": 39,
+      "certified_top10_rate": 0.0,
+      "mean_observed_papers": 757.8412698412699,
+      "mean_actual_queries": 20.0,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.05405405405405406,
+          "candidate_recall": 0.20270270270270271,
+          "macro_average_precision_positive_targets": 0.039883296914750496,
+          "precision_at_10_all_targets": 0.006349206349206349
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.04054054054054054,
+          "candidate_recall": 0.20270270270270271,
+          "macro_average_precision_positive_targets": 0.03783233538187819,
+          "precision_at_10_all_targets": 0.004761904761904762
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.04054054054054054,
+          "candidate_recall": 0.20270270270270271,
+          "macro_average_precision_positive_targets": 0.037482477242164976,
+          "precision_at_10_all_targets": 0.004761904761904762
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.02702702702702703,
+          "candidate_recall": 0.20270270270270271,
+          "macro_average_precision_positive_targets": 0.014472087654678181,
+          "precision_at_10_all_targets": 0.0031746031746031746
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.013513513513513514,
+          "candidate_recall": 0.20270270270270271,
+          "macro_average_precision_positive_targets": 0.005604288330758921,
+          "precision_at_10_all_targets": 0.0015873015873015873
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.013513513513513514,
+          "candidate_recall": 0.20270270270270271,
+          "macro_average_precision_positive_targets": 0.005604288330758921,
+          "precision_at_10_all_targets": 0.0015873015873015873
+        }
+      }
+    },
+    {
+      "policy": "observed_degree",
+      "budget": 40,
+      "n_targets": 63,
+      "targets_with_new_seen_edges": 23,
+      "gold_new_seen": 74,
+      "gold_new_cold": 39,
+      "certified_top10_rate": 0.0,
+      "mean_observed_papers": 1666.2539682539682,
+      "mean_actual_queries": 40.0,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.05405405405405406,
+          "candidate_recall": 0.20270270270270271,
+          "macro_average_precision_positive_targets": 0.039616473707639405,
+          "precision_at_10_all_targets": 0.006349206349206349
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.04054054054054054,
+          "candidate_recall": 0.20270270270270271,
+          "macro_average_precision_positive_targets": 0.03731760981015993,
+          "precision_at_10_all_targets": 0.004761904761904762
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.04054054054054054,
+          "candidate_recall": 0.20270270270270271,
+          "macro_average_precision_positive_targets": 0.03677473109471889,
+          "precision_at_10_all_targets": 0.004761904761904762
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.013513513513513514,
+          "candidate_recall": 0.20270270270270271,
+          "macro_average_precision_positive_targets": 0.00752564619964006,
+          "precision_at_10_all_targets": 0.0015873015873015873
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.20270270270270271,
+          "macro_average_precision_positive_targets": 0.0018685254892370077,
+          "precision_at_10_all_targets": 0.0
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.20270270270270271,
+          "macro_average_precision_positive_targets": 0.0018685254892370077,
+          "precision_at_10_all_targets": 0.0
+        }
+      }
+    },
+    {
+      "policy": "random",
+      "budget": 0,
+      "n_targets": 64,
+      "targets_with_new_seen_edges": 23,
+      "gold_new_seen": 74,
+      "gold_new_cold": 39,
+      "certified_top10_rate": 0.0,
+      "mean_observed_papers": 16.375,
+      "mean_actual_queries": 0.0,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        }
+      }
+    },
+    {
+      "policy": "random",
+      "budget": 5,
+      "n_targets": 64,
+      "targets_with_new_seen_edges": 23,
+      "gold_new_seen": 74,
+      "gold_new_cold": 39,
+      "certified_top10_rate": 0.0,
+      "mean_observed_papers": 111.328125,
+      "mean_actual_queries": 5.0,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.02702702702702703,
+          "candidate_recall": 0.06756756756756757,
+          "macro_average_precision_positive_targets": 0.01370333476568095,
+          "precision_at_10_all_targets": 0.003125
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.02702702702702703,
+          "candidate_recall": 0.06756756756756757,
+          "macro_average_precision_positive_targets": 0.015593352960046969,
+          "precision_at_10_all_targets": 0.003125
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.02702702702702703,
+          "candidate_recall": 0.06756756756756757,
+          "macro_average_precision_positive_targets": 0.015593352960046969,
+          "precision_at_10_all_targets": 0.003125
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.013513513513513514,
+          "candidate_recall": 0.06756756756756757,
+          "macro_average_precision_positive_targets": 0.04420918288030639,
+          "precision_at_10_all_targets": 0.0015625
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.013513513513513514,
+          "candidate_recall": 0.06756756756756757,
+          "macro_average_precision_positive_targets": 0.005326742758136634,
+          "precision_at_10_all_targets": 0.0015625
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.013513513513513514,
+          "candidate_recall": 0.06756756756756757,
+          "macro_average_precision_positive_targets": 0.005326742758136634,
+          "precision_at_10_all_targets": 0.0015625
+        }
+      }
+    },
+    {
+      "policy": "random",
+      "budget": 10,
+      "n_targets": 63,
+      "targets_with_new_seen_edges": 23,
+      "gold_new_seen": 74,
+      "gold_new_cold": 39,
+      "certified_top10_rate": 0.0,
+      "mean_observed_papers": 206.6984126984127,
+      "mean_actual_queries": 10.0,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.04054054054054054,
+          "candidate_recall": 0.12162162162162163,
+          "macro_average_precision_positive_targets": 0.02213175372174344,
+          "precision_at_10_all_targets": 0.004761904761904762
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.04054054054054054,
+          "candidate_recall": 0.12162162162162163,
+          "macro_average_precision_positive_targets": 0.025539843610495785,
+          "precision_at_10_all_targets": 0.004761904761904762
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.05405405405405406,
+          "candidate_recall": 0.12162162162162163,
+          "macro_average_precision_positive_targets": 0.03668811562833302,
+          "precision_at_10_all_targets": 0.006349206349206349
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.02702702702702703,
+          "candidate_recall": 0.12162162162162163,
+          "macro_average_precision_positive_targets": 0.01545088989763259,
+          "precision_at_10_all_targets": 0.0031746031746031746
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.013513513513513514,
+          "candidate_recall": 0.12162162162162163,
+          "macro_average_precision_positive_targets": 0.010255319553247894,
+          "precision_at_10_all_targets": 0.0015873015873015873
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.013513513513513514,
+          "candidate_recall": 0.12162162162162163,
+          "macro_average_precision_positive_targets": 0.010255319553247894,
+          "precision_at_10_all_targets": 0.0015873015873015873
+        }
+      }
+    },
+    {
+      "policy": "random",
+      "budget": 20,
+      "n_targets": 63,
+      "targets_with_new_seen_edges": 23,
+      "gold_new_seen": 74,
+      "gold_new_cold": 39,
+      "certified_top10_rate": 0.0,
+      "mean_observed_papers": 426.984126984127,
+      "mean_actual_queries": 20.0,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.04054054054054054,
+          "candidate_recall": 0.13513513513513514,
+          "macro_average_precision_positive_targets": 0.02732553039181783,
+          "precision_at_10_all_targets": 0.004761904761904762
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.04054054054054054,
+          "candidate_recall": 0.13513513513513514,
+          "macro_average_precision_positive_targets": 0.026783369348868574,
+          "precision_at_10_all_targets": 0.004761904761904762
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.05405405405405406,
+          "candidate_recall": 0.13513513513513514,
+          "macro_average_precision_positive_targets": 0.03802264766889223,
+          "precision_at_10_all_targets": 0.006349206349206349
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.02702702702702703,
+          "candidate_recall": 0.13513513513513514,
+          "macro_average_precision_positive_targets": 0.032541909934539315,
+          "precision_at_10_all_targets": 0.0031746031746031746
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.02702702702702703,
+          "candidate_recall": 0.13513513513513514,
+          "macro_average_precision_positive_targets": 0.012482875474803905,
+          "precision_at_10_all_targets": 0.0031746031746031746
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.02702702702702703,
+          "candidate_recall": 0.13513513513513514,
+          "macro_average_precision_positive_targets": 0.012482875474803905,
+          "precision_at_10_all_targets": 0.0031746031746031746
+        }
+      }
+    },
+    {
+      "policy": "random",
+      "budget": 40,
+      "n_targets": 63,
+      "targets_with_new_seen_edges": 23,
+      "gold_new_seen": 74,
+      "gold_new_cold": 39,
+      "certified_top10_rate": 0.0,
+      "mean_observed_papers": 941.4761904761905,
+      "mean_actual_queries": 40.0,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.04054054054054054,
+          "candidate_recall": 0.1891891891891892,
+          "macro_average_precision_positive_targets": 0.028064563720751553,
+          "precision_at_10_all_targets": 0.004761904761904762
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.04054054054054054,
+          "candidate_recall": 0.1891891891891892,
+          "macro_average_precision_positive_targets": 0.030823458771221696,
+          "precision_at_10_all_targets": 0.004761904761904762
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.05405405405405406,
+          "candidate_recall": 0.1891891891891892,
+          "macro_average_precision_positive_targets": 0.03674864505126731,
+          "precision_at_10_all_targets": 0.006349206349206349
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.013513513513513514,
+          "candidate_recall": 0.1891891891891892,
+          "macro_average_precision_positive_targets": 0.007095138573252165,
+          "precision_at_10_all_targets": 0.0015873015873015873
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.1891891891891892,
+          "macro_average_precision_positive_targets": 0.0017370194363348934,
+          "precision_at_10_all_targets": 0.0
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.1891891891891892,
+          "macro_average_precision_positive_targets": 0.0017370194363348934,
+          "precision_at_10_all_targets": 0.0
+        }
+      }
+    },
+    {
+      "policy": "uncertainty",
+      "budget": 0,
+      "n_targets": 64,
+      "targets_with_new_seen_edges": 23,
+      "gold_new_seen": 74,
+      "gold_new_cold": 39,
+      "certified_top10_rate": 0.0,
+      "mean_observed_papers": 16.375,
+      "mean_actual_queries": 0.0,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        }
+      }
+    },
+    {
+      "policy": "uncertainty",
+      "budget": 5,
+      "n_targets": 64,
+      "targets_with_new_seen_edges": 23,
+      "gold_new_seen": 74,
+      "gold_new_cold": 39,
+      "certified_top10_rate": 0.0,
+      "mean_observed_papers": 295.625,
+      "mean_actual_queries": 5.0,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.05405405405405406,
+          "candidate_recall": 0.08108108108108109,
+          "macro_average_precision_positive_targets": 0.036321363609693125,
+          "precision_at_10_all_targets": 0.00625
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.04054054054054054,
+          "candidate_recall": 0.08108108108108109,
+          "macro_average_precision_positive_targets": 0.03464912280701754,
+          "precision_at_10_all_targets": 0.004687500000000001
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.04054054054054054,
+          "candidate_recall": 0.08108108108108109,
+          "macro_average_precision_positive_targets": 0.03464912280701754,
+          "precision_at_10_all_targets": 0.004687500000000001
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.02702702702702703,
+          "candidate_recall": 0.08108108108108109,
+          "macro_average_precision_positive_targets": 0.025723943992657566,
+          "precision_at_10_all_targets": 0.003125
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.013513513513513514,
+          "candidate_recall": 0.08108108108108109,
+          "macro_average_precision_positive_targets": 0.009178336338099032,
+          "precision_at_10_all_targets": 0.0015625
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.013513513513513514,
+          "candidate_recall": 0.08108108108108109,
+          "macro_average_precision_positive_targets": 0.009178336338099032,
+          "precision_at_10_all_targets": 0.0015625
+        }
+      }
+    },
+    {
+      "policy": "uncertainty",
+      "budget": 10,
+      "n_targets": 63,
+      "targets_with_new_seen_edges": 23,
+      "gold_new_seen": 74,
+      "gold_new_cold": 39,
+      "certified_top10_rate": 0.0,
+      "mean_observed_papers": 522.9206349206349,
+      "mean_actual_queries": 10.0,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.05405405405405406,
+          "candidate_recall": 0.10810810810810811,
+          "macro_average_precision_positive_targets": 0.03652939832859742,
+          "precision_at_10_all_targets": 0.006349206349206349
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.04054054054054054,
+          "candidate_recall": 0.10810810810810811,
+          "macro_average_precision_positive_targets": 0.03485715752592183,
+          "precision_at_10_all_targets": 0.004761904761904762
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.04054054054054054,
+          "candidate_recall": 0.10810810810810811,
+          "macro_average_precision_positive_targets": 0.03485715752592183,
+          "precision_at_10_all_targets": 0.004761904761904762
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.02702702702702703,
+          "candidate_recall": 0.10810810810810811,
+          "macro_average_precision_positive_targets": 0.01345712189346883,
+          "precision_at_10_all_targets": 0.0031746031746031746
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.013513513513513514,
+          "candidate_recall": 0.10810810810810811,
+          "macro_average_precision_positive_targets": 0.0052944306593198116,
+          "precision_at_10_all_targets": 0.0015873015873015873
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.013513513513513514,
+          "candidate_recall": 0.10810810810810811,
+          "macro_average_precision_positive_targets": 0.0052944306593198116,
+          "precision_at_10_all_targets": 0.0015873015873015873
+        }
+      }
+    },
+    {
+      "policy": "uncertainty",
+      "budget": 20,
+      "n_targets": 63,
+      "targets_with_new_seen_edges": 23,
+      "gold_new_seen": 74,
+      "gold_new_cold": 39,
+      "certified_top10_rate": 0.0,
+      "mean_observed_papers": 954.4444444444445,
+      "mean_actual_queries": 20.0,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.05405405405405406,
+          "candidate_recall": 0.10810810810810811,
+          "macro_average_precision_positive_targets": 0.03626507735291046,
+          "precision_at_10_all_targets": 0.006349206349206349
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.04054054054054054,
+          "candidate_recall": 0.10810810810810811,
+          "macro_average_precision_positive_targets": 0.03439154830546837,
+          "precision_at_10_all_targets": 0.004761904761904762
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.04054054054054054,
+          "candidate_recall": 0.10810810810810811,
+          "macro_average_precision_positive_targets": 0.034230517709655156,
+          "precision_at_10_all_targets": 0.004761904761904762
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.013513513513513514,
+          "candidate_recall": 0.10810810810810811,
+          "macro_average_precision_positive_targets": 0.013239674949384746,
+          "precision_at_10_all_targets": 0.0015873015873015873
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.013513513513513514,
+          "candidate_recall": 0.10810810810810811,
+          "macro_average_precision_positive_targets": 0.004003887290425061,
+          "precision_at_10_all_targets": 0.0015873015873015873
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.013513513513513514,
+          "candidate_recall": 0.10810810810810811,
+          "macro_average_precision_positive_targets": 0.004003887290425061,
+          "precision_at_10_all_targets": 0.0015873015873015873
+        }
+      }
+    },
+    {
+      "policy": "uncertainty",
+      "budget": 40,
+      "n_targets": 63,
+      "targets_with_new_seen_edges": 23,
+      "gold_new_seen": 74,
+      "gold_new_cold": 39,
+      "certified_top10_rate": 0.0,
+      "mean_observed_papers": 1877.142857142857,
+      "mean_actual_queries": 40.0,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.05405405405405406,
+          "candidate_recall": 0.10810810810810811,
+          "macro_average_precision_positive_targets": 0.0362196664224083,
+          "precision_at_10_all_targets": 0.006349206349206349
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.04054054054054054,
+          "candidate_recall": 0.10810810810810811,
+          "macro_average_precision_positive_targets": 0.03426138442980137,
+          "precision_at_10_all_targets": 0.004761904761904762
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.04054054054054054,
+          "candidate_recall": 0.10810810810810811,
+          "macro_average_precision_positive_targets": 0.03399607086232881,
+          "precision_at_10_all_targets": 0.004761904761904762
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.10810810810810811,
+          "macro_average_precision_positive_targets": 0.0035768015476525298,
+          "precision_at_10_all_targets": 0.0
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.10810810810810811,
+          "macro_average_precision_positive_targets": 0.001220111064529185,
+          "precision_at_10_all_targets": 0.0
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.10810810810810811,
+          "macro_average_precision_positive_targets": 0.001220111064529185,
+          "precision_at_10_all_targets": 0.0
+        }
+      }
+    },
+    {
+      "policy": "uniform_cover",
+      "budget": 0,
+      "n_targets": 64,
+      "targets_with_new_seen_edges": 23,
+      "gold_new_seen": 74,
+      "gold_new_cold": 39,
+      "certified_top10_rate": 0.0,
+      "mean_observed_papers": 16.375,
+      "mean_actual_queries": 0.0,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        }
+      }
+    },
+    {
+      "policy": "uniform_cover",
+      "budget": 5,
+      "n_targets": 64,
+      "targets_with_new_seen_edges": 23,
+      "gold_new_seen": 74,
+      "gold_new_cold": 39,
+      "certified_top10_rate": 0.0,
+      "mean_observed_papers": 164.34375,
+      "mean_actual_queries": 5.0,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.10810810810810811,
+          "candidate_recall": 0.21621621621621623,
+          "macro_average_precision_positive_targets": 0.05413047279300034,
+          "precision_at_10_all_targets": 0.0125
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.0945945945945946,
+          "candidate_recall": 0.21621621621621623,
+          "macro_average_precision_positive_targets": 0.04717067255445113,
+          "precision_at_10_all_targets": 0.010937500000000001
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.06756756756756757,
+          "candidate_recall": 0.21621621621621623,
+          "macro_average_precision_positive_targets": 0.039959272843051424,
+          "precision_at_10_all_targets": 0.0078125
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.04054054054054054,
+          "candidate_recall": 0.21621621621621623,
+          "macro_average_precision_positive_targets": 0.02659514687499273,
+          "precision_at_10_all_targets": 0.004687500000000001
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.02702702702702703,
+          "candidate_recall": 0.21621621621621623,
+          "macro_average_precision_positive_targets": 0.022576945353371326,
+          "precision_at_10_all_targets": 0.003125
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.02702702702702703,
+          "candidate_recall": 0.21621621621621623,
+          "macro_average_precision_positive_targets": 0.022576945353371326,
+          "precision_at_10_all_targets": 0.003125
+        }
+      }
+    },
+    {
+      "policy": "uniform_cover",
+      "budget": 10,
+      "n_targets": 63,
+      "targets_with_new_seen_edges": 23,
+      "gold_new_seen": 74,
+      "gold_new_cold": 39,
+      "certified_top10_rate": 0.015873015873015872,
+      "mean_observed_papers": 281.6984126984127,
+      "mean_actual_queries": 10.0,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.0945945945945946,
+          "candidate_recall": 0.28378378378378377,
+          "macro_average_precision_positive_targets": 0.04481213041976141,
+          "precision_at_10_all_targets": 0.011111111111111112
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.06756756756756757,
+          "candidate_recall": 0.28378378378378377,
+          "macro_average_precision_positive_targets": 0.04227959942550868,
+          "precision_at_10_all_targets": 0.007936507936507936
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.06756756756756757,
+          "candidate_recall": 0.28378378378378377,
+          "macro_average_precision_positive_targets": 0.044238536593140435,
+          "precision_at_10_all_targets": 0.007936507936507936
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.04054054054054054,
+          "candidate_recall": 0.28378378378378377,
+          "macro_average_precision_positive_targets": 0.029424475340397528,
+          "precision_at_10_all_targets": 0.004761904761904762
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.013513513513513514,
+          "candidate_recall": 0.28378378378378377,
+          "macro_average_precision_positive_targets": 0.013884572663224137,
+          "precision_at_10_all_targets": 0.0015873015873015873
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.013513513513513514,
+          "candidate_recall": 0.28378378378378377,
+          "macro_average_precision_positive_targets": 0.013884572663224137,
+          "precision_at_10_all_targets": 0.0015873015873015873
+        }
+      }
+    },
+    {
+      "policy": "uniform_cover",
+      "budget": 20,
+      "n_targets": 63,
+      "targets_with_new_seen_edges": 23,
+      "gold_new_seen": 74,
+      "gold_new_cold": 39,
+      "certified_top10_rate": 0.015873015873015872,
+      "mean_observed_papers": 558.3650793650794,
+      "mean_actual_queries": 20.0,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.08108108108108109,
+          "candidate_recall": 0.2972972972972973,
+          "macro_average_precision_positive_targets": 0.050086483581745174,
+          "precision_at_10_all_targets": 0.009523809523809523
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.08108108108108109,
+          "candidate_recall": 0.2972972972972973,
+          "macro_average_precision_positive_targets": 0.047327494710070486,
+          "precision_at_10_all_targets": 0.009523809523809523
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.06756756756756757,
+          "candidate_recall": 0.2972972972972973,
+          "macro_average_precision_positive_targets": 0.04855997227988539,
+          "precision_at_10_all_targets": 0.007936507936507936
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.02702702702702703,
+          "candidate_recall": 0.2972972972972973,
+          "macro_average_precision_positive_targets": 0.020269826169036075,
+          "precision_at_10_all_targets": 0.0031746031746031746
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.2972972972972973,
+          "macro_average_precision_positive_targets": 0.003644753170088692,
+          "precision_at_10_all_targets": 0.0
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.2972972972972973,
+          "macro_average_precision_positive_targets": 0.003644753170088692,
+          "precision_at_10_all_targets": 0.0
+        }
+      }
+    },
+    {
+      "policy": "uniform_cover",
+      "budget": 40,
+      "n_targets": 63,
+      "targets_with_new_seen_edges": 23,
+      "gold_new_seen": 74,
+      "gold_new_cold": 39,
+      "certified_top10_rate": 0.015873015873015872,
+      "mean_observed_papers": 1349.3015873015872,
+      "mean_actual_queries": 40.0,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.06756756756756757,
+          "candidate_recall": 0.3783783783783784,
+          "macro_average_precision_positive_targets": 0.04837779599018696,
+          "precision_at_10_all_targets": 0.007936507936507936
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.08108108108108109,
+          "candidate_recall": 0.3783783783783784,
+          "macro_average_precision_positive_targets": 0.04917483935529646,
+          "precision_at_10_all_targets": 0.009523809523809523
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.06756756756756757,
+          "candidate_recall": 0.3783783783783784,
+          "macro_average_precision_positive_targets": 0.03924081295720993,
+          "precision_at_10_all_targets": 0.007936507936507936
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.013513513513513514,
+          "candidate_recall": 0.3783783783783784,
+          "macro_average_precision_positive_targets": 0.01720690493681412,
+          "precision_at_10_all_targets": 0.0015873015873015873
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.3783783783783784,
+          "macro_average_precision_positive_targets": 0.0021438820238699314,
+          "precision_at_10_all_targets": 0.0
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.3783783783783784,
+          "macro_average_precision_positive_targets": 0.0021438820238699314,
+          "precision_at_10_all_targets": 0.0
+        }
+      }
+    }
+  ],
+  "rows_path": "data/research/temporal/runs/coauth-DBLP-2008-n64-s42-author-query-cn-1",
+  "peak_rss_platform_units": 514588672,
+  "limitations": [
+    "Development results only, not a frozen test or paper-ready claim.",
+    "Author responses are complete relative to the published dataset; real source completeness must be audited separately.",
+    "Scores with ties use fixed author ID ordering; EdgeBank has no discrimination for new edges.",
+    "No binary accuracy on arbitrary sampled nonedges; fixed future positives remain in recall denominator."
+  ],
+  "superseded_reason": "Initial development smoke run stopped exhausted-frontier targets early; high-budget denominators were inconsistent. Replaced by v2 forward-filled fixed denominators."
+}

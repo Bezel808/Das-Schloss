@@ -1,0 +1,206 @@
+{
+  "rows": [
+    {
+      "dataset": "coauth-DBLP",
+      "cutoff": 2000,
+      "targets": 512,
+      "policy": "neighbor_degree",
+      "budget": 20,
+      "counts": {
+        "gold_seen": 390.0,
+        "gold_cold": 324.0,
+        "discovered_positive": 107.0,
+        "expected_hits": 28.21956554653199,
+        "full_twohop_positive": 110.0,
+        "full_cn_expected_hits": 26.622508106887583,
+        "not_discovered": 283.0,
+        "discovered_but_below_top10": 78.78043445346802,
+        "all_future_new_associations": 714.0
+      },
+      "full_twohop_coverage_of_seen": 0.28205128205128205,
+      "shares_of_all_new_associations": {
+        "gold_cold": 0.453781512605042,
+        "not_discovered": 0.3963585434173669,
+        "discovered_but_below_top10": 0.11033674293202804,
+        "expected_hits": 0.03952320104556301
+      }
+    },
+    {
+      "dataset": "coauth-DBLP",
+      "cutoff": 2002,
+      "targets": 512,
+      "policy": "neighbor_degree",
+      "budget": 20,
+      "counts": {
+        "gold_seen": 531.0,
+        "gold_cold": 344.0,
+        "discovered_positive": 138.0,
+        "expected_hits": 35.23091593363365,
+        "full_twohop_positive": 156.0,
+        "full_cn_expected_hits": 36.73097498729868,
+        "not_discovered": 393.0,
+        "discovered_but_below_top10": 102.76908406636635,
+        "all_future_new_associations": 875.0
+      },
+      "full_twohop_coverage_of_seen": 0.2937853107344633,
+      "shares_of_all_new_associations": {
+        "gold_cold": 0.3931428571428571,
+        "not_discovered": 0.4491428571428571,
+        "discovered_but_below_top10": 0.11745038179013297,
+        "expected_hits": 0.040263903924152744
+      }
+    },
+    {
+      "dataset": "coauth-DBLP",
+      "cutoff": 2004,
+      "targets": 512,
+      "policy": "neighbor_degree",
+      "budget": 20,
+      "counts": {
+        "gold_seen": 539.0,
+        "gold_cold": 335.0,
+        "discovered_positive": 141.0,
+        "expected_hits": 40.102255131034525,
+        "full_twohop_positive": 154.0,
+        "full_cn_expected_hits": 39.90631169510807,
+        "not_discovered": 398.0,
+        "discovered_but_below_top10": 100.89774486896548,
+        "all_future_new_associations": 874.0
+      },
+      "full_twohop_coverage_of_seen": 0.2857142857142857,
+      "shares_of_all_new_associations": {
+        "gold_cold": 0.38329519450800914,
+        "not_discovered": 0.45537757437070936,
+        "discovered_but_below_top10": 0.11544364401483465,
+        "expected_hits": 0.04588358710644683
+      }
+    },
+    {
+      "dataset": "coauth-DBLP",
+      "cutoff": 2006,
+      "targets": 512,
+      "policy": "neighbor_degree",
+      "budget": 20,
+      "counts": {
+        "gold_seen": 620.0,
+        "gold_cold": 399.0,
+        "discovered_positive": 168.0,
+        "expected_hits": 41.49812937825242,
+        "full_twohop_positive": 193.0,
+        "full_cn_expected_hits": 43.1043855604708,
+        "not_discovered": 452.0,
+        "discovered_but_below_top10": 126.50187062174757,
+        "all_future_new_associations": 1019.0
+      },
+      "full_twohop_coverage_of_seen": 0.31129032258064515,
+      "shares_of_all_new_associations": {
+        "gold_cold": 0.3915603532875368,
+        "not_discovered": 0.4435721295387635,
+        "discovered_but_below_top10": 0.12414315075735777,
+        "expected_hits": 0.040724366416341924
+      }
+    },
+    {
+      "dataset": "coauth-DBLP",
+      "cutoff": 2008,
+      "targets": 512,
+      "policy": "neighbor_degree",
+      "budget": 20,
+      "counts": {
+        "gold_seen": 606.0,
+        "gold_cold": 342.0,
+        "discovered_positive": 146.0,
+        "expected_hits": 30.089041310765978,
+        "full_twohop_positive": 167.0,
+        "full_cn_expected_hits": 31.39748559457131,
+        "not_discovered": 460.0,
+        "discovered_but_below_top10": 115.91095868923402,
+        "all_future_new_associations": 948.0
+      },
+      "full_twohop_coverage_of_seen": 0.2755775577557756,
+      "shares_of_all_new_associations": {
+        "gold_cold": 0.36075949367088606,
+        "not_discovered": 0.48523206751054854,
+        "discovered_but_below_top10": 0.12226894376501479,
+        "expected_hits": 0.03173949505355061
+      }
+    },
+    {
+      "dataset": "coauth-MAG-History",
+      "cutoff": 2004,
+      "targets": 512,
+      "policy": "neighbor_degree",
+      "budget": 20,
+      "counts": {
+        "gold_seen": 155.0,
+        "gold_cold": 144.0,
+        "discovered_positive": 14.0,
+        "expected_hits": 3.2727272727272725,
+        "full_twohop_positive": 18.0,
+        "full_cn_expected_hits": 3.3458980044345896,
+        "not_discovered": 141.0,
+        "discovered_but_below_top10": 10.727272727272727,
+        "all_future_new_associations": 299.0
+      },
+      "full_twohop_coverage_of_seen": 0.11612903225806452,
+      "shares_of_all_new_associations": {
+        "gold_cold": 0.4816053511705686,
+        "not_discovered": 0.47157190635451507,
+        "discovered_but_below_top10": 0.03587716631194892,
+        "expected_hits": 0.010945576162967466
+      }
+    },
+    {
+      "dataset": "coauth-MAG-History",
+      "cutoff": 2006,
+      "targets": 512,
+      "policy": "neighbor_degree",
+      "budget": 20,
+      "counts": {
+        "gold_seen": 133.0,
+        "gold_cold": 159.0,
+        "discovered_positive": 20.0,
+        "expected_hits": 0.7087147815155904,
+        "full_twohop_positive": 23.0,
+        "full_cn_expected_hits": 0.6562752010322344,
+        "not_discovered": 113.0,
+        "discovered_but_below_top10": 19.29128521848441,
+        "all_future_new_associations": 292.0
+      },
+      "full_twohop_coverage_of_seen": 0.17293233082706766,
+      "shares_of_all_new_associations": {
+        "gold_cold": 0.5445205479452054,
+        "not_discovered": 0.386986301369863,
+        "discovered_but_below_top10": 0.06606604526878224,
+        "expected_hits": 0.0024271054161492823
+      }
+    },
+    {
+      "dataset": "coauth-MAG-History",
+      "cutoff": 2008,
+      "targets": 512,
+      "policy": "neighbor_degree",
+      "budget": 20,
+      "counts": {
+        "gold_seen": 185.0,
+        "gold_cold": 184.0,
+        "discovered_positive": 38.0,
+        "expected_hits": 9.605263157894736,
+        "full_twohop_positive": 42.0,
+        "full_cn_expected_hits": 9.605263157894736,
+        "not_discovered": 147.0,
+        "discovered_but_below_top10": 28.394736842105264,
+        "all_future_new_associations": 369.0
+      },
+      "full_twohop_coverage_of_seen": 0.22702702702702704,
+      "shares_of_all_new_associations": {
+        "gold_cold": 0.4986449864498645,
+        "not_discovered": 0.3983739837398374,
+        "discovered_but_below_top10": 0.07695050634716874,
+        "expected_hits": 0.026030523463129368
+      }
+    }
+  ],
+  "interpretation": "Fixed neighbor-degree acquisition at budget 20. Future labels are evaluator-only. Complete-history two-hop coverage is a reference for that candidate rule, not a ceiling for broader candidate retrieval or prediction.",
+  "denominator": "target-partner associations, not deduplicated undirected edges"
+}

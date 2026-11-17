@@ -1,0 +1,72 @@
+{
+  "runs": [
+    {
+      "source": "research/results/coauth-DBLP-2000-n512-s42-author-query-cn-3-unique-incidence-1-tie-expectation-1.json",
+      "sha256": "d9f393eb5db682247f7cc713a9f6c4661e4fbaf371ba79b85074901468317ee8",
+      "targets": 512,
+      "saved_states": 17920,
+      "passed": true
+    },
+    {
+      "source": "research/results/coauth-DBLP-2002-n512-s42-author-query-cn-3-unique-incidence-1-tie-expectation-1.json",
+      "sha256": "b6e8d841746bc2675571667b89852793f3c57799729872a216d50d859bb2f6c4",
+      "targets": 512,
+      "saved_states": 17920,
+      "passed": true
+    },
+    {
+      "source": "research/results/coauth-DBLP-2004-n512-s42-author-query-cn-3-unique-incidence-1-tie-expectation-1.json",
+      "sha256": "42d32d18e2b4b4e6b603b84ba6684f5a5be091a7c35f715f5a2ff95fde22343a",
+      "targets": 512,
+      "saved_states": 17920,
+      "passed": true
+    },
+    {
+      "source": "research/results/coauth-DBLP-2006-n512-s42-author-query-cn-3-unique-incidence-1-tie-expectation-1.json",
+      "sha256": "1390ecddf53a3c6bfad93b37058b29529ebc74f0e5a8ca5c3b889cbc5bbf206c",
+      "targets": 512,
+      "saved_states": 17920,
+      "passed": true
+    },
+    {
+      "source": "research/results/coauth-DBLP-2008-n512-s42-author-query-cn-3-unique-incidence-1-tie-expectation-1.json",
+      "sha256": "ed4d83920a26e576a7e559cc4718354038ce49bd667399d46b39a0e6fdca26c1",
+      "targets": 512,
+      "saved_states": 17920,
+      "passed": true
+    },
+    {
+      "source": "research/results/coauth-MAG-History-2004-n512-s42-author-query-cn-3-unique-incidence-1-tie-expectation-1.json",
+      "sha256": "ee34903aab2c174dbd81d6247cb811c726c569e24712a5f6d3ee60a3916eebf9",
+      "targets": 512,
+      "saved_states": 17920,
+      "passed": true
+    },
+    {
+      "source": "research/results/coauth-MAG-History-2006-n512-s42-author-query-cn-3-unique-incidence-1-tie-expectation-1.json",
+      "sha256": "c8521422d9f461d6a8608ca5a51fdf394732705093b5177235156e2d078ed815",
+      "targets": 512,
+      "saved_states": 17920,
+      "passed": true
+    },
+    {
+      "source": "research/results/coauth-MAG-History-2008-n512-s42-author-query-cn-3-unique-incidence-1-tie-expectation-1.json",
+      "sha256": "6de17b27341da7e0c3048f030eb505a862236c06f024623f43da697e0eb3a880",
+      "targets": 512,
+      "saved_states": 17920,
+      "passed": true
+    }
+  ],
+  "total_target_years": 4096,
+  "total_saved_states": 143360,
+  "checks": [
+    "fixed cohorts and denominators",
+    "unique policies/budgets",
+    "complete-author query accounting",
+    "historical bound coverage",
+    "repeat-edge metrics invariant to extra acquisition",
+    "oracle and gold independent of acquisition",
+    "expected hit ranges and candidate coverage"
+  ],
+  "interpretation": "Consistency checks on real experiment artifacts; not evidence of prediction superiority."
+}

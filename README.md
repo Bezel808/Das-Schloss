@@ -1,71 +1,114 @@
-# 🏰 Das Schloss (Project K.)
+# 🏰 Das Schloss — ScholarTrace
 
-> *"It was late evening when K. arrived. The village lay deep in snow. There was nothing to be seen of Castle Hill, for mist and darkness surrounded it..."*  
-> — Franz Kafka, *Das Schloss* (1926)
+本地运行、在线获取 OpenAlex 数据的个人学术轨迹工作台。
 
-**Mapping Kafka’s *Castle* of academia: decode collaboration networks and find your research trajectory at any stage.**
+## 启动
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
-[![Data: OpenAlex](https://img.shields.io/badge/Data-OpenAlex%20API-orange.svg)](https://openalex.org/)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
-
----
-
-## 🧭 Why *Das Schloss*?
-
-For a research rookie, entering academia often feels like stepping into Franz Kafka’s *The Castle*. 
-
-You stand at the foot of a towering, opaque bureaucracy. Everyone seems to know the unwritten rules—who collaborates with whom, how lab hierarchies actually operate, and which path leads to the summit—while you don't even have a map. Worse still, conventional "survivor-bias" advice makes it feel as though missing a single early milestone means it is already too late.
-
-**Das Schloss** is an open-source **academic trajectory explorer and collaboration network analyzer**. Like Land Surveyor K., our goal is not to tear down the Castle, but to **measure it, map its hidden corridors, and prove that it is never too late to chart a path that fits you.**
-
----
-
-## ✨ Core Features
-
-### 1. 🗺️ The Map — Collaboration Topology & Lab Transparency
-Look beyond citation counts and h-indices to see how a research group actually functions:
-* **Co-authorship Network Visualization**: Reveals whether a lab operates as a *centralized hub* (single-PI bottleneck) or a *distributed mesh* (high peer-to-peer collaboration).
-* **Rookie-Friendliness Metrics**:
-  * **First-Author Ratio**: Percentage of group publications led by students/junior researchers.
-  * **Time-to-First-Paper**: Median time from a newcomer's first appearance in a group to their first core publication.
-  * **Openness Index**: Ratio of cross-institutional and interdisciplinary collaborations.
-
-### 2. 🧭 The Compass — Non-Linear Trajectory Matching
-Break free from the anxiety of "falling behind" by matching your current state against real historical trajectories:
-* **State-Vector Retrieval**: Input your current stage, domain shift, or constraints (e.g., late start, interdisciplinary pivot, industry-to-academia transition).
-* **Empirical Path Recall**: Retrieves real researchers whose *early publication signatures* resemble your current baseline, visualizing their 3-, 5-, and 10-year evolution.
-* **The Late-Bloomer Index**: Curated longitudinal profiles of researchers who published their breakthrough work later in their careers or after major domain switches.
-
-### 3. 📖 Village Notes — Demystifying Unwritten Rules
-A community-driven, structured Markdown knowledge base turning tacit academic intuition into actionable checklists:
-* Cold-email frameworks tailored to lab archetypes (Junior AP vs. Senior Chair).
-* Step-by-step protocols for reproducing baselines, evaluating lab fit, and pivoting research directions gracefully.
-
----
-
-## 🏗️ Architecture & Tech Stack
-
-Designed to be lightweight, reproducible, and zero-cost to deploy using open scholarly metadata:
-
-* **Data Layer**: [OpenAlex API](https://openalex.org/) & [Semantic Scholar API](https://www.semanticscholar.org/product/api) (100% open metadata, no scraping required).
-* **Graph & Matching Engine**: Python (`NetworkX`, `scikit-learn`, `PyTorch Geometric`) for structural feature extraction and trajectory embedding similarity.
-* **Visualization**: Interactive web frontend (`Next.js` + `D3.js` / `ECharts`) deployable on Vercel or GitHub Pages.
-
----
-
-## 🚀 Quick Start (Local Prototype)
+建议使用 Python 3.12（锁定依赖在该版本验证），首次安装需联网。在仓库目录执行：
 
 ```bash
-# 1. Clone the repository
-git clone [https://github.com/Bezel808/Das-Schloss.git](https://github.com/Bezel808/Das-Schloss.git)
-cd Das-Schloss
+./run.sh
+```
 
-# 2. Set up the environment
-conda create -n das-schloss python=3.10 -y
-conda activate das-schloss
-pip install -r requirements.txt
+打开 [本机网站](http://127.0.0.1:8000/)，点击「设置」填写自己的 [OpenAlex API Key](https://openalex.org/settings/api)。Key 只保存在当前服务内存中，重启后需重新填写；也可由 `OPENALEX_API_KEY` 环境变量提供。
 
-# 3. Fetch sample collaboration graph & compute rookie metrics
-python scripts/fetch_graph.py --author "Sample Researcher" --depth 2
+网页需要上面的本机服务运行。直接打开 `scholartrace/static/index.html` 时会自动转到默认本机网站，避免文件地址无法加载样式和接口；使用自定义端口时，请直接打开对应的 HTTP 地址。
+
+如果已经安装依赖，直接启动：
+
+```bash
+.venv/bin/python -m uvicorn scholartrace.server:app --host 127.0.0.1 --port 8000
+```
+
+## 使用流程
+
+首页右上角可点击 **English / 中文** 切换语言，档案页顶部也有入口。本标签页刷新后保留所选语言；切换不重新采集或计算，并保留当前筛选、结果页和图谱。界面、帮助、进度与错误提示支持英文；作者、机构、论文原文和原始 JSON 记录保持来源内容。
+
+1. 按姓名、ORCID 编号 / 链接或 OpenAlex 作者 ID 在线搜索，核对机构和 ORCID。姓名结果每页 12 位，可查看总数并前后翻页；返回搜索保留当前页。翻至后续页需要设置 API Key。
+2. 点击「查看档案」。论文按游标分页获取，默认仅放在当前服务内存中，每页处理完再推进游标。
+3. 查看采集进度；连接中断或限额后，可在本次会话内点击「继续采集」。暂停在当前请求/页处理后生效。
+4. 时间轴展示逐年发表、署名角色、论文署名机构和来源主题；点击标签跳转到支撑论文。
+5. 合作图默认展示最频繁的 100 位合作者，支持 50–300 节点、Louvain 社区筛选、力导向布局、拖拽缩放、邻居高亮、引用数补全和 SVG 导出。点击节点查看共同论文证据。
+6. 设置时间范围、搜索论文标题、展开摘要和作者列表，或导出当前范围 JSON（含论文数据及完整计算图）。
+
+默认 Web 查询不写论文或计算结果文件，也不自动读取旧的 `scholartrace-web.sqlite`。源数据暂存上限 512 MiB，空闲 30 分钟清空；服务重启后重新查询。「设置 → 最近查看」可主动清空临时查询，需要留存时使用导出。旧研究数据文件保持不动。只有明确设置 `SCHOLARTRACE_DB` 路径才启用离线研究用的文件模式；CLI 离线数据库独立。
+
+首页使用双通道 WebGL 雾绿 / 炭灰动态背景，右上角可暂停；系统开启减少动态效果时默认静止。档案页、图表与 SVG 导出沿用浅灰绿配色。进入档案、打开弹窗或隐藏页面时暂停背景渲染；无 WebGL 时使用可暂停的动态雾层。实现来源与验证见 [搜索与视觉更新](docs/search-and-visuals.md)。
+
+## 关系推断研究记录
+
+关系推测已从网站移除，包括导航、页面、自动请求与 Web 接口。现有验证尚不支持可靠身份识别：120 人队列的首位候选命中率为模型 16.67%、合作次数基线 18.33%，且仅 24 人的已知导师进入有效候选池。离线实现与历史验收记录保留用于复现，见 [关系推断研究记录](docs/relationship-inference.md)，不作为在线产品能力。
+
+## 年度统计
+
+「年度统计」提供个人逐年的发表、网络角色、集合内引用/h/i10、伙伴保留率，并可导出完整年度面板。页面已移除机构产出比较及排名筛选。统计总体是本机已采集论文。具体定义与验证见 [年度统计](docs/annual-insights.md)。
+
+「实验验收」展示两个真实时间网络的补采预算曲线、并列期望指标、新合作/重复合作基线、候选错误分解、ML 时间消融、固定参数后的最终时间留出和原始审稿记录。已完成4,096个开发目标—年份与5,120个验证/最终目标—年份；结果未被转换成个人身份或晋升预测。实现、结果和独立重放命令见 [合作预测验收](docs/forecast-validation.md)。
+
+完整研究目标、CCF-A 投稿定位和三审记录见 [研究协议与完成账本](research/protocols/goal-and-review.md)，研究路线及未完成项保留，不代表已达到正式论文接收标准。
+
+## 团队与新人
+
+「团队与新人」已实现同机构 / 全合作者两种合作圈、年度进入者分类、科研早期成员的目标作者参与和既有成员持续协作、第 H 年同圈合作与发表、目标作者未署名的成员合作图。点击「开始分析」会自动获取当前合作圈的缺失成员历史。等待时仅显示进度，全部获取并计算完成后才展开图表与导出；失败或暂停时可用同一按钮继续。手动分批放在「高级选项」内；每个指标可查看原始论文并整体导出。等待获取、资料仍不足与观察期未满分别显示，不用老师自己的论文误判成员的科研起点。
+
+它描述发表合作，不把共著圈直接认定为实验室，不输出未经验证的“大导/小导”、招生意愿或师生身份。方法公式、数据要求、与已有研究的适配及验收见 [团队与新人方法](docs/group-cohorts.md)。网页回归可运行 `.venv/bin/python tests/browser_groups.py`。
+
+## LLM-free 研究检索
+
+「研究检索」页面使用本地 BM25 对该学者全部已缓存论文的标题、摘要和主题排序，展示匹配词、摘要片段和可点击的论文证据。无需任何语言模型或模型 API Key。它不生成答案，不应称为完整 RAG。英文论文建议使用英文关键词；当前不支持跨语言语义匹配。
+
+## 数据与方法边界
+
+- 署名机构是发表证据，不代表教育/任职起止日期；第一/末位作者不自动解释为学生/导师。
+- 主题是 OpenAlex 标签，尚未实现精细研究对象抽取、语义聚类或转向检测。
+- 「合作网络」图基于目标作者参与的论文；权重为共同论文数及 `sum(1/(n-1))`，不是完整自我诱导网络。「团队与新人」另从成员历史并集构造目标作者未署名的成员合作图，并显示历史覆盖。
+- 列表中截断的作者信息会通过单篇接口补全。补全失败保留游标，重试恢复。
+- 超过 200 位作者的论文保留在证据列表，但排除年度统计与网络计算，避免二次方展开耗尽内存。页面显示排除数量及原因。
+- 缺失作者身份、不完整署名、缺失年份也会影响统计；覆盖提示展示相关数量。
+- 当前是单用户本机应用，无账号体系，不应直接绑定公网；后续公网部署需增加身份认证、用户隔离和资源配额。
+- 真实搜索可匿名尝试，完整采集需要有效 Key。当前每页 100 条，按最新 OpenAlex 文档实现。
+
+## 验证
+
+```bash
+.venv/bin/python -m unittest discover -s tests -v
+node --check scholartrace/static/app.js
+```
+
+测试覆盖合作权重、单作者、去重、外部论文排除、作者截断补全、采集中断恢复、时间筛选、Key 不泄露和跨来源请求拒绝。采集集成测试使用可控上游响应；不能替代使用有效 Key 的全量实网验收。
+
+已安装 Playwright 与 Chrome/Chromium、启动服务且至少完成两位学者采集时，可执行 `.venv/bin/python tests/browser_smoke.py`。它检查72种实验页面组合、桌面/手机和导出、延迟检索响应不会串入另一位学者，以及统计失败后的重试。测试只读已有数据；截图和结果保存在忽略提交的 `data/research/browser-qa/`。非默认Chrome路径可用 `SCHOLARTRACE_BROWSER_EXECUTABLE` 指定。
+
+[方法依据](docs/methods.md) · [时序研究基础](docs/research-foundation.md) · [历史愿景（非现有能力）](docs/original-vision.md)
+
+## 离线 CLI
+
+```bash
+python3 -m scholartrace --input examples/synthetic.json --author https://openalex.org/A1
+```
+
+示例完全虚构，仅用于测试。
+
+### ORCID 搜索
+
+支持 `0000-0003-2780-0393`、`https://orcid.org/0000-0003-2780-0393`、`orcid:0000-0003-2780-0393` 和无连字符编号；先校验格式和校验位，再通过 OpenAlex 的 ORCID 单记录接口匹配。未匹配不表示 ORCID 不存在，可能只是 OpenAlex 未收录或尚未建立关联。本功能不是 ORCID 登录或直接导入 ORCID 履历。
+
+## 带时间的合作图
+
+合作网络提供年份滑块、逐年播放、单年、累计和 3/5/10 年滚动窗口。所选窗口同时更新年度统计、合作图与论文证据；按当前窗口重新计算边权和社区。跨窗口保留已有节点坐标与缩放，减少画面跳动；社区重新检测，颜色不是已经匹配好的跨期团队身份。
+
+每条合作边导出 `events`（论文 ID、发表年份/来源日期、日期精度和分数贡献）、`yearly_weights`、`active_years`、首次/末次观察年份。首次和末次之间不假设连续合作。节点也保留活跃年份。
+
+来源只给年份时，日期保持 null，并提供该年份的可能区间；来源提供日期时标记 `source_day_unverified`，它不保证实际日精度。日期与年份冲突时保留原值、标记冲突并退回年精度。
+
+图快照区分发表时间、末页采集时间和图计算时间。历史视图使用当前缓存元数据重建，不是当年的数据库快照；历史模式禁用当前生涯引用数作为节点大小，避免把今天的引用数当作历史引用。关系推断可单独指定截止年，结果标明截止时间，不把共同发表区间解释为指导任期。
+
+## 合作边的含义与筛选
+
+「合作网络」可组合筛选三类条件：边来源（目标作者直接共著 / 两位合作者在目标论文内共著）、当篇机构证据（有共同机构 / 无交集 / 信息缺失）、发表重复（单篇 / 多篇 / 跨年）。机构条件按“至少一篇符合”选择整条边，详细面板可只查看匹配论文；同一关系可跨时期出现不同机构状态。筛选先于显示数量上限，社区保持当前时间窗口内未做显示筛选时的划分。
+
+绿色实线和灰色虚线均为无方向的共著证据，不表示已确认的师生或同门。点击边（或聚焦后按 Enter）可查看含义、线宽公式、逐年计数和机构证据，跳转具体论文。筛选后的 JSON 导出保留显示节点、边、参数、时间窗口及证据；原始完整报告仍可从顶部导出。空结果显示原因，切换学者重置边筛选。回归命令：`.venv/bin/python tests/browser_edges.py`。
+
+## 按需搜索与计算
+
+首页以搜索栏为主，原理与方法集中在左上角 About，设置和最近查看记录在弹窗中。档案页顶部提供「返回搜索」，保留原搜索结果；手机端不会在档案标题前堆叠设置与记录。首次查询按后台任务分页采集；重复请求复用已有数据。团队画像与年度统计使用有界后台计算队列，合并相同请求，仅短暂保留内存结果，按时间、数量及字节上限清理；冷计算只读当前学者及直接合作者的必要字段。具体行为、实测耗时和公开部署所需条件见 [按需采集与计算](docs/on-demand-computation.md)。

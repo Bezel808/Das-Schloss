@@ -1,0 +1,50 @@
+{
+  "measurement": "Three uncached group calculations; old synchronous HTTP including response transfer vs new in-process calculation. No upstream download timing included.",
+  "old_seconds": [
+    4.7451736250004615,
+    4.6914632090010855,
+    4.712063750001107
+  ],
+  "new_seconds": [
+    1.5552734580014658,
+    1.6153201249981066,
+    1.6274894999987737
+  ],
+  "old_median": 4.712063750001107,
+  "new_median": 1.6153201249981066,
+  "semantic_equality": {
+    "summary": true,
+    "members": true,
+    "cohorts": true,
+    "structure": true,
+    "annual": true,
+    "peer_support": true,
+    "evidence": false
+  },
+  "scope": {
+    "kind": "focal_and_direct_collaborator_histories",
+    "author_histories": 120,
+    "source_records": 13771,
+    "description": "目标学者及符合所选口径的直接合作者历史；不扫描其他查询的数据。"
+  },
+  "new_http_seconds": [
+    1.7937748750009632,
+    1.7487607080001908,
+    1.8623109170002863
+  ],
+  "evidence_difference_count": 15,
+  "evidence_changed_fields": [
+    "authors"
+  ],
+  "live_empty_memory_query": {
+    "author": "A5091518548",
+    "accept_seconds": 0.001380458998028189,
+    "source_complete_seconds": 4.410993292000057,
+    "papers": 173,
+    "focal_only_group_seconds": 0.04784387499967124,
+    "member_histories_fetched": false
+  },
+  "evidence_difference_explanation": "18 display-name entries across 15 evidence records changed; author IDs retained. Names no longer enriched from unrelated queried histories.",
+  "unit_tests_passed": 92,
+  "browser_checks": "Desktop/mobile homepage; no initial history request; search-to-profile using live collected papers; lazy graph; async group/annual results; return home."
+}

@@ -1,0 +1,51 @@
+{
+  "label": "parallel-new-author",
+  "author": "A5078337825",
+  "initial_author_absent": true,
+  "initial_workspace_authors": 0,
+  "focal_seconds": 4.817969790998177,
+  "total_seconds": 77.80369358299868,
+  "focal_papers": 165,
+  "collection": {
+    "completed": 82,
+    "total": 82,
+    "elapsed_seconds": 72.49,
+    "source_requests": 232,
+    "downloaded_bytes": 18931222,
+    "workers": 8,
+    "calculation_seconds": 1.556,
+    "rate_limit_responses": 0
+  },
+  "summary": {
+    "entrants": 82,
+    "early_career": 14,
+    "experienced": 68,
+    "unknown": 0,
+    "age_classification_coverage": 1.0,
+    "early_career_share_of_classified": 0.17073170731707318,
+    "early_career_count_bounds": [
+      14,
+      14
+    ],
+    "assessed": 7,
+    "right_censored": 7,
+    "assessment_counts": {
+      "not_early_career": 68,
+      "right_censored": 7,
+      "assessed": 7
+    },
+    "unknown_reasons": {},
+    "focal_mean_share": 0.7111111111111111,
+    "peer_supported_count": 3,
+    "peer_supported_rate": 0.42857142857142855,
+    "persistent_peer_count": 2,
+    "persistent_peer_rate": 0.2857142857142857,
+    "circle_continuation_count": 3,
+    "circle_continuation_rate": 0.42857142857142855,
+    "publication_continuation_count": 3,
+    "publication_continuation_rate": 0.42857142857142855
+  },
+  "member_histories": 82,
+  "incomplete_member_histories": 0,
+  "measured_at": "2026-11-16T12:24:29.862000+00:00"
+}

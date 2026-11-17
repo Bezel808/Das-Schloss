@@ -1,0 +1,1290 @@
+{
+  "protocol": {
+    "id": "frozen-forecast-v1",
+    "frozen_at": "2026-11-16T02:26:59.582959+00:00",
+    "selection_data": "Development cutoffs 2000\u20132008 only; no validation or test results observed before this freeze.",
+    "primary_method": "ppr_recent_fractional",
+    "primary_baseline": "adamic_adar",
+    "selection_reason": "Recent fractional PPR exceeded CN at all eight development anchors; AA is the strongest equal-year DBLP mean among the prespecified CN/AA/RA baselines. All three ML ablations remain secondary comparisons.",
+    "datasets": [
+      "coauth-DBLP",
+      "coauth-MAG-History"
+    ],
+    "stages": {
+      "validation": [
+        2009,
+        2010
+      ],
+      "final_test": [
+        2011,
+        2012,
+        2013
+      ]
+    },
+    "targets": 512,
+    "seed": 42,
+    "policy": "neighbor_degree",
+    "budget": 20,
+    "alpha": 0.85,
+    "half_life_years": 3.0,
+    "pool": "all historically observed candidates except focal and prior partners",
+    "graph_baselines": [
+      "common_neighbors",
+      "adamic_adar",
+      "resource_allocation"
+    ],
+    "models": {
+      "activity": {
+        "features": [
+          "log_focal_papers_3y",
+          "log_candidate_papers_3y",
+          "log_candidate_observed_age"
+        ],
+        "mean": [
+          1.6372566297935731,
+          0.4547584054138707,
+          1.5623074223857207
+        ],
+        "scale": [
+          0.6758802319969134,
+          0.5724559854590854,
+          0.9161091316905788
+        ],
+        "coefficient": [
+          0.28438967535545306,
+          0.5861176191487298,
+          -0.4658448263655184
+        ],
+        "intercept": -6.6540564523043715,
+        "C": 1.0,
+        "iterations": 12,
+        "probabilities_calibrated": false
+      },
+      "activity_network": {
+        "features": [
+          "log_focal_papers_3y",
+          "log_candidate_papers_3y",
+          "log_candidate_observed_age",
+          "log_focal_degree",
+          "log_candidate_degree",
+          "log_common_neighbors",
+          "adamic_adar",
+          "resource_allocation"
+        ],
+        "mean": [
+          1.6372566297935673,
+          0.45475840541387136,
+          1.562307422385723,
+          2.400035782088186,
+          1.5898382276278389,
+          0.5103137637824445,
+          0.2605763118216286,
+          0.04092032840932763
+        ],
+        "scale": [
+          0.6758802319969129,
+          0.5724559854590857,
+          0.9161091316905765,
+          0.7863190566485666,
+          0.6125056243441966,
+          0.4006358291946959,
+          0.27917426809471396,
+          0.06652627471365727
+        ],
+        "coefficient": [
+          0.5184011875036206,
+          0.6450945668028152,
+          -0.40768948842091635,
+          -0.4710889809502383,
+          -0.23770979769970432,
+          0.8599388618368555,
+          0.031115287341466694,
+          -0.014932616979700232
+        ],
+        "intercept": -7.15974941112791,
+        "C": 1.0,
+        "iterations": 13,
+        "probabilities_calibrated": false
+      },
+      "activity_network_coverage": {
+        "features": [
+          "log_focal_papers_3y",
+          "log_candidate_papers_3y",
+          "log_candidate_observed_age",
+          "log_focal_degree",
+          "log_candidate_degree",
+          "log_common_neighbors",
+          "adamic_adar",
+          "resource_allocation",
+          "candidate_complete",
+          "focal_neighbors_queried_fraction",
+          "cn_interval_width"
+        ],
+        "mean": [
+          1.6372566297935673,
+          0.45475840541387136,
+          1.562307422385723,
+          2.400035782088186,
+          1.5898382276278389,
+          0.5103137637824445,
+          0.2605763118216286,
+          0.04092032840932763,
+          0.031037504622130452,
+          0.5962475183877229,
+          7.856566706238508
+        ],
+        "scale": [
+          0.6758802319969129,
+          0.5724559854590857,
+          0.9161091316905765,
+          0.7863190566485666,
+          0.6125056243441966,
+          0.4006358291946959,
+          0.27917426809471396,
+          0.06652627471365727,
+          0.17341908179021603,
+          0.37506615394958337,
+          15.58724984827036
+        ],
+        "coefficient": [
+          0.5348676369739551,
+          0.6215890251051763,
+          -0.40788880080451184,
+          -0.5242700960282456,
+          -0.23325227285896416,
+          0.9299246724198065,
+          -0.04137483850497556,
+          0.027252520487646113,
+          0.038153595285900996,
+          0.02487589740796556,
+          0.06933027024052253
+        ],
+        "intercept": -7.190967256383463,
+        "C": 1.0,
+        "iterations": 13,
+        "probabilities_calibrated": false
+      }
+    },
+    "training_report_sha256": "cce305c16b6a3b3cf808ccfd02221c977660fc0fcd0c61a86b89a5a9c8f7b8d0",
+    "source_sha256": {
+      "coauth-DBLP": "421e6747a3ec2f8aaad404a706d7c25904d7b42df7b81db3380bc1255efd10c8",
+      "coauth-MAG-History": "4d0383b1cc0fe5d86e0d85902c72376ed173735fd8170192d5bb355c1fc8b6e0"
+    },
+    "components_sha256": {
+      "research/frozen_forecast.py": "7a6fb73928ae97408d480c61bc9e2573ae1c2e9d5ed7457f83a3a4e76814dbf1",
+      "research/temporal_benchmark.py": "994d1e6482cabfe813869fd02eb4cdb1d72b878d9d32044ff2e16b5cadd181f6",
+      "research/event_data.py": "3002f1f40229e61fa71243efa3097144ab3bc284c04a7a37593383c6fcae5965",
+      "research/forecast_features.py": "5512329591e602b14d916d5142dabedbb672641261795c3f8f4f9e69a3e37688",
+      "scholartrace/acquisition.py": "5e312f37a30eb323c3f6fd0ec59d3fcecc912df342dd8ce2cfce8d507806d753",
+      "scholartrace/forecasting.py": "5da5a0b543e0380cc091902f3f3cff19309b378ad196e337e61383611336f5d5",
+      "scholartrace/evaluation.py": "f4328a87199668fdd03a1543660db29c7f15fb9d713546d08286383d27a0e5b7"
+    },
+    "primary_reporting": "Show each domain/year and equal-year final-test recall differences separately per domain; no edge-level pooled independence or picking favorable years.",
+    "no_retuning": "Run all validation and final-test years under this immutable selection. Validation is diagnostic, not an opportunity to change this protocol. Any later method requires a new explicitly exploratory evaluation; do not reuse this final test for model selection.",
+    "activation": "A holdout score does not validate mentor identity, degree, promotion or OpenAlex-domain personal probabilities. No automatic identity or production prediction gate is opened."
+  },
+  "protocol_sha256": "9e66e5fa38155259298ba35b65a93cfe2a834fc3b6b789ef2c80685ac8c70c96",
+  "reports": [
+    {
+      "dataset": "coauth-DBLP",
+      "cutoff": 2009,
+      "stage": "validation",
+      "targets": 512,
+      "positive_targets": 197,
+      "cold_start_associations": 379,
+      "mean_actual_queries": 11.87109375,
+      "mean_returned_papers": 343.662109375,
+      "models": [
+        {
+          "method": "common_neighbors",
+          "gold": 741,
+          "expected_hits_at_10": 30.184477947031336,
+          "micro_recall_at_10": 0.040734788052673866,
+          "candidate_coverage": 0.24021592442645073,
+          "macro_ap_positive_targets": 0.030600523271652396,
+          "difference_vs_primary_baseline": -0.012328555160205711,
+          "paired_target_bootstrap_95": [
+            -0.0200931756604487,
+            -0.005564708789534247
+          ],
+          "valid_resamples": 2000
+        },
+        {
+          "method": "adamic_adar",
+          "gold": 741,
+          "expected_hits_at_10": 39.319937320743776,
+          "micro_recall_at_10": 0.05306334321287959,
+          "candidate_coverage": 0.24021592442645073,
+          "macro_ap_positive_targets": 0.0321567189084639,
+          "difference_vs_primary_baseline": 0.0,
+          "paired_target_bootstrap_95": [
+            0.0,
+            0.0
+          ],
+          "valid_resamples": 2000
+        },
+        {
+          "method": "resource_allocation",
+          "gold": 741,
+          "expected_hits_at_10": 33.302621303427756,
+          "micro_recall_at_10": 0.044942808776555675,
+          "candidate_coverage": 0.24021592442645073,
+          "macro_ap_positive_targets": 0.02773235947779702,
+          "difference_vs_primary_baseline": -0.00812053443632391,
+          "paired_target_bootstrap_95": [
+            -0.017215160012856466,
+            -2.5198681915103467e-05
+          ],
+          "valid_resamples": 2000
+        },
+        {
+          "method": "ppr_recent_fractional",
+          "gold": 741,
+          "expected_hits_at_10": 52.611111111111114,
+          "micro_recall_at_10": 0.07100014994751837,
+          "candidate_coverage": 0.24021592442645073,
+          "macro_ap_positive_targets": 0.05767841362495983,
+          "difference_vs_primary_baseline": 0.017936806734638783,
+          "paired_target_bootstrap_95": [
+            0.001740059326644407,
+            0.03532051914232043
+          ],
+          "valid_resamples": 2000
+        },
+        {
+          "method": "ml_activity",
+          "gold": 741,
+          "expected_hits_at_10": 36.035714285714285,
+          "micro_recall_at_10": 0.04863119336803547,
+          "candidate_coverage": 0.24021592442645073,
+          "macro_ap_positive_targets": 0.03564700558275343,
+          "difference_vs_primary_baseline": -0.004432149844844112,
+          "paired_target_bootstrap_95": [
+            -0.02405856313013817,
+            0.015559829147573501
+          ],
+          "valid_resamples": 2000
+        },
+        {
+          "method": "ml_activity_network",
+          "gold": 741,
+          "expected_hits_at_10": 46.44444444444444,
+          "micro_recall_at_10": 0.06267806267806268,
+          "candidate_coverage": 0.24021592442645073,
+          "macro_ap_positive_targets": 0.051051518401649516,
+          "difference_vs_primary_baseline": 0.009614719465183094,
+          "paired_target_bootstrap_95": [
+            -0.004548057614499577,
+            0.024536014247853084
+          ],
+          "valid_resamples": 2000
+        },
+        {
+          "method": "ml_activity_network_coverage",
+          "gold": 741,
+          "expected_hits_at_10": 44.55555555555556,
+          "micro_recall_at_10": 0.060128954865796974,
+          "candidate_coverage": 0.24021592442645073,
+          "macro_ap_positive_targets": 0.051328546666052195,
+          "difference_vs_primary_baseline": 0.007065611652917386,
+          "paired_target_bootstrap_95": [
+            -0.007336920861843614,
+            0.021781487696970303
+          ],
+          "valid_resamples": 2000
+        }
+      ]
+    },
+    {
+      "dataset": "coauth-DBLP",
+      "cutoff": 2010,
+      "stage": "validation",
+      "targets": 512,
+      "positive_targets": 186,
+      "cold_start_associations": 280,
+      "mean_actual_queries": 11.595703125,
+      "mean_returned_papers": 344.3125,
+      "models": [
+        {
+          "method": "common_neighbors",
+          "gold": 556,
+          "expected_hits_at_10": 25.82596451373287,
+          "micro_recall_at_10": 0.04644957646354833,
+          "candidate_coverage": 0.2607913669064748,
+          "macro_ap_positive_targets": 0.02922756236309336,
+          "difference_vs_primary_baseline": -0.004002078765509234,
+          "paired_target_bootstrap_95": [
+            -0.013435507853397128,
+            0.004164966006341803
+          ],
+          "valid_resamples": 2000
+        },
+        {
+          "method": "adamic_adar",
+          "gold": 556,
+          "expected_hits_at_10": 28.05112030735601,
+          "micro_recall_at_10": 0.05045165522905757,
+          "candidate_coverage": 0.2607913669064748,
+          "macro_ap_positive_targets": 0.030766865228958027,
+          "difference_vs_primary_baseline": 0.0,
+          "paired_target_bootstrap_95": [
+            0.0,
+            0.0
+          ],
+          "valid_resamples": 2000
+        },
+        {
+          "method": "resource_allocation",
+          "gold": 556,
+          "expected_hits_at_10": 25.475626356862055,
+          "micro_recall_at_10": 0.04581947186485981,
+          "candidate_coverage": 0.2607913669064748,
+          "macro_ap_positive_targets": 0.031066544733597785,
+          "difference_vs_primary_baseline": -0.004632183364197752,
+          "paired_target_bootstrap_95": [
+            -0.01429625869055372,
+            0.004172500438338645
+          ],
+          "valid_resamples": 2000
+        },
+        {
+          "method": "ppr_recent_fractional",
+          "gold": 556,
+          "expected_hits_at_10": 45.0,
+          "micro_recall_at_10": 0.08093525179856115,
+          "candidate_coverage": 0.2607913669064748,
+          "macro_ap_positive_targets": 0.053225935636481134,
+          "difference_vs_primary_baseline": 0.03048359656950359,
+          "paired_target_bootstrap_95": [
+            0.010047134422465095,
+            0.05304311551825036
+          ],
+          "valid_resamples": 2000
+        },
+        {
+          "method": "ml_activity",
+          "gold": 556,
+          "expected_hits_at_10": 29.399908424908425,
+          "micro_recall_at_10": 0.0528775331383245,
+          "candidate_coverage": 0.2607913669064748,
+          "macro_ap_positive_targets": 0.02984592404980082,
+          "difference_vs_primary_baseline": 0.0024258779092669424,
+          "paired_target_bootstrap_95": [
+            -0.020467659860864816,
+            0.022568538462668576
+          ],
+          "valid_resamples": 2000
+        },
+        {
+          "method": "ml_activity_network",
+          "gold": 556,
+          "expected_hits_at_10": 40.75,
+          "micro_recall_at_10": 0.07329136690647482,
+          "candidate_coverage": 0.2607913669064748,
+          "macro_ap_positive_targets": 0.04351610425299801,
+          "difference_vs_primary_baseline": 0.022839711677417256,
+          "paired_target_bootstrap_95": [
+            0.002566592369190236,
+            0.0427518369252949
+          ],
+          "valid_resamples": 2000
+        },
+        {
+          "method": "ml_activity_network_coverage",
+          "gold": 556,
+          "expected_hits_at_10": 39.25,
+          "micro_recall_at_10": 0.07059352517985612,
+          "candidate_coverage": 0.2607913669064748,
+          "macro_ap_positive_targets": 0.043044578367667646,
+          "difference_vs_primary_baseline": 0.020141869950798554,
+          "paired_target_bootstrap_95": [
+            -0.0001444393954656046,
+            0.03970694010262314
+          ],
+          "valid_resamples": 2000
+        }
+      ]
+    },
+    {
+      "dataset": "coauth-DBLP",
+      "cutoff": 2011,
+      "stage": "final_test",
+      "targets": 512,
+      "positive_targets": 231,
+      "cold_start_associations": 368,
+      "mean_actual_queries": 12.634765625,
+      "mean_returned_papers": 427.05859375,
+      "models": [
+        {
+          "method": "common_neighbors",
+          "gold": 897,
+          "expected_hits_at_10": 37.543158927333536,
+          "micro_recall_at_10": 0.04185413481308087,
+          "candidate_coverage": 0.21070234113712374,
+          "macro_ap_positive_targets": 0.0389715511850747,
+          "difference_vs_primary_baseline": -0.005960339360088967,
+          "paired_target_bootstrap_95": [
+            -0.013652500613910707,
+            0.0005246927275622082
+          ],
+          "valid_resamples": 2000
+        },
+        {
+          "method": "adamic_adar",
+          "gold": 897,
+          "expected_hits_at_10": 42.889583333333334,
+          "micro_recall_at_10": 0.04781447417316983,
+          "candidate_coverage": 0.21070234113712374,
+          "macro_ap_positive_targets": 0.04375753627722607,
+          "difference_vs_primary_baseline": 0.0,
+          "paired_target_bootstrap_95": [
+            0.0,
+            0.0
+          ],
+          "valid_resamples": 2000
+        },
+        {
+          "method": "resource_allocation",
+          "gold": 897,
+          "expected_hits_at_10": 47.27222222222222,
+          "micro_recall_at_10": 0.05270035922209835,
+          "candidate_coverage": 0.21070234113712374,
+          "macro_ap_positive_targets": 0.04308049060187036,
+          "difference_vs_primary_baseline": 0.004885885048928528,
+          "paired_target_bootstrap_95": [
+            -0.0016536304538458785,
+            0.011651547708021922
+          ],
+          "valid_resamples": 2000
+        },
+        {
+          "method": "ppr_recent_fractional",
+          "gold": 897,
+          "expected_hits_at_10": 53.666666666666664,
+          "micro_recall_at_10": 0.059829059829059825,
+          "candidate_coverage": 0.21070234113712374,
+          "macro_ap_positive_targets": 0.039476442348018274,
+          "difference_vs_primary_baseline": 0.012014585655890003,
+          "paired_target_bootstrap_95": [
+            -0.005289159547737663,
+            0.030061735314880104
+          ],
+          "valid_resamples": 2000
+        },
+        {
+          "method": "ml_activity",
+          "gold": 897,
+          "expected_hits_at_10": 34.77777777777778,
+          "micro_recall_at_10": 0.038771212684256165,
+          "candidate_coverage": 0.21070234113712374,
+          "macro_ap_positive_targets": 0.032678208564483356,
+          "difference_vs_primary_baseline": -0.009043261488913663,
+          "paired_target_bootstrap_95": [
+            -0.025020786526416126,
+            0.007958620102276149
+          ],
+          "valid_resamples": 2000
+        },
+        {
+          "method": "ml_activity_network",
+          "gold": 897,
+          "expected_hits_at_10": 43.416666666666664,
+          "micro_recall_at_10": 0.04840208101077666,
+          "candidate_coverage": 0.21070234113712374,
+          "macro_ap_positive_targets": 0.035476166790051784,
+          "difference_vs_primary_baseline": 0.000587606837606838,
+          "paired_target_bootstrap_95": [
+            -0.01209745843160283,
+            0.01266723983356803
+          ],
+          "valid_resamples": 2000
+        },
+        {
+          "method": "ml_activity_network_coverage",
+          "gold": 897,
+          "expected_hits_at_10": 42.083333333333336,
+          "micro_recall_at_10": 0.0469156447417317,
+          "candidate_coverage": 0.21070234113712374,
+          "macro_ap_positive_targets": 0.03565788830525942,
+          "difference_vs_primary_baseline": -0.0008988294314381266,
+          "paired_target_bootstrap_95": [
+            -0.013041091943086228,
+            0.010730254729842553
+          ],
+          "valid_resamples": 2000
+        }
+      ]
+    },
+    {
+      "dataset": "coauth-DBLP",
+      "cutoff": 2012,
+      "stage": "final_test",
+      "targets": 512,
+      "positive_targets": 188,
+      "cold_start_associations": 377,
+      "mean_actual_queries": 12.146484375,
+      "mean_returned_papers": 416.783203125,
+      "models": [
+        {
+          "method": "common_neighbors",
+          "gold": 762,
+          "expected_hits_at_10": 26.776719198305635,
+          "micro_recall_at_10": 0.03514005144134598,
+          "candidate_coverage": 0.2152230971128609,
+          "macro_ap_positive_targets": 0.031957585067994954,
+          "difference_vs_primary_baseline": 0.003184670863918159,
+          "paired_target_bootstrap_95": [
+            -0.002824643107000734,
+            0.009030194057091937
+          ],
+          "valid_resamples": 2000
+        },
+        {
+          "method": "adamic_adar",
+          "gold": 762,
+          "expected_hits_at_10": 24.35,
+          "micro_recall_at_10": 0.031955380577427826,
+          "candidate_coverage": 0.2152230971128609,
+          "macro_ap_positive_targets": 0.03357788939374302,
+          "difference_vs_primary_baseline": 0.0,
+          "paired_target_bootstrap_95": [
+            0.0,
+            0.0
+          ],
+          "valid_resamples": 2000
+        },
+        {
+          "method": "resource_allocation",
+          "gold": 762,
+          "expected_hits_at_10": 20.85,
+          "micro_recall_at_10": 0.02736220472440945,
+          "candidate_coverage": 0.2152230971128609,
+          "macro_ap_positive_targets": 0.030908472830664453,
+          "difference_vs_primary_baseline": -0.004593175853018373,
+          "paired_target_bootstrap_95": [
+            -0.013962413431531973,
+            0.004439219022421806
+          ],
+          "valid_resamples": 2000
+        },
+        {
+          "method": "ppr_recent_fractional",
+          "gold": 762,
+          "expected_hits_at_10": 39.666666666666664,
+          "micro_recall_at_10": 0.052055993000874885,
+          "candidate_coverage": 0.2152230971128609,
+          "macro_ap_positive_targets": 0.040574365000957055,
+          "difference_vs_primary_baseline": 0.02010061242344707,
+          "paired_target_bootstrap_95": [
+            0.00517423622476814,
+            0.03564585177663212
+          ],
+          "valid_resamples": 2000
+        },
+        {
+          "method": "ml_activity",
+          "gold": 762,
+          "expected_hits_at_10": 19.09090909090909,
+          "micro_recall_at_10": 0.025053686471009303,
+          "candidate_coverage": 0.2152230971128609,
+          "macro_ap_positive_targets": 0.025795614285768292,
+          "difference_vs_primary_baseline": -0.0069016941064185145,
+          "paired_target_bootstrap_95": [
+            -0.021511421006753368,
+            0.006818649963435888
+          ],
+          "valid_resamples": 2000
+        },
+        {
+          "method": "ml_activity_network",
+          "gold": 762,
+          "expected_hits_at_10": 29.0,
+          "micro_recall_at_10": 0.03805774278215223,
+          "candidate_coverage": 0.2152230971128609,
+          "macro_ap_positive_targets": 0.033918561251259374,
+          "difference_vs_primary_baseline": 0.00610236220472441,
+          "paired_target_bootstrap_95": [
+            -0.005649717514124294,
+            0.01909947411247061
+          ],
+          "valid_resamples": 2000
+        },
+        {
+          "method": "ml_activity_network_coverage",
+          "gold": 762,
+          "expected_hits_at_10": 31.0,
+          "micro_recall_at_10": 0.04068241469816273,
+          "candidate_coverage": 0.2152230971128609,
+          "macro_ap_positive_targets": 0.033833506850449044,
+          "difference_vs_primary_baseline": 0.008727034120734908,
+          "paired_target_bootstrap_95": [
+            -0.0036150489581340643,
+            0.02188198632742073
+          ],
+          "valid_resamples": 2000
+        }
+      ]
+    },
+    {
+      "dataset": "coauth-DBLP",
+      "cutoff": 2013,
+      "stage": "final_test",
+      "targets": 512,
+      "positive_targets": 198,
+      "cold_start_associations": 377,
+      "mean_actual_queries": 12.84375,
+      "mean_returned_papers": 539.78125,
+      "models": [
+        {
+          "method": "common_neighbors",
+          "gold": 975,
+          "expected_hits_at_10": 53.641245856227975,
+          "micro_recall_at_10": 0.055016662416644074,
+          "candidate_coverage": 0.25435897435897437,
+          "macro_ap_positive_targets": 0.05527565924943875,
+          "difference_vs_primary_baseline": -0.00583148812562411,
+          "paired_target_bootstrap_95": [
+            -0.013697988057834995,
+            0.0016490053455078314
+          ],
+          "valid_resamples": 2000
+        },
+        {
+          "method": "adamic_adar",
+          "gold": 975,
+          "expected_hits_at_10": 59.32694677871149,
+          "micro_recall_at_10": 0.06084815054226819,
+          "candidate_coverage": 0.25435897435897437,
+          "macro_ap_positive_targets": 0.05218626622959167,
+          "difference_vs_primary_baseline": 0.0,
+          "paired_target_bootstrap_95": [
+            0.0,
+            0.0
+          ],
+          "valid_resamples": 2000
+        },
+        {
+          "method": "resource_allocation",
+          "gold": 975,
+          "expected_hits_at_10": 45.744453781512604,
+          "micro_recall_at_10": 0.04691738849385908,
+          "candidate_coverage": 0.25435897435897437,
+          "macro_ap_positive_targets": 0.04415249746808969,
+          "difference_vs_primary_baseline": -0.013930762048409106,
+          "paired_target_bootstrap_95": [
+            -0.025190599487193214,
+            -0.004095059796309838
+          ],
+          "valid_resamples": 2000
+        },
+        {
+          "method": "ppr_recent_fractional",
+          "gold": 975,
+          "expected_hits_at_10": 72.0,
+          "micro_recall_at_10": 0.07384615384615385,
+          "candidate_coverage": 0.25435897435897437,
+          "macro_ap_positive_targets": 0.07469492476025048,
+          "difference_vs_primary_baseline": 0.012998003303885657,
+          "paired_target_bootstrap_95": [
+            -0.0016093021362951078,
+            0.028766377507776282
+          ],
+          "valid_resamples": 2000
+        },
+        {
+          "method": "ml_activity",
+          "gold": 975,
+          "expected_hits_at_10": 45.34761904761905,
+          "micro_recall_at_10": 0.04651037851037851,
+          "candidate_coverage": 0.25435897435897437,
+          "macro_ap_positive_targets": 0.03984508077522042,
+          "difference_vs_primary_baseline": -0.014337772031889679,
+          "paired_target_bootstrap_95": [
+            -0.03253479469610617,
+            0.0019476037967602906
+          ],
+          "valid_resamples": 2000
+        },
+        {
+          "method": "ml_activity_network",
+          "gold": 975,
+          "expected_hits_at_10": 71.88888888888889,
+          "micro_recall_at_10": 0.07373219373219372,
+          "candidate_coverage": 0.25435897435897437,
+          "macro_ap_positive_targets": 0.06177647255693352,
+          "difference_vs_primary_baseline": 0.012884043189925544,
+          "paired_target_bootstrap_95": [
+            0.0010381964554230848,
+            0.026232115628270655
+          ],
+          "valid_resamples": 2000
+        },
+        {
+          "method": "ml_activity_network_coverage",
+          "gold": 975,
+          "expected_hits_at_10": 73.88888888888889,
+          "micro_recall_at_10": 0.07578347578347579,
+          "candidate_coverage": 0.25435897435897437,
+          "macro_ap_positive_targets": 0.061183135045406706,
+          "difference_vs_primary_baseline": 0.014935325241207595,
+          "paired_target_bootstrap_95": [
+            0.0029306123579375255,
+            0.028890430636318982
+          ],
+          "valid_resamples": 2000
+        }
+      ]
+    },
+    {
+      "dataset": "coauth-MAG-History",
+      "cutoff": 2009,
+      "stage": "validation",
+      "targets": 512,
+      "positive_targets": 70,
+      "cold_start_associations": 151,
+      "mean_actual_queries": 8.916015625,
+      "mean_returned_papers": 106.66015625,
+      "models": [
+        {
+          "method": "common_neighbors",
+          "gold": 201,
+          "expected_hits_at_10": 2.9439605110336817,
+          "micro_recall_at_10": 0.014646569706635233,
+          "candidate_coverage": 0.14427860696517414,
+          "macro_ap_positive_targets": 0.007697355704331248,
+          "difference_vs_primary_baseline": -0.0044511872870081825,
+          "paired_target_bootstrap_95": [
+            -0.013069985248861873,
+            0.00032807118254879475
+          ],
+          "valid_resamples": 2000
+        },
+        {
+          "method": "adamic_adar",
+          "gold": 201,
+          "expected_hits_at_10": 3.8386491557223263,
+          "micro_recall_at_10": 0.019097756993643415,
+          "candidate_coverage": 0.14427860696517414,
+          "macro_ap_positive_targets": 0.007276421722819263,
+          "difference_vs_primary_baseline": 0.0,
+          "paired_target_bootstrap_95": [
+            0.0,
+            0.0
+          ],
+          "valid_resamples": 2000
+        },
+        {
+          "method": "resource_allocation",
+          "gold": 201,
+          "expected_hits_at_10": 3.8386491557223263,
+          "micro_recall_at_10": 0.019097756993643415,
+          "candidate_coverage": 0.14427860696517414,
+          "macro_ap_positive_targets": 0.007337756534875529,
+          "difference_vs_primary_baseline": 0.0,
+          "paired_target_bootstrap_95": [
+            -0.01224552397646175,
+            0.015037593984962405
+          ],
+          "valid_resamples": 2000
+        },
+        {
+          "method": "ppr_recent_fractional",
+          "gold": 201,
+          "expected_hits_at_10": 3.0,
+          "micro_recall_at_10": 0.014925373134328358,
+          "candidate_coverage": 0.14427860696517414,
+          "macro_ap_positive_targets": 0.012641040204479231,
+          "difference_vs_primary_baseline": -0.004172383859315057,
+          "paired_target_bootstrap_95": [
+            -0.02464580873671783,
+            0.014251902639103985
+          ],
+          "valid_resamples": 2000
+        },
+        {
+          "method": "ml_activity",
+          "gold": 201,
+          "expected_hits_at_10": 1.1578947368421053,
+          "micro_recall_at_10": 0.005760670332547788,
+          "candidate_coverage": 0.14427860696517414,
+          "macro_ap_positive_targets": 0.015927438461564275,
+          "difference_vs_primary_baseline": -0.013337086661095628,
+          "paired_target_bootstrap_95": [
+            -0.03311609834012566,
+            0.003731933436487417
+          ],
+          "valid_resamples": 2000
+        },
+        {
+          "method": "ml_activity_network",
+          "gold": 201,
+          "expected_hits_at_10": 3.0,
+          "micro_recall_at_10": 0.014925373134328358,
+          "candidate_coverage": 0.14427860696517414,
+          "macro_ap_positive_targets": 0.01806149685359858,
+          "difference_vs_primary_baseline": -0.004172383859315057,
+          "paired_target_bootstrap_95": [
+            -0.019867549668874173,
+            0.012196580697864388
+          ],
+          "valid_resamples": 2000
+        },
+        {
+          "method": "ml_activity_network_coverage",
+          "gold": 201,
+          "expected_hits_at_10": 3.0,
+          "micro_recall_at_10": 0.014925373134328358,
+          "candidate_coverage": 0.14427860696517414,
+          "macro_ap_positive_targets": 0.018041372545310717,
+          "difference_vs_primary_baseline": -0.004172383859315057,
+          "paired_target_bootstrap_95": [
+            -0.019867549668874173,
+            0.012196580697864388
+          ],
+          "valid_resamples": 2000
+        }
+      ]
+    },
+    {
+      "dataset": "coauth-MAG-History",
+      "cutoff": 2010,
+      "stage": "validation",
+      "targets": 512,
+      "positive_targets": 58,
+      "cold_start_associations": 128,
+      "mean_actual_queries": 8.76953125,
+      "mean_returned_papers": 124.814453125,
+      "models": [
+        {
+          "method": "common_neighbors",
+          "gold": 156,
+          "expected_hits_at_10": 7.760940393106395,
+          "micro_recall_at_10": 0.04974961790452818,
+          "candidate_coverage": 0.27564102564102566,
+          "macro_ap_positive_targets": 0.030512394196018824,
+          "difference_vs_primary_baseline": -0.007942689787779518,
+          "paired_target_bootstrap_95": [
+            -0.024336152960249928,
+            0.0013160316371248074
+          ],
+          "valid_resamples": 2000
+        },
+        {
+          "method": "adamic_adar",
+          "gold": 156,
+          "expected_hits_at_10": 9.0,
+          "micro_recall_at_10": 0.057692307692307696,
+          "candidate_coverage": 0.27564102564102566,
+          "macro_ap_positive_targets": 0.030218560544281625,
+          "difference_vs_primary_baseline": 0.0,
+          "paired_target_bootstrap_95": [
+            0.0,
+            0.0
+          ],
+          "valid_resamples": 2000
+        },
+        {
+          "method": "resource_allocation",
+          "gold": 156,
+          "expected_hits_at_10": 8.0,
+          "micro_recall_at_10": 0.05128205128205128,
+          "candidate_coverage": 0.27564102564102566,
+          "macro_ap_positive_targets": 0.030424367641026937,
+          "difference_vs_primary_baseline": -0.00641025641025641,
+          "paired_target_bootstrap_95": [
+            -0.021391329258976317,
+            0.0
+          ],
+          "valid_resamples": 2000
+        },
+        {
+          "method": "ppr_recent_fractional",
+          "gold": 156,
+          "expected_hits_at_10": 10.0,
+          "micro_recall_at_10": 0.0641025641025641,
+          "candidate_coverage": 0.27564102564102566,
+          "macro_ap_positive_targets": 0.02488942155929635,
+          "difference_vs_primary_baseline": 0.00641025641025641,
+          "paired_target_bootstrap_95": [
+            -0.014184397163120567,
+            0.03054022313564295
+          ],
+          "valid_resamples": 2000
+        },
+        {
+          "method": "ml_activity",
+          "gold": 156,
+          "expected_hits_at_10": 7.066666666666666,
+          "micro_recall_at_10": 0.0452991452991453,
+          "candidate_coverage": 0.27564102564102566,
+          "macro_ap_positive_targets": 0.020102797391732898,
+          "difference_vs_primary_baseline": -0.012393162393162393,
+          "paired_target_bootstrap_95": [
+            -0.03730113636363636,
+            0.013162280701754361
+          ],
+          "valid_resamples": 2000
+        },
+        {
+          "method": "ml_activity_network",
+          "gold": 156,
+          "expected_hits_at_10": 9.0,
+          "micro_recall_at_10": 0.057692307692307696,
+          "candidate_coverage": 0.27564102564102566,
+          "macro_ap_positive_targets": 0.03041932729531594,
+          "difference_vs_primary_baseline": 0.0,
+          "paired_target_bootstrap_95": [
+            -0.018867924528301886,
+            0.017964071856287425
+          ],
+          "valid_resamples": 2000
+        },
+        {
+          "method": "ml_activity_network_coverage",
+          "gold": 156,
+          "expected_hits_at_10": 9.0,
+          "micro_recall_at_10": 0.057692307692307696,
+          "candidate_coverage": 0.27564102564102566,
+          "macro_ap_positive_targets": 0.031011564695584592,
+          "difference_vs_primary_baseline": 0.0,
+          "paired_target_bootstrap_95": [
+            -0.018867924528301886,
+            0.017964071856287425
+          ],
+          "valid_resamples": 2000
+        }
+      ]
+    },
+    {
+      "dataset": "coauth-MAG-History",
+      "cutoff": 2011,
+      "stage": "final_test",
+      "targets": 512,
+      "positive_targets": 59,
+      "cold_start_associations": 189,
+      "mean_actual_queries": 8.50390625,
+      "mean_returned_papers": 124.498046875,
+      "models": [
+        {
+          "method": "common_neighbors",
+          "gold": 219,
+          "expected_hits_at_10": 9.072871572871573,
+          "micro_recall_at_10": 0.04142863731904828,
+          "candidate_coverage": 0.1872146118721461,
+          "macro_ap_positive_targets": 0.015394330724651238,
+          "difference_vs_primary_baseline": -0.0042334631375727265,
+          "paired_target_bootstrap_95": [
+            -0.02155178730308264,
+            0.010718590545861894
+          ],
+          "valid_resamples": 2000
+        },
+        {
+          "method": "adamic_adar",
+          "gold": 219,
+          "expected_hits_at_10": 10.0,
+          "micro_recall_at_10": 0.045662100456621,
+          "candidate_coverage": 0.1872146118721461,
+          "macro_ap_positive_targets": 0.01807982105825876,
+          "difference_vs_primary_baseline": 0.0,
+          "paired_target_bootstrap_95": [
+            0.0,
+            0.0
+          ],
+          "valid_resamples": 2000
+        },
+        {
+          "method": "resource_allocation",
+          "gold": 219,
+          "expected_hits_at_10": 11.0,
+          "micro_recall_at_10": 0.0502283105022831,
+          "candidate_coverage": 0.1872146118721461,
+          "macro_ap_positive_targets": 0.020402948174293525,
+          "difference_vs_primary_baseline": 0.0045662100456621,
+          "paired_target_bootstrap_95": [
+            0.0,
+            0.016668410041840994
+          ],
+          "valid_resamples": 2000
+        },
+        {
+          "method": "ppr_recent_fractional",
+          "gold": 219,
+          "expected_hits_at_10": 9.0,
+          "micro_recall_at_10": 0.0410958904109589,
+          "candidate_coverage": 0.1872146118721461,
+          "macro_ap_positive_targets": 0.030623182879170506,
+          "difference_vs_primary_baseline": -0.0045662100456621,
+          "paired_target_bootstrap_95": [
+            -0.020835512552301254,
+            0.010471204188481676
+          ],
+          "valid_resamples": 2000
+        },
+        {
+          "method": "ml_activity",
+          "gold": 219,
+          "expected_hits_at_10": 3.7433691756272403,
+          "micro_recall_at_10": 0.01709300993437096,
+          "candidate_coverage": 0.1872146118721461,
+          "macro_ap_positive_targets": 0.007321468247671644,
+          "difference_vs_primary_baseline": -0.028569090522250044,
+          "paired_target_bootstrap_95": [
+            -0.06810170813275146,
+            0.0009074747594706308
+          ],
+          "valid_resamples": 2000
+        },
+        {
+          "method": "ml_activity_network",
+          "gold": 219,
+          "expected_hits_at_10": 8.0,
+          "micro_recall_at_10": 0.0365296803652968,
+          "candidate_coverage": 0.1872146118721461,
+          "macro_ap_positive_targets": 0.015121060204895231,
+          "difference_vs_primary_baseline": -0.0091324200913242,
+          "paired_target_bootstrap_95": [
+            -0.03367097945749631,
+            0.009570528156054465
+          ],
+          "valid_resamples": 2000
+        },
+        {
+          "method": "ml_activity_network_coverage",
+          "gold": 219,
+          "expected_hits_at_10": 8.0,
+          "micro_recall_at_10": 0.0365296803652968,
+          "candidate_coverage": 0.1872146118721461,
+          "macro_ap_positive_targets": 0.014915556270472658,
+          "difference_vs_primary_baseline": -0.0091324200913242,
+          "paired_target_bootstrap_95": [
+            -0.03367097945749631,
+            0.009570528156054465
+          ],
+          "valid_resamples": 2000
+        }
+      ]
+    },
+    {
+      "dataset": "coauth-MAG-History",
+      "cutoff": 2012,
+      "stage": "final_test",
+      "targets": 512,
+      "positive_targets": 48,
+      "cold_start_associations": 108,
+      "mean_actual_queries": 8.72265625,
+      "mean_returned_papers": 124.74609375,
+      "models": [
+        {
+          "method": "common_neighbors",
+          "gold": 118,
+          "expected_hits_at_10": 4.030769230769231,
+          "micro_recall_at_10": 0.03415906127770534,
+          "candidate_coverage": 0.13559322033898305,
+          "macro_ap_positive_targets": 0.017185259562036304,
+          "difference_vs_primary_baseline": 0.00026075619295958186,
+          "paired_target_bootstrap_95": [
+            0.0,
+            0.0008373055515912627
+          ],
+          "valid_resamples": 2000
+        },
+        {
+          "method": "adamic_adar",
+          "gold": 118,
+          "expected_hits_at_10": 4.0,
+          "micro_recall_at_10": 0.03389830508474576,
+          "candidate_coverage": 0.13559322033898305,
+          "macro_ap_positive_targets": 0.01850678165806605,
+          "difference_vs_primary_baseline": 0.0,
+          "paired_target_bootstrap_95": [
+            0.0,
+            0.0
+          ],
+          "valid_resamples": 2000
+        },
+        {
+          "method": "resource_allocation",
+          "gold": 118,
+          "expected_hits_at_10": 4.266666666666667,
+          "micro_recall_at_10": 0.03615819209039548,
+          "candidate_coverage": 0.13559322033898305,
+          "macro_ap_positive_targets": 0.011690909706735897,
+          "difference_vs_primary_baseline": 0.0022598870056497176,
+          "paired_target_bootstrap_95": [
+            0.0,
+            0.007547169811320755
+          ],
+          "valid_resamples": 2000
+        },
+        {
+          "method": "ppr_recent_fractional",
+          "gold": 118,
+          "expected_hits_at_10": 5.0,
+          "micro_recall_at_10": 0.0423728813559322,
+          "candidate_coverage": 0.13559322033898305,
+          "macro_ap_positive_targets": 0.010955282006916775,
+          "difference_vs_primary_baseline": 0.00847457627118644,
+          "paired_target_bootstrap_95": [
+            0.0,
+            0.02830188679245283
+          ],
+          "valid_resamples": 2000
+        },
+        {
+          "method": "ml_activity",
+          "gold": 118,
+          "expected_hits_at_10": 2.1818181818181817,
+          "micro_recall_at_10": 0.018489984591679505,
+          "candidate_coverage": 0.13559322033898305,
+          "macro_ap_positive_targets": 0.0034699739696762693,
+          "difference_vs_primary_baseline": -0.015408320493066256,
+          "paired_target_bootstrap_95": [
+            -0.03905832518735744,
+            0.0
+          ],
+          "valid_resamples": 2000
+        },
+        {
+          "method": "ml_activity_network",
+          "gold": 118,
+          "expected_hits_at_10": 5.0,
+          "micro_recall_at_10": 0.0423728813559322,
+          "candidate_coverage": 0.13559322033898305,
+          "macro_ap_positive_targets": 0.01630922129177821,
+          "difference_vs_primary_baseline": 0.00847457627118644,
+          "paired_target_bootstrap_95": [
+            0.0,
+            0.02721243042671613
+          ],
+          "valid_resamples": 2000
+        },
+        {
+          "method": "ml_activity_network_coverage",
+          "gold": 118,
+          "expected_hits_at_10": 5.0,
+          "micro_recall_at_10": 0.0423728813559322,
+          "candidate_coverage": 0.13559322033898305,
+          "macro_ap_positive_targets": 0.01632330323864906,
+          "difference_vs_primary_baseline": 0.00847457627118644,
+          "paired_target_bootstrap_95": [
+            0.0,
+            0.02721243042671613
+          ],
+          "valid_resamples": 2000
+        }
+      ]
+    },
+    {
+      "dataset": "coauth-MAG-History",
+      "cutoff": 2013,
+      "stage": "final_test",
+      "targets": 512,
+      "positive_targets": 57,
+      "cold_start_associations": 131,
+      "mean_actual_queries": 8.42578125,
+      "mean_returned_papers": 133.654296875,
+      "models": [
+        {
+          "method": "common_neighbors",
+          "gold": 157,
+          "expected_hits_at_10": 10.784147869674186,
+          "micro_recall_at_10": 0.06868883993423049,
+          "candidate_coverage": 0.35668789808917195,
+          "macro_ap_positive_targets": 0.03993433947843767,
+          "difference_vs_primary_baseline": -0.007744281084877802,
+          "paired_target_bootstrap_95": [
+            -0.025321215653550354,
+            0.00889277983920839
+          ],
+          "valid_resamples": 2000
+        },
+        {
+          "method": "adamic_adar",
+          "gold": 157,
+          "expected_hits_at_10": 12.0,
+          "micro_recall_at_10": 0.07643312101910828,
+          "candidate_coverage": 0.35668789808917195,
+          "macro_ap_positive_targets": 0.039730628877262295,
+          "difference_vs_primary_baseline": 0.0,
+          "paired_target_bootstrap_95": [
+            0.0,
+            0.0
+          ],
+          "valid_resamples": 2000
+        },
+        {
+          "method": "resource_allocation",
+          "gold": 157,
+          "expected_hits_at_10": 8.5,
+          "micro_recall_at_10": 0.054140127388535034,
+          "candidate_coverage": 0.35668789808917195,
+          "macro_ap_positive_targets": 0.030014163799013463,
+          "difference_vs_primary_baseline": -0.022292993630573247,
+          "paired_target_bootstrap_95": [
+            -0.04278589058000822,
+            0.0
+          ],
+          "valid_resamples": 2000
+        },
+        {
+          "method": "ppr_recent_fractional",
+          "gold": 157,
+          "expected_hits_at_10": 14.357142857142858,
+          "micro_recall_at_10": 0.09144676979071883,
+          "candidate_coverage": 0.35668789808917195,
+          "macro_ap_positive_targets": 0.06757593430080006,
+          "difference_vs_primary_baseline": 0.015013648771610556,
+          "paired_target_bootstrap_95": [
+            -0.016314247921390777,
+            0.06147109109601276
+          ],
+          "valid_resamples": 2000
+        },
+        {
+          "method": "ml_activity",
+          "gold": 157,
+          "expected_hits_at_10": 7.411986352173268,
+          "micro_recall_at_10": 0.04721010415396986,
+          "candidate_coverage": 0.35668789808917195,
+          "macro_ap_positive_targets": 0.07134600582645712,
+          "difference_vs_primary_baseline": -0.02922301686513842,
+          "paired_target_bootstrap_95": [
+            -0.07083983936253628,
+            0.026404070466570447
+          ],
+          "valid_resamples": 2000
+        },
+        {
+          "method": "ml_activity_network",
+          "gold": 157,
+          "expected_hits_at_10": 14.142857142857142,
+          "micro_recall_at_10": 0.09008189262966333,
+          "candidate_coverage": 0.35668789808917195,
+          "macro_ap_positive_targets": 0.08108500769803605,
+          "difference_vs_primary_baseline": 0.01364877161055505,
+          "paired_target_bootstrap_95": [
+            -0.011257127019322142,
+            0.05562534999557896
+          ],
+          "valid_resamples": 2000
+        },
+        {
+          "method": "ml_activity_network_coverage",
+          "gold": 157,
+          "expected_hits_at_10": 14.076923076923077,
+          "micro_recall_at_10": 0.08966193042626164,
+          "candidate_coverage": 0.35668789808917195,
+          "macro_ap_positive_targets": 0.08017998233039178,
+          "difference_vs_primary_baseline": 0.013228809407153354,
+          "paired_target_bootstrap_95": [
+            -0.01156412982245725,
+            0.0550965843143757
+          ],
+          "valid_resamples": 2000
+        }
+      ]
+    }
+  ],
+  "interpretation": "Immutable chronological holdout; no post-holdout parameter selection. Paired intervals are conditional on each fixed source graph and historical-activity cohort. Not new-person generalization, causal career effects or mentor identification."
+}

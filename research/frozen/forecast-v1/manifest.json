@@ -1,0 +1,29 @@
+{
+  "snapshot": "forecast-v1",
+  "files_sha256": {
+    "research/temporal_benchmark.py": "994d1e6482cabfe813869fd02eb4cdb1d72b878d9d32044ff2e16b5cadd181f6",
+    "research/fetch_temporal.py": "00f5c1271e863281ee6a7771004c5aab31720c7a7d15fde458becc6901ba1401",
+    "research/event_data.py": "3002f1f40229e61fa71243efa3097144ab3bc284c04a7a37593383c6fcae5965",
+    "research/forecast_features.py": "5512329591e602b14d916d5142dabedbb672641261795c3f8f4f9e69a3e37688",
+    "research/forecast_ml.py": "2d100246fd9cd9f8e627fbfc10c85cfa0c3b256856d9522e003f9aae7c47b5f9",
+    "research/analyze_acquisition.py": "061512a5c9139ed0ab2799567a2a264c5f2aeaf8694526354aff5f75438c5657",
+    "research/audit_temporal.py": "7fea50703de98858ff8c55ae0dd3d38332b57d785ab2794a3ac76209dc78bd90",
+    "research/verify_development.py": "9187fc444427def90fa4e0b06ba31971fb01576f182f412d144cd823f3b84068",
+    "research/error_decomposition.py": "d8ec2283d7040c41a8aa69834855142b5916c573347bee5f16edb6d95192f308",
+    "research/candidate_benchmark.py": "76a96867990e380ac2ff480f95bd3dc42eda27aae900bcf3c2227e8b29e4138d",
+    "research/frozen_forecast.py": "7a6fb73928ae97408d480c61bc9e2573ae1c2e9d5ed7457f83a3a4e76814dbf1",
+    "research/publish_local_results.py": "e44443f07ab42d9fc3d366a7ef8e53e65b9601a8bbd4b88bf923d09b144b7e11",
+    "research/run_development.py": "c4ff0e60b009a4d0598e0b79ecc4f946cb0c6c9fcdc3f05b79cfc2edc3e230ac",
+    "scholartrace/__init__.py": "2c57e7740f070cf72f8520ece2f6b8c60e8d8c7210e6e474f5e8bf590d237a7c",
+    "scholartrace/temporal.py": "3100f6e9a8ed43fb0934857c6467ab3d467dec17b7b57fb07a10f4013651b8e3",
+    "scholartrace/acquisition.py": "5e312f37a30eb323c3f6fd0ec59d3fcecc912df342dd8ce2cfce8d507806d753",
+    "scholartrace/forecasting.py": "5da5a0b543e0380cc091902f3f3cff19309b378ad196e337e61383611336f5d5",
+    "scholartrace/evaluation.py": "f4328a87199668fdd03a1543660db29c7f15fb9d713546d08286383d27a0e5b7",
+    "research/protocols/frozen-forecast-v1.json": "9e66e5fa38155259298ba35b65a93cfe2a834fc3b6b789ef2c80685ac8c70c96",
+    "research/temporal-data-manifest.json": "d8880afcd3e7238c9741c4ef488db74f86836e34f16ead4841c7c583ee6781e2",
+    "research/environment.json": "7f46ae5e8ca8c1844d46cb05393ae32019fe20af210cd48ac3a72c58563dca5d",
+    "requirements.lock": "fe6897dac54279f214c821c1df33d1a2ba1ac70009d90d8628a1259de2194868",
+    "research/reviews/scoreboard.json": "06d8f74c59e08fdb59bf16e482312c03b8712098ef9ac9eda60c518e4ecf3ae3"
+  },
+  "note": "Immutable original scientific implementation. Later production fixes must not alter this snapshot."
+}

@@ -1,0 +1,142 @@
+{
+  "verified_at": "2026-11-16T04:35:55.340727+00:00",
+  "feature_version": "group-cohorts-1",
+  "unit_and_api_tests": {
+    "status": "passed",
+    "total": 78,
+    "group_specific": 16
+  },
+  "browser": {
+    "status": "passed",
+    "desktop_mobile_export": true,
+    "non_focal_evidence_checked": true,
+    "filters": true,
+    "error_retry": true,
+    "parameter_and_profile_isolation": true,
+    "collection_preview": true
+  },
+  "existing_browser_regression": {
+    "status": "passed",
+    "experiment_combinations": 72,
+    "cross_profile_delayed_response": "isolated",
+    "insights_error_and_retry": "passed",
+    "desktop_mobile_export": "passed"
+  },
+  "live_collection": {
+    "status": "complete",
+    "completed": 6,
+    "total": 6,
+    "updated_at": "2026-11-16T04:19:38.757799+00:00"
+  },
+  "collected_authors": [
+    {
+      "id": "https://openalex.org/A5100352418",
+      "name": "Xian Wu",
+      "entry_year": 2019,
+      "qualifying_papers": 4,
+      "estimated_pages": 4
+    },
+    {
+      "id": "https://openalex.org/A5039641800",
+      "name": "Yangqin Jiang",
+      "entry_year": 2023,
+      "qualifying_papers": 3,
+      "estimated_pages": 1
+    },
+    {
+      "id": "https://openalex.org/A5064805926",
+      "name": "Chenliang Xu",
+      "entry_year": 2023,
+      "qualifying_papers": 3,
+      "estimated_pages": 2
+    },
+    {
+      "id": "https://openalex.org/A5079860867",
+      "name": "Chunzhen Huang",
+      "entry_year": 2023,
+      "qualifying_papers": 3,
+      "estimated_pages": 1
+    },
+    {
+      "id": "https://openalex.org/A5100352274",
+      "name": "Xin Liu",
+      "entry_year": 2022,
+      "qualifying_papers": 3,
+      "estimated_pages": 2
+    },
+    {
+      "id": "https://openalex.org/A5112553141",
+      "name": "Susan Liang",
+      "entry_year": 2023,
+      "qualifying_papers": 3,
+      "estimated_pages": 1
+    }
+  ],
+  "real_portrait": {
+    "focal": "https://openalex.org/A5091518548",
+    "name": "Chao Huang",
+    "parameters": {
+      "start": 2016,
+      "end": 2025,
+      "scope": "shared_institution",
+      "window": 5,
+      "early_years": 3,
+      "prior_papers": 5,
+      "early_papers": 5,
+      "followup": 2,
+      "incumbent_papers": 2,
+      "max_team": 50
+    },
+    "summary": {
+      "entrants": 107,
+      "early_career": 4,
+      "experienced": 10,
+      "unknown": 93,
+      "age_classification_coverage": 0.1308411214953271,
+      "early_career_share_of_classified": 0.2857142857142857,
+      "early_career_count_bounds": [
+        4,
+        97
+      ],
+      "assessed": 4,
+      "right_censored": 0,
+      "assessment_counts": {
+        "not_early_career": 10,
+        "unknown_career_history": 93,
+        "assessed": 4
+      },
+      "focal_mean_share": 0.775,
+      "peer_supported_count": 3,
+      "peer_supported_rate": 0.75,
+      "persistent_peer_count": 0,
+      "persistent_peer_rate": 0.0,
+      "circle_continuation_count": 2,
+      "circle_continuation_rate": 0.5,
+      "publication_continuation_count": 3,
+      "publication_continuation_rate": 0.75
+    },
+    "input_sha256": "99b939f9d0c36054aabd54cdb61ff183ae6bb5b770db4522e4cb8a2968ee399b",
+    "evidence_papers": 463,
+    "active_members": 88,
+    "complete_member_histories": 12,
+    "independent_papers": 22,
+    "observed_subgroups": 5
+  },
+  "limits": [
+    "Functional and evidence-chain validation, not identity-prediction validation.",
+    "Collected members are selected, not a random sample; aggregate rates do not generalize to the entire circle.",
+    "No supervision, admissions or formal PI hierarchy ground truth used."
+  ],
+  "files_sha256": {
+    "scholartrace/groups.py": "bdd97f22c6bf22bee5ac0d74c559d42acd479c511f7c4f32f03ac18fa2d92cc9",
+    "scholartrace/group_api.py": "08ef607f2d562830f27b0ddce24aee4bd90eeb05cee8acad98bb4363804e58c4",
+    "scholartrace/server.py": "f1f30330680a1b1a220dcb8e3ae114d59b14ec7b51493dc883d65881edef0d01",
+    "scholartrace/static/groups.js": "1eaff25fd171c9922aa6a8c982440570c8feec063dd57b384ed18596932c2d7e",
+    "scholartrace/static/index.html": "8c561cf2611b881f5f88d4133c6541080446c8b4f01ad63505519ca01cc939af",
+    "scholartrace/static/app.js": "bd3d8fb7ea5fe25d017d193afb5a38edb09c524a1d6fd93448964e417c5edf63",
+    "scholartrace/static/style.css": "5daebc2fd20493e532079e60841e72029f7b6be78ea85e5732f344e32e1ffd5f",
+    "tests/test_groups.py": "4642134d0321dcd212e163cd0678d8d4ff4a30fa00a92906e962e7d8463377a6",
+    "tests/test_group_api.py": "8cf319c7ed7a61284e12d39bda6f301141195e145b08d5992616ddfd342808e8",
+    "tests/browser_groups.py": "955bb3f5b03978ed99c8c3c90b8b603d923c84624d96045649c3dae01d0b8447"
+  }
+}

@@ -1,0 +1,128 @@
+[
+  {
+    "id": "https://openalex.org/W1",
+    "title": "Synthetic example 1 (not a real paper)",
+    "publication_year": 2020,
+    "authors_count": 3,
+    "topics": [
+      {
+        "id": "https://openalex.org/T1",
+        "display_name": "Synthetic topic"
+      }
+    ],
+    "authorships": [
+      {
+        "author": {
+          "id": "https://openalex.org/A1",
+          "display_name": "Demo A1"
+        },
+        "author_position": "first",
+        "is_corresponding": true,
+        "institutions": [
+          {
+            "id": "https://openalex.org/I1",
+            "display_name": "Demo institution"
+          }
+        ]
+      },
+      {
+        "author": {
+          "id": "https://openalex.org/A2",
+          "display_name": "Demo A2"
+        },
+        "author_position": "middle",
+        "is_corresponding": false,
+        "institutions": [
+          {
+            "id": "https://openalex.org/I1",
+            "display_name": "Demo institution"
+          }
+        ]
+      },
+      {
+        "author": {
+          "id": "https://openalex.org/A3",
+          "display_name": "Demo A3"
+        },
+        "author_position": "last",
+        "is_corresponding": false,
+        "institutions": [
+          {
+            "id": "https://openalex.org/I1",
+            "display_name": "Demo institution"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "https://openalex.org/W2",
+    "title": "Synthetic example 2 (not a real paper)",
+    "publication_year": 2021,
+    "authors_count": 2,
+    "topics": [
+      {
+        "id": "https://openalex.org/T1",
+        "display_name": "Synthetic topic"
+      }
+    ],
+    "authorships": [
+      {
+        "author": {
+          "id": "https://openalex.org/A1",
+          "display_name": "Demo A1"
+        },
+        "author_position": "first",
+        "is_corresponding": true,
+        "institutions": [
+          {
+            "id": "https://openalex.org/I1",
+            "display_name": "Demo institution"
+          }
+        ]
+      },
+      {
+        "author": {
+          "id": "https://openalex.org/A2",
+          "display_name": "Demo A2"
+        },
+        "author_position": "last",
+        "is_corresponding": false,
+        "institutions": [
+          {
+            "id": "https://openalex.org/I1",
+            "display_name": "Demo institution"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "https://openalex.org/W3",
+    "title": "Synthetic example 3 (not a real paper)",
+    "publication_year": 2022,
+    "authors_count": 1,
+    "topics": [
+      {
+        "id": "https://openalex.org/T1",
+        "display_name": "Synthetic topic"
+      }
+    ],
+    "authorships": [
+      {
+        "author": {
+          "id": "https://openalex.org/A1",
+          "display_name": "Demo A1"
+        },
+        "author_position": "first",
+        "is_corresponding": true,
+        "institutions": [
+          {
+            "id": "https://openalex.org/I1",
+            "display_name": "Demo institution"
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,1487 @@
+{
+  "protocol": {
+    "dataset": "coauth-DBLP",
+    "cutoff": 2004,
+    "targets": 128,
+    "seed": 42,
+    "stage": "development",
+    "implementation_sha256": "1957344cb05fd4daafb4386b4f36cb750e0f6a36d290646179ae5aebe0764a41",
+    "policies": [
+      "random",
+      "observed_degree",
+      "uncertainty",
+      "uniform_cover",
+      "ambiguity_cover"
+    ],
+    "budgets": [
+      0,
+      5,
+      10,
+      20,
+      40
+    ],
+    "version": "author-query-cn-2",
+    "cohort": [
+      51553,
+      290840,
+      68377,
+      377640,
+      629215,
+      272202,
+      170680,
+      80070,
+      916824,
+      92177,
+      472057,
+      27712,
+      57037,
+      52610,
+      51568,
+      239744,
+      731475,
+      141221,
+      677304,
+      67363,
+      599882,
+      620647,
+      345366,
+      121974,
+      900003,
+      721135,
+      312490,
+      914091,
+      234957,
+      13369,
+      199024,
+      166017,
+      815590,
+      306900,
+      153998,
+      121374,
+      154681,
+      168373,
+      14768,
+      94125,
+      13335,
+      271325,
+      888269,
+      303552,
+      1517096,
+      6310,
+      599963,
+      39786,
+      69160,
+      194023,
+      147497,
+      658285,
+      1473644,
+      10223,
+      258961,
+      241081,
+      1353966,
+      925064,
+      118519,
+      372098,
+      164124,
+      943529,
+      423308,
+      381447,
+      147779,
+      454820,
+      1204281,
+      217239,
+      1009585,
+      398831,
+      205332,
+      9083,
+      1435298,
+      1077287,
+      38709,
+      191209,
+      325287,
+      477144,
+      372788,
+      550164,
+      117145,
+      184839,
+      1587427,
+      355114,
+      629407,
+      296595,
+      1732098,
+      372382,
+      1474151,
+      56569,
+      1086456,
+      313830,
+      1012694,
+      38037,
+      45895,
+      392431,
+      68677,
+      194366,
+      84726,
+      572540,
+      80620,
+      211240,
+      545730,
+      516999,
+      620010,
+      97672,
+      895155,
+      122707,
+      877901,
+      375226,
+      1311588,
+      124699,
+      544985,
+      407127,
+      629363,
+      437873,
+      931114,
+      63358,
+      214817,
+      369724,
+      1473464,
+      513246,
+      198153,
+      466140,
+      658510,
+      52172,
+      75557,
+      981776
+    ],
+    "task": "next-year new edges among historically seen authors; cold-start and repeated ties separately counted",
+    "sampling": "at least three papers in trailing five years and two historical neighbors; SHA256 order, no future labels",
+    "source": {
+      "dataset": "coauth-DBLP",
+      "events": 3700067,
+      "nodes": 1924991,
+      "incidences": 10304422,
+      "min_team": 1,
+      "max_team": 25,
+      "year_counts": {
+        "1936": 12,
+        "1937": 15,
+        "1938": 10,
+        "1939": 18,
+        "1940": 10,
+        "1941": 13,
+        "1942": 13,
+        "1943": 8,
+        "1944": 5,
+        "1945": 9,
+        "1946": 31,
+        "1947": 10,
+        "1948": 15,
+        "1949": 23,
+        "1950": 24,
+        "1951": 19,
+        "1952": 34,
+        "1953": 110,
+        "1954": 158,
+        "1955": 149,
+        "1956": 206,
+        "1957": 241,
+        "1958": 267,
+        "1959": 453,
+        "1960": 422,
+        "1961": 625,
+        "1962": 934,
+        "1963": 794,
+        "1964": 792,
+        "1965": 950,
+        "1966": 1114,
+        "1967": 1432,
+        "1968": 1853,
+        "1969": 1728,
+        "1970": 1770,
+        "1971": 2354,
+        "1972": 2805,
+        "1973": 3274,
+        "1974": 3806,
+        "1975": 3956,
+        "1976": 4526,
+        "1977": 4983,
+        "1978": 5211,
+        "1979": 5674,
+        "1980": 6542,
+        "1981": 6919,
+        "1982": 7823,
+        "1983": 8872,
+        "1984": 10450,
+        "1985": 11115,
+        "1986": 13310,
+        "1987": 14193,
+        "1988": 16851,
+        "1989": 19441,
+        "1990": 22042,
+        "1991": 25495,
+        "1992": 28536,
+        "1993": 34197,
+        "1994": 38831,
+        "1995": 40593,
+        "1996": 44629,
+        "1997": 48994,
+        "1998": 54643,
+        "1999": 61146,
+        "2000": 69765,
+        "2001": 74825,
+        "2002": 83970,
+        "2003": 99931,
+        "2004": 120785,
+        "2005": 140696,
+        "2006": 154714,
+        "2007": 171374,
+        "2008": 182433,
+        "2009": 197964,
+        "2010": 206182,
+        "2011": 223522,
+        "2012": 234672,
+        "2013": 244821,
+        "2014": 253369,
+        "2015": 262304,
+        "2016": 266983,
+        "2017": 146113,
+        "2018": 166
+      },
+      "source_sha256": "0cf134f8342690e76e5f54b634d851a5b5b498eb8f3b2a608d80e63353f38071",
+      "processed_sha256": "421e6747a3ec2f8aaad404a706d7c25904d7b42df7b81db3380bc1255efd10c8"
+    }
+  },
+  "summary": [
+    {
+      "policy": "ambiguity_cover",
+      "budget": 0,
+      "n_targets": 128,
+      "targets_with_new_seen_edges": 44,
+      "gold_new_seen": 111,
+      "gold_new_cold": 68,
+      "certified_top10_rate": 0.0,
+      "mean_observed_papers": 11.5546875,
+      "mean_actual_queries": 0.0,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        }
+      }
+    },
+    {
+      "policy": "ambiguity_cover",
+      "budget": 5,
+      "n_targets": 128,
+      "targets_with_new_seen_edges": 44,
+      "gold_new_seen": 111,
+      "gold_new_cold": 68,
+      "certified_top10_rate": 0.0,
+      "mean_observed_papers": 102.5234375,
+      "mean_actual_queries": 4.9765625,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.05405405405405406,
+          "candidate_recall": 0.2072072072072072,
+          "macro_average_precision_positive_targets": 0.04310302435742583,
+          "precision_at_10_all_targets": 0.004687500000000001
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.05405405405405406,
+          "candidate_recall": 0.2072072072072072,
+          "macro_average_precision_positive_targets": 0.0428864633957212,
+          "precision_at_10_all_targets": 0.004687500000000001
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.04504504504504504,
+          "candidate_recall": 0.2072072072072072,
+          "macro_average_precision_positive_targets": 0.04189996977269523,
+          "precision_at_10_all_targets": 0.00390625
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.036036036036036036,
+          "candidate_recall": 0.2072072072072072,
+          "macro_average_precision_positive_targets": 0.024099015311389648,
+          "precision_at_10_all_targets": 0.003125
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.04504504504504504,
+          "candidate_recall": 0.2072072072072072,
+          "macro_average_precision_positive_targets": 0.03197545482011411,
+          "precision_at_10_all_targets": 0.00390625
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.04504504504504504,
+          "candidate_recall": 0.2072072072072072,
+          "macro_average_precision_positive_targets": 0.03197545482011411,
+          "precision_at_10_all_targets": 0.00390625
+        }
+      }
+    },
+    {
+      "policy": "ambiguity_cover",
+      "budget": 10,
+      "n_targets": 128,
+      "targets_with_new_seen_edges": 44,
+      "gold_new_seen": 111,
+      "gold_new_cold": 68,
+      "certified_top10_rate": 0.015625,
+      "mean_observed_papers": 178.0078125,
+      "mean_actual_queries": 9.9140625,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.05405405405405406,
+          "candidate_recall": 0.2072072072072072,
+          "macro_average_precision_positive_targets": 0.05234087547119337,
+          "precision_at_10_all_targets": 0.004687500000000001
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.05405405405405406,
+          "candidate_recall": 0.2072072072072072,
+          "macro_average_precision_positive_targets": 0.05180940406697141,
+          "precision_at_10_all_targets": 0.004687500000000001
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.036036036036036036,
+          "candidate_recall": 0.2072072072072072,
+          "macro_average_precision_positive_targets": 0.050542490989352595,
+          "precision_at_10_all_targets": 0.003125
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.02702702702702703,
+          "candidate_recall": 0.2072072072072072,
+          "macro_average_precision_positive_targets": 0.025904022091161202,
+          "precision_at_10_all_targets": 0.0023437500000000003
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.036036036036036036,
+          "candidate_recall": 0.2072072072072072,
+          "macro_average_precision_positive_targets": 0.01923437854926739,
+          "precision_at_10_all_targets": 0.003125
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.036036036036036036,
+          "candidate_recall": 0.2072072072072072,
+          "macro_average_precision_positive_targets": 0.01923437854926739,
+          "precision_at_10_all_targets": 0.003125
+        }
+      }
+    },
+    {
+      "policy": "ambiguity_cover",
+      "budget": 20,
+      "n_targets": 128,
+      "targets_with_new_seen_edges": 44,
+      "gold_new_seen": 111,
+      "gold_new_cold": 68,
+      "certified_top10_rate": 0.03125,
+      "mean_observed_papers": 449.5078125,
+      "mean_actual_queries": 19.640625,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.05405405405405406,
+          "candidate_recall": 0.24324324324324326,
+          "macro_average_precision_positive_targets": 0.05267927229735267,
+          "precision_at_10_all_targets": 0.004687500000000001
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.05405405405405406,
+          "candidate_recall": 0.24324324324324326,
+          "macro_average_precision_positive_targets": 0.051912668529207354,
+          "precision_at_10_all_targets": 0.004687500000000001
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.036036036036036036,
+          "candidate_recall": 0.24324324324324326,
+          "macro_average_precision_positive_targets": 0.050791631398473334,
+          "precision_at_10_all_targets": 0.003125
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.036036036036036036,
+          "candidate_recall": 0.24324324324324326,
+          "macro_average_precision_positive_targets": 0.03424142521029119,
+          "precision_at_10_all_targets": 0.003125
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.24324324324324326,
+          "macro_average_precision_positive_targets": 0.008361710697685217,
+          "precision_at_10_all_targets": 0.0
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.24324324324324326,
+          "macro_average_precision_positive_targets": 0.008361710697685217,
+          "precision_at_10_all_targets": 0.0
+        }
+      }
+    },
+    {
+      "policy": "ambiguity_cover",
+      "budget": 40,
+      "n_targets": 128,
+      "targets_with_new_seen_edges": 44,
+      "gold_new_seen": 111,
+      "gold_new_cold": 68,
+      "certified_top10_rate": 0.0390625,
+      "mean_observed_papers": 1098.109375,
+      "mean_actual_queries": 39.015625,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.05405405405405406,
+          "candidate_recall": 0.26126126126126126,
+          "macro_average_precision_positive_targets": 0.051988173287914045,
+          "precision_at_10_all_targets": 0.004687500000000001
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.05405405405405406,
+          "candidate_recall": 0.26126126126126126,
+          "macro_average_precision_positive_targets": 0.0510959544386234,
+          "precision_at_10_all_targets": 0.004687500000000001
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.036036036036036036,
+          "candidate_recall": 0.26126126126126126,
+          "macro_average_precision_positive_targets": 0.049760911016615124,
+          "precision_at_10_all_targets": 0.003125
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.02702702702702703,
+          "candidate_recall": 0.26126126126126126,
+          "macro_average_precision_positive_targets": 0.011180438517117046,
+          "precision_at_10_all_targets": 0.0023437500000000003
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.26126126126126126,
+          "macro_average_precision_positive_targets": 0.0036942864276343803,
+          "precision_at_10_all_targets": 0.0
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.26126126126126126,
+          "macro_average_precision_positive_targets": 0.0036942864276343803,
+          "precision_at_10_all_targets": 0.0
+        }
+      }
+    },
+    {
+      "policy": "observed_degree",
+      "budget": 0,
+      "n_targets": 128,
+      "targets_with_new_seen_edges": 44,
+      "gold_new_seen": 111,
+      "gold_new_cold": 68,
+      "certified_top10_rate": 0.0,
+      "mean_observed_papers": 11.5546875,
+      "mean_actual_queries": 0.0,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        }
+      }
+    },
+    {
+      "policy": "observed_degree",
+      "budget": 5,
+      "n_targets": 128,
+      "targets_with_new_seen_edges": 44,
+      "gold_new_seen": 111,
+      "gold_new_cold": 68,
+      "certified_top10_rate": 0.0,
+      "mean_observed_papers": 144.8125,
+      "mean_actual_queries": 4.9765625,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.05405405405405406,
+          "candidate_recall": 0.1981981981981982,
+          "macro_average_precision_positive_targets": 0.05421002121672924,
+          "precision_at_10_all_targets": 0.004687500000000001
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.04504504504504504,
+          "candidate_recall": 0.1981981981981982,
+          "macro_average_precision_positive_targets": 0.05400767352761562,
+          "precision_at_10_all_targets": 0.00390625
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.04504504504504504,
+          "candidate_recall": 0.1981981981981982,
+          "macro_average_precision_positive_targets": 0.054261835177077014,
+          "precision_at_10_all_targets": 0.00390625
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.04504504504504504,
+          "candidate_recall": 0.1981981981981982,
+          "macro_average_precision_positive_targets": 0.044836668116974204,
+          "precision_at_10_all_targets": 0.00390625
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.04504504504504504,
+          "candidate_recall": 0.1981981981981982,
+          "macro_average_precision_positive_targets": 0.020357418452937037,
+          "precision_at_10_all_targets": 0.00390625
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.04504504504504504,
+          "candidate_recall": 0.1981981981981982,
+          "macro_average_precision_positive_targets": 0.020357418452937037,
+          "precision_at_10_all_targets": 0.00390625
+        }
+      }
+    },
+    {
+      "policy": "observed_degree",
+      "budget": 10,
+      "n_targets": 128,
+      "targets_with_new_seen_edges": 44,
+      "gold_new_seen": 111,
+      "gold_new_cold": 68,
+      "certified_top10_rate": 0.0,
+      "mean_observed_papers": 278.328125,
+      "mean_actual_queries": 9.9140625,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.05405405405405406,
+          "candidate_recall": 0.21621621621621623,
+          "macro_average_precision_positive_targets": 0.05496460266368619,
+          "precision_at_10_all_targets": 0.004687500000000001
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.05405405405405406,
+          "candidate_recall": 0.21621621621621623,
+          "macro_average_precision_positive_targets": 0.05457880899330337,
+          "precision_at_10_all_targets": 0.004687500000000001
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.05405405405405406,
+          "candidate_recall": 0.21621621621621623,
+          "macro_average_precision_positive_targets": 0.05453844100580088,
+          "precision_at_10_all_targets": 0.004687500000000001
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.036036036036036036,
+          "candidate_recall": 0.21621621621621623,
+          "macro_average_precision_positive_targets": 0.04431101428141144,
+          "precision_at_10_all_targets": 0.003125
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.036036036036036036,
+          "candidate_recall": 0.21621621621621623,
+          "macro_average_precision_positive_targets": 0.011972363199568509,
+          "precision_at_10_all_targets": 0.003125
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.036036036036036036,
+          "candidate_recall": 0.21621621621621623,
+          "macro_average_precision_positive_targets": 0.011972363199568509,
+          "precision_at_10_all_targets": 0.003125
+        }
+      }
+    },
+    {
+      "policy": "observed_degree",
+      "budget": 20,
+      "n_targets": 128,
+      "targets_with_new_seen_edges": 44,
+      "gold_new_seen": 111,
+      "gold_new_cold": 68,
+      "certified_top10_rate": 0.0,
+      "mean_observed_papers": 559.21875,
+      "mean_actual_queries": 19.640625,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.05405405405405406,
+          "candidate_recall": 0.22522522522522523,
+          "macro_average_precision_positive_targets": 0.05473516506807736,
+          "precision_at_10_all_targets": 0.004687500000000001
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.05405405405405406,
+          "candidate_recall": 0.22522522522522523,
+          "macro_average_precision_positive_targets": 0.05420052072216907,
+          "precision_at_10_all_targets": 0.004687500000000001
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.05405405405405406,
+          "candidate_recall": 0.22522522522522523,
+          "macro_average_precision_positive_targets": 0.05415045268940067,
+          "precision_at_10_all_targets": 0.004687500000000001
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.018018018018018018,
+          "candidate_recall": 0.22522522522522523,
+          "macro_average_precision_positive_targets": 0.012224072259753025,
+          "precision_at_10_all_targets": 0.0015625
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.22522522522522523,
+          "macro_average_precision_positive_targets": 0.004888083064187889,
+          "precision_at_10_all_targets": 0.0
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.22522522522522523,
+          "macro_average_precision_positive_targets": 0.004888083064187889,
+          "precision_at_10_all_targets": 0.0
+        }
+      }
+    },
+    {
+      "policy": "observed_degree",
+      "budget": 40,
+      "n_targets": 128,
+      "targets_with_new_seen_edges": 44,
+      "gold_new_seen": 111,
+      "gold_new_cold": 68,
+      "certified_top10_rate": 0.0,
+      "mean_observed_papers": 1202.078125,
+      "mean_actual_queries": 39.015625,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.05405405405405406,
+          "candidate_recall": 0.24324324324324326,
+          "macro_average_precision_positive_targets": 0.05460233706545269,
+          "precision_at_10_all_targets": 0.004687500000000001
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.05405405405405406,
+          "candidate_recall": 0.24324324324324326,
+          "macro_average_precision_positive_targets": 0.0540418847081003,
+          "precision_at_10_all_targets": 0.004687500000000001
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.05405405405405406,
+          "candidate_recall": 0.24324324324324326,
+          "macro_average_precision_positive_targets": 0.05395308190507819,
+          "precision_at_10_all_targets": 0.004687500000000001
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.018018018018018018,
+          "candidate_recall": 0.24324324324324326,
+          "macro_average_precision_positive_targets": 0.0071825043906818715,
+          "precision_at_10_all_targets": 0.0015625
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.24324324324324326,
+          "macro_average_precision_positive_targets": 0.002501030871476264,
+          "precision_at_10_all_targets": 0.0
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.24324324324324326,
+          "macro_average_precision_positive_targets": 0.002501030871476264,
+          "precision_at_10_all_targets": 0.0
+        }
+      }
+    },
+    {
+      "policy": "random",
+      "budget": 0,
+      "n_targets": 128,
+      "targets_with_new_seen_edges": 44,
+      "gold_new_seen": 111,
+      "gold_new_cold": 68,
+      "certified_top10_rate": 0.0,
+      "mean_observed_papers": 11.5546875,
+      "mean_actual_queries": 0.0,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        }
+      }
+    },
+    {
+      "policy": "random",
+      "budget": 5,
+      "n_targets": 128,
+      "targets_with_new_seen_edges": 44,
+      "gold_new_seen": 111,
+      "gold_new_cold": 68,
+      "certified_top10_rate": 0.0,
+      "mean_observed_papers": 91.1640625,
+      "mean_actual_queries": 4.9765625,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.02702702702702703,
+          "candidate_recall": 0.08108108108108109,
+          "macro_average_precision_positive_targets": 0.0444993892148711,
+          "precision_at_10_all_targets": 0.0023437500000000003
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.02702702702702703,
+          "candidate_recall": 0.08108108108108109,
+          "macro_average_precision_positive_targets": 0.04066824229161892,
+          "precision_at_10_all_targets": 0.0023437500000000003
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.02702702702702703,
+          "candidate_recall": 0.08108108108108109,
+          "macro_average_precision_positive_targets": 0.04066824229161892,
+          "precision_at_10_all_targets": 0.0023437500000000003
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.018018018018018018,
+          "candidate_recall": 0.08108108108108109,
+          "macro_average_precision_positive_targets": 0.013974010061823179,
+          "precision_at_10_all_targets": 0.0015625
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.05405405405405406,
+          "candidate_recall": 0.08108108108108109,
+          "macro_average_precision_positive_targets": 0.023710503118132574,
+          "precision_at_10_all_targets": 0.004687500000000001
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.05405405405405406,
+          "candidate_recall": 0.08108108108108109,
+          "macro_average_precision_positive_targets": 0.023710503118132574,
+          "precision_at_10_all_targets": 0.004687500000000001
+        }
+      }
+    },
+    {
+      "policy": "random",
+      "budget": 10,
+      "n_targets": 128,
+      "targets_with_new_seen_edges": 44,
+      "gold_new_seen": 111,
+      "gold_new_cold": 68,
+      "certified_top10_rate": 0.0,
+      "mean_observed_papers": 169.78125,
+      "mean_actual_queries": 9.9140625,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.036036036036036036,
+          "candidate_recall": 0.10810810810810811,
+          "macro_average_precision_positive_targets": 0.05233645494978645,
+          "precision_at_10_all_targets": 0.003125
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.036036036036036036,
+          "candidate_recall": 0.10810810810810811,
+          "macro_average_precision_positive_targets": 0.048274741491619894,
+          "precision_at_10_all_targets": 0.003125
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.036036036036036036,
+          "candidate_recall": 0.10810810810810811,
+          "macro_average_precision_positive_targets": 0.048274741491619894,
+          "precision_at_10_all_targets": 0.003125
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.018018018018018018,
+          "candidate_recall": 0.10810810810810811,
+          "macro_average_precision_positive_targets": 0.017043475571002484,
+          "precision_at_10_all_targets": 0.0015625
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.02702702702702703,
+          "candidate_recall": 0.10810810810810811,
+          "macro_average_precision_positive_targets": 0.010570212209965001,
+          "precision_at_10_all_targets": 0.0023437500000000003
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.02702702702702703,
+          "candidate_recall": 0.10810810810810811,
+          "macro_average_precision_positive_targets": 0.010570212209965001,
+          "precision_at_10_all_targets": 0.0023437500000000003
+        }
+      }
+    },
+    {
+      "policy": "random",
+      "budget": 20,
+      "n_targets": 128,
+      "targets_with_new_seen_edges": 44,
+      "gold_new_seen": 111,
+      "gold_new_cold": 68,
+      "certified_top10_rate": 0.0,
+      "mean_observed_papers": 342.359375,
+      "mean_actual_queries": 19.640625,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.04504504504504504,
+          "candidate_recall": 0.12612612612612611,
+          "macro_average_precision_positive_targets": 0.0506929389246193,
+          "precision_at_10_all_targets": 0.00390625
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.04504504504504504,
+          "candidate_recall": 0.12612612612612611,
+          "macro_average_precision_positive_targets": 0.04295157178679906,
+          "precision_at_10_all_targets": 0.00390625
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.04504504504504504,
+          "candidate_recall": 0.12612612612612611,
+          "macro_average_precision_positive_targets": 0.04295157178679906,
+          "precision_at_10_all_targets": 0.00390625
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.018018018018018018,
+          "candidate_recall": 0.12612612612612611,
+          "macro_average_precision_positive_targets": 0.021058604275550067,
+          "precision_at_10_all_targets": 0.0015625
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.009009009009009009,
+          "candidate_recall": 0.12612612612612611,
+          "macro_average_precision_positive_targets": 0.0054895685387647475,
+          "precision_at_10_all_targets": 0.00078125
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.009009009009009009,
+          "candidate_recall": 0.12612612612612611,
+          "macro_average_precision_positive_targets": 0.0054895685387647475,
+          "precision_at_10_all_targets": 0.00078125
+        }
+      }
+    },
+    {
+      "policy": "random",
+      "budget": 40,
+      "n_targets": 128,
+      "targets_with_new_seen_edges": 44,
+      "gold_new_seen": 111,
+      "gold_new_cold": 68,
+      "certified_top10_rate": 0.0,
+      "mean_observed_papers": 723.625,
+      "mean_actual_queries": 39.015625,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.04504504504504504,
+          "candidate_recall": 0.15315315315315314,
+          "macro_average_precision_positive_targets": 0.050662192190100847,
+          "precision_at_10_all_targets": 0.00390625
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.04504504504504504,
+          "candidate_recall": 0.15315315315315314,
+          "macro_average_precision_positive_targets": 0.04290042878188435,
+          "precision_at_10_all_targets": 0.00390625
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.04504504504504504,
+          "candidate_recall": 0.15315315315315314,
+          "macro_average_precision_positive_targets": 0.04289612149496837,
+          "precision_at_10_all_targets": 0.00390625
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.02702702702702703,
+          "candidate_recall": 0.15315315315315314,
+          "macro_average_precision_positive_targets": 0.011106270807386536,
+          "precision_at_10_all_targets": 0.0023437500000000003
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.15315315315315314,
+          "macro_average_precision_positive_targets": 0.0020287884169139622,
+          "precision_at_10_all_targets": 0.0
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.15315315315315314,
+          "macro_average_precision_positive_targets": 0.0020287884169139622,
+          "precision_at_10_all_targets": 0.0
+        }
+      }
+    },
+    {
+      "policy": "uncertainty",
+      "budget": 0,
+      "n_targets": 128,
+      "targets_with_new_seen_edges": 44,
+      "gold_new_seen": 111,
+      "gold_new_cold": 68,
+      "certified_top10_rate": 0.0,
+      "mean_observed_papers": 11.5546875,
+      "mean_actual_queries": 0.0,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        }
+      }
+    },
+    {
+      "policy": "uncertainty",
+      "budget": 5,
+      "n_targets": 128,
+      "targets_with_new_seen_edges": 44,
+      "gold_new_seen": 111,
+      "gold_new_cold": 68,
+      "certified_top10_rate": 0.0,
+      "mean_observed_papers": 176.3984375,
+      "mean_actual_queries": 4.9765625,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.05405405405405406,
+          "candidate_recall": 0.2072072072072072,
+          "macro_average_precision_positive_targets": 0.048171356459406504,
+          "precision_at_10_all_targets": 0.004687500000000001
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.05405405405405406,
+          "candidate_recall": 0.2072072072072072,
+          "macro_average_precision_positive_targets": 0.04743554677012615,
+          "precision_at_10_all_targets": 0.004687500000000001
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.05405405405405406,
+          "candidate_recall": 0.2072072072072072,
+          "macro_average_precision_positive_targets": 0.047404517193642026,
+          "precision_at_10_all_targets": 0.004687500000000001
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.05405405405405406,
+          "candidate_recall": 0.2072072072072072,
+          "macro_average_precision_positive_targets": 0.014544720478540434,
+          "precision_at_10_all_targets": 0.004687500000000001
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.036036036036036036,
+          "candidate_recall": 0.2072072072072072,
+          "macro_average_precision_positive_targets": 0.016455716689814222,
+          "precision_at_10_all_targets": 0.003125
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.036036036036036036,
+          "candidate_recall": 0.2072072072072072,
+          "macro_average_precision_positive_targets": 0.016455716689814222,
+          "precision_at_10_all_targets": 0.003125
+        }
+      }
+    },
+    {
+      "policy": "uncertainty",
+      "budget": 10,
+      "n_targets": 128,
+      "targets_with_new_seen_edges": 44,
+      "gold_new_seen": 111,
+      "gold_new_cold": 68,
+      "certified_top10_rate": 0.0,
+      "mean_observed_papers": 311.203125,
+      "mean_actual_queries": 9.9140625,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.06306306306306306,
+          "candidate_recall": 0.23423423423423423,
+          "macro_average_precision_positive_targets": 0.051651244983198015,
+          "precision_at_10_all_targets": 0.0054687500000000005
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.06306306306306306,
+          "candidate_recall": 0.23423423423423423,
+          "macro_average_precision_positive_targets": 0.04842867953654899,
+          "precision_at_10_all_targets": 0.0054687500000000005
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.06306306306306306,
+          "candidate_recall": 0.23423423423423423,
+          "macro_average_precision_positive_targets": 0.048377185474717435,
+          "precision_at_10_all_targets": 0.0054687500000000005
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.036036036036036036,
+          "candidate_recall": 0.23423423423423423,
+          "macro_average_precision_positive_targets": 0.01829966870881696,
+          "precision_at_10_all_targets": 0.003125
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.009009009009009009,
+          "candidate_recall": 0.23423423423423423,
+          "macro_average_precision_positive_targets": 0.00863247159403321,
+          "precision_at_10_all_targets": 0.00078125
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.009009009009009009,
+          "candidate_recall": 0.23423423423423423,
+          "macro_average_precision_positive_targets": 0.00863247159403321,
+          "precision_at_10_all_targets": 0.00078125
+        }
+      }
+    },
+    {
+      "policy": "uncertainty",
+      "budget": 20,
+      "n_targets": 128,
+      "targets_with_new_seen_edges": 44,
+      "gold_new_seen": 111,
+      "gold_new_cold": 68,
+      "certified_top10_rate": 0.0,
+      "mean_observed_papers": 597.2109375,
+      "mean_actual_queries": 19.640625,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.06306306306306306,
+          "candidate_recall": 0.23423423423423423,
+          "macro_average_precision_positive_targets": 0.0495430263645376,
+          "precision_at_10_all_targets": 0.0054687500000000005
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.06306306306306306,
+          "candidate_recall": 0.23423423423423423,
+          "macro_average_precision_positive_targets": 0.04670001557375902,
+          "precision_at_10_all_targets": 0.0054687500000000005
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.06306306306306306,
+          "candidate_recall": 0.23423423423423423,
+          "macro_average_precision_positive_targets": 0.046648521511927464,
+          "precision_at_10_all_targets": 0.0054687500000000005
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.036036036036036036,
+          "candidate_recall": 0.23423423423423423,
+          "macro_average_precision_positive_targets": 0.012525104155953187,
+          "precision_at_10_all_targets": 0.003125
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.009009009009009009,
+          "candidate_recall": 0.23423423423423423,
+          "macro_average_precision_positive_targets": 0.0052094027841955185,
+          "precision_at_10_all_targets": 0.00078125
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.009009009009009009,
+          "candidate_recall": 0.23423423423423423,
+          "macro_average_precision_positive_targets": 0.0052094027841955185,
+          "precision_at_10_all_targets": 0.00078125
+        }
+      }
+    },
+    {
+      "policy": "uncertainty",
+      "budget": 40,
+      "n_targets": 128,
+      "targets_with_new_seen_edges": 44,
+      "gold_new_seen": 111,
+      "gold_new_cold": 68,
+      "certified_top10_rate": 0.0,
+      "mean_observed_papers": 1313.9296875,
+      "mean_actual_queries": 39.015625,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.06306306306306306,
+          "candidate_recall": 0.25225225225225223,
+          "macro_average_precision_positive_targets": 0.04950434086531194,
+          "precision_at_10_all_targets": 0.0054687500000000005
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.06306306306306306,
+          "candidate_recall": 0.25225225225225223,
+          "macro_average_precision_positive_targets": 0.046661330074533366,
+          "precision_at_10_all_targets": 0.0054687500000000005
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.06306306306306306,
+          "candidate_recall": 0.25225225225225223,
+          "macro_average_precision_positive_targets": 0.046609836012701814,
+          "precision_at_10_all_targets": 0.0054687500000000005
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.02702702702702703,
+          "candidate_recall": 0.25225225225225223,
+          "macro_average_precision_positive_targets": 0.010125583759196762,
+          "precision_at_10_all_targets": 0.0023437500000000003
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.25225225225225223,
+          "macro_average_precision_positive_targets": 0.002139196257547711,
+          "precision_at_10_all_targets": 0.0
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.25225225225225223,
+          "macro_average_precision_positive_targets": 0.002139196257547711,
+          "precision_at_10_all_targets": 0.0
+        }
+      }
+    },
+    {
+      "policy": "uniform_cover",
+      "budget": 0,
+      "n_targets": 128,
+      "targets_with_new_seen_edges": 44,
+      "gold_new_seen": 111,
+      "gold_new_cold": 68,
+      "certified_top10_rate": 0.0,
+      "mean_observed_papers": 11.5546875,
+      "mean_actual_queries": 0.0,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.0,
+          "macro_average_precision_positive_targets": 0.0,
+          "precision_at_10_all_targets": 0.0
+        }
+      }
+    },
+    {
+      "policy": "uniform_cover",
+      "budget": 5,
+      "n_targets": 128,
+      "targets_with_new_seen_edges": 44,
+      "gold_new_seen": 111,
+      "gold_new_cold": 68,
+      "certified_top10_rate": 0.0,
+      "mean_observed_papers": 106.84375,
+      "mean_actual_queries": 4.9765625,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.06306306306306306,
+          "candidate_recall": 0.22522522522522523,
+          "macro_average_precision_positive_targets": 0.04671223758621876,
+          "precision_at_10_all_targets": 0.0054687500000000005
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.06306306306306306,
+          "candidate_recall": 0.22522522522522523,
+          "macro_average_precision_positive_targets": 0.04650859916782343,
+          "precision_at_10_all_targets": 0.0054687500000000005
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.06306306306306306,
+          "candidate_recall": 0.22522522522522523,
+          "macro_average_precision_positive_targets": 0.04587468635170722,
+          "precision_at_10_all_targets": 0.0054687500000000005
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.06306306306306306,
+          "candidate_recall": 0.22522522522522523,
+          "macro_average_precision_positive_targets": 0.02825995194445755,
+          "precision_at_10_all_targets": 0.00546875
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.06306306306306306,
+          "candidate_recall": 0.22522522522522523,
+          "macro_average_precision_positive_targets": 0.027428263686952673,
+          "precision_at_10_all_targets": 0.00546875
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.06306306306306306,
+          "candidate_recall": 0.22522522522522523,
+          "macro_average_precision_positive_targets": 0.027428263686952673,
+          "precision_at_10_all_targets": 0.00546875
+        }
+      }
+    },
+    {
+      "policy": "uniform_cover",
+      "budget": 10,
+      "n_targets": 128,
+      "targets_with_new_seen_edges": 44,
+      "gold_new_seen": 111,
+      "gold_new_cold": 68,
+      "certified_top10_rate": 0.015625,
+      "mean_observed_papers": 179.515625,
+      "mean_actual_queries": 9.9140625,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.06306306306306306,
+          "candidate_recall": 0.22522522522522523,
+          "macro_average_precision_positive_targets": 0.053633865734763586,
+          "precision_at_10_all_targets": 0.0054687500000000005
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.06306306306306306,
+          "candidate_recall": 0.22522522522522523,
+          "macro_average_precision_positive_targets": 0.05312664980933766,
+          "precision_at_10_all_targets": 0.0054687500000000005
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.04504504504504504,
+          "candidate_recall": 0.22522522522522523,
+          "macro_average_precision_positive_targets": 0.0518565103289709,
+          "precision_at_10_all_targets": 0.00390625
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.036036036036036036,
+          "candidate_recall": 0.22522522522522523,
+          "macro_average_precision_positive_targets": 0.026525957682454415,
+          "precision_at_10_all_targets": 0.003125
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.036036036036036036,
+          "candidate_recall": 0.22522522522522523,
+          "macro_average_precision_positive_targets": 0.017931176561425885,
+          "precision_at_10_all_targets": 0.003125
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.036036036036036036,
+          "candidate_recall": 0.22522522522522523,
+          "macro_average_precision_positive_targets": 0.017931176561425885,
+          "precision_at_10_all_targets": 0.003125
+        }
+      }
+    },
+    {
+      "policy": "uniform_cover",
+      "budget": 20,
+      "n_targets": 128,
+      "targets_with_new_seen_edges": 44,
+      "gold_new_seen": 111,
+      "gold_new_cold": 68,
+      "certified_top10_rate": 0.03125,
+      "mean_observed_papers": 440.8984375,
+      "mean_actual_queries": 19.640625,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.06306306306306306,
+          "candidate_recall": 0.25225225225225223,
+          "macro_average_precision_positive_targets": 0.05347117865613257,
+          "precision_at_10_all_targets": 0.0054687500000000005
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.06306306306306306,
+          "candidate_recall": 0.25225225225225223,
+          "macro_average_precision_positive_targets": 0.052894758681319584,
+          "precision_at_10_all_targets": 0.0054687500000000005
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.04504504504504504,
+          "candidate_recall": 0.25225225225225223,
+          "macro_average_precision_positive_targets": 0.052556831711689726,
+          "precision_at_10_all_targets": 0.00390625
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.036036036036036036,
+          "candidate_recall": 0.25225225225225223,
+          "macro_average_precision_positive_targets": 0.03586136144997811,
+          "precision_at_10_all_targets": 0.003125
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.25225225225225223,
+          "macro_average_precision_positive_targets": 0.009859999124080242,
+          "precision_at_10_all_targets": 0.0
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.25225225225225223,
+          "macro_average_precision_positive_targets": 0.009859999124080242,
+          "precision_at_10_all_targets": 0.0
+        }
+      }
+    },
+    {
+      "policy": "uniform_cover",
+      "budget": 40,
+      "n_targets": 128,
+      "targets_with_new_seen_edges": 44,
+      "gold_new_seen": 111,
+      "gold_new_cold": 68,
+      "certified_top10_rate": 0.0390625,
+      "mean_observed_papers": 1084.9296875,
+      "mean_actual_queries": 39.015625,
+      "new_edge": {
+        "common_neighbors": {
+          "micro_recall_at_10": 0.06306306306306306,
+          "candidate_recall": 0.2702702702702703,
+          "macro_average_precision_positive_targets": 0.052507444735106275,
+          "precision_at_10_all_targets": 0.0054687500000000005
+        },
+        "adamic_adar": {
+          "micro_recall_at_10": 0.06306306306306306,
+          "candidate_recall": 0.2702702702702703,
+          "macro_average_precision_positive_targets": 0.05193567345322341,
+          "precision_at_10_all_targets": 0.0054687500000000005
+        },
+        "resource_allocation": {
+          "micro_recall_at_10": 0.04504504504504504,
+          "candidate_recall": 0.2702702702702703,
+          "macro_average_precision_positive_targets": 0.0514871864395893,
+          "precision_at_10_all_targets": 0.00390625
+        },
+        "preferential_attachment": {
+          "micro_recall_at_10": 0.02702702702702703,
+          "candidate_recall": 0.2702702702702703,
+          "macro_average_precision_positive_targets": 0.011865140775658218,
+          "precision_at_10_all_targets": 0.0023437500000000003
+        },
+        "edge_bank": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.2702702702702703,
+          "macro_average_precision_positive_targets": 0.003893547660273711,
+          "precision_at_10_all_targets": 0.0
+        },
+        "past_joint_count": {
+          "micro_recall_at_10": 0.0,
+          "candidate_recall": 0.2702702702702703,
+          "macro_average_precision_positive_targets": 0.003893547660273711,
+          "precision_at_10_all_targets": 0.0
+        }
+      }
+    }
+  ],
+  "rows_path": "data/research/temporal/runs/coauth-DBLP-2004-n128-s42-author-query-cn-2",
+  "peak_rss_platform_units": 328548352,
+  "limitations": [
+    "Development results only, not a frozen test or paper-ready claim.",
+    "Author responses are complete relative to the published dataset; real source completeness must be audited separately.",
+    "Scores with ties use fixed author ID ordering; EdgeBank has no discrimination for new edges.",
+    "No binary accuracy on arbitrary sampled nonedges; fixed future positives remain in recall denominator."
+  ]
+}

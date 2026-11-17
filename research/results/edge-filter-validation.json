@@ -1,0 +1,21 @@
+{
+  "verified_at": "2026-11-16T10:58:30.869763+00:00",
+  "unit_api_tests": 83,
+  "browser_filter_combinations": 48,
+  "checks": [
+    "observed edge meanings",
+    "contemporaneous institution evidence",
+    "keyboard inspection",
+    "evidence navigation",
+    "filtered export",
+    "empty state",
+    "desktop and mobile layout"
+  ],
+  "files_sha256": {
+    "scholartrace/network.py": "b5add2c08ec700c75a7ca9e97fc77d76d2db14a6cbc1d64432cd1ed8b423831d",
+    "scholartrace/static/network.js": "6984812d5fb753a815d0294c8988af6ddd450414c9bb3b0ca06cd08cbc891a11",
+    "scholartrace/static/index.html": "42ad8edf0ea98b1d18f9339234ede52b67d29759ffd0a064ae58dba271e946fa",
+    "tests/test_edge_semantics.py": "c77608a975ae6563eacf254697093dadffbec5e6cf60570feef75e40c408450b",
+    "tests/browser_edges.py": "e4b2b16b933ff6d4b16f631ce252af0c6ea571aabd44513f5cb32580676181ab"
+  }
+}

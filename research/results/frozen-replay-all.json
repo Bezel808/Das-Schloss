@@ -1,0 +1,42 @@
+{
+  "suite": "all",
+  "protocol_sha256": "9e66e5fa38155259298ba35b65a93cfe2a834fc3b6b789ef2c80685ac8c70c96",
+  "recomputed_target_years": 5120,
+  "reused_author_checkpoints": 0,
+  "exact_query_logs": true,
+  "exact_all_method_metrics": true,
+  "exact_numerical_diagnostics": true,
+  "exact_holdout_summary": true,
+  "live_code_imported": false,
+  "environment": {
+    "python": "3.12.11",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "machine": "arm64",
+    "logical_cpus": 10,
+    "packages": {
+      "fastapi": "0.163.1",
+      "uvicorn": "0.54.0",
+      "httpx": "0.28.1",
+      "networkx": "3.7",
+      "numpy": "2.5.4",
+      "scipy": "1.18.1",
+      "scikit-learn": "1.9.1",
+      "pydantic": "2.14.3",
+      "starlette": "1.10.0"
+    },
+    "note": "Actual runtime used for reported tests; Python 3.12 requirements.lock pins these runtime dependencies with hashes."
+  },
+  "snapshot_manifest_sha256": "4483f00f1ad04cc888cfa75a46b3cb86c43833472d8a40c3a1e86859a009dcd6",
+  "additional_stage_checks": {
+    "development_states_compared": 143360,
+    "candidate_rows_compared": 98304,
+    "exact_development_metrics_and_queries": true,
+    "exact_candidate_metrics": true,
+    "exact_retrained_ml_models_sampling_and_evaluation": true,
+    "ignored_nondeterministic_fields": [
+      "development elapsed_seconds",
+      "process peak RSS",
+      "derived report hashes containing measurements"
+    ]
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "source_sha256": "d13f12ca78ad5d6408767191b7bccb004fc3800601a6b9d1081decf09398b474",
+  "protocol_sha256": "9e66e5fa38155259298ba35b65a93cfe2a834fc3b6b789ef2c80685ac8c70c96",
+  "rows": [
+    {
+      "dataset": "coauth-DBLP",
+      "years": [
+        2011,
+        2012,
+        2013
+      ],
+      "target_years": 1536,
+      "unique_authors": 1534,
+      "primary_mean_recall": 0.06191040222536285,
+      "baseline_mean_recall": 0.04687266843095528,
+      "equal_year_difference": 0.015037733794407579,
+      "year_stratified_paired_95": [
+        0.006098425890567139,
+        0.024213069712025165
+      ],
+      "year_stratified_valid_replicates": 5000,
+      "author_cluster_paired_95_sensitivity": [
+        0.006220714984174864,
+        0.02419445952356484
+      ],
+      "author_cluster_valid_replicates": 5000
+    },
+    {
+      "dataset": "coauth-MAG-History",
+      "years": [
+        2011,
+        2012,
+        2013
+      ],
+      "target_years": 1536,
+      "unique_authors": 1495,
+      "primary_mean_recall": 0.05830518051920331,
+      "baseline_mean_recall": 0.051997842186825016,
+      "equal_year_difference": 0.0063073383323782985,
+      "year_stratified_paired_95": [
+        -0.006452648808856278,
+        0.023610139578254828
+      ],
+      "year_stratified_valid_replicates": 5000,
+      "author_cluster_paired_95_sensitivity": [
+        -0.0065348728830235585,
+        0.023496545777213912
+      ],
+      "author_cluster_valid_replicates": 5000
+    }
+  ],
+  "bootstrap_replicates": 5000,
+  "year_stratified_seed": "813 + cutoff year",
+  "author_cluster_seed": 1813,
+  "scope": "Conditional on the fixed three final years, source graphs and sampled historical-activity populations. Years are not resampled; these are not intervals for future-year generalization. History was seen during development, not an untouched domain.",
+  "analysis": "Predeclared equal-year mean contrast, with reporting-only bootstrap and repeated-author cluster sensitivity; no model or query changes."
+}

@@ -1,0 +1,10 @@
+{
+  "previous_synchronous_seconds": 4.977,
+  "task_acceptance_seconds": 0.0119,
+  "cold_completion_including_poll_seconds": 5.2793,
+  "cached_response_seconds": 0.3366,
+  "identical_results": true,
+  "scope": "Chao Huang current local corpus; no upstream acquisition included",
+  "status": "superseded_persistent_result_cache_removed",
+  "replacement": "online-calculation-latency.json"
+}

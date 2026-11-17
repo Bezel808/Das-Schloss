@@ -1,0 +1,22 @@
+{
+  "target": "SIGKDD Research Track full paper",
+  "scale": "internal 1-10; not actual conference score distribution",
+  "rounds": [
+    {
+      "round": 1,
+      "methods": 2,
+      "statistics": 3,
+      "systems": 3,
+      "hardware_limit_reached": false,
+      "decision": "major revisions; goal active"
+    },
+    {
+      "round": 2,
+      "methods": 3,
+      "statistics": 4,
+      "systems": 4,
+      "hardware_limit_reached": false,
+      "decision": "major revisions; goal active"
+    }
+  ]
+}

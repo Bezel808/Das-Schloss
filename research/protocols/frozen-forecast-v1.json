@@ -1,0 +1,184 @@
+{
+  "id": "frozen-forecast-v1",
+  "frozen_at": "2026-11-16T02:26:59.582959+00:00",
+  "selection_data": "Development cutoffs 2000\u20132008 only; no validation or test results observed before this freeze.",
+  "primary_method": "ppr_recent_fractional",
+  "primary_baseline": "adamic_adar",
+  "selection_reason": "Recent fractional PPR exceeded CN at all eight development anchors; AA is the strongest equal-year DBLP mean among the prespecified CN/AA/RA baselines. All three ML ablations remain secondary comparisons.",
+  "datasets": [
+    "coauth-DBLP",
+    "coauth-MAG-History"
+  ],
+  "stages": {
+    "validation": [
+      2009,
+      2010
+    ],
+    "final_test": [
+      2011,
+      2012,
+      2013
+    ]
+  },
+  "targets": 512,
+  "seed": 42,
+  "policy": "neighbor_degree",
+  "budget": 20,
+  "alpha": 0.85,
+  "half_life_years": 3.0,
+  "pool": "all historically observed candidates except focal and prior partners",
+  "graph_baselines": [
+    "common_neighbors",
+    "adamic_adar",
+    "resource_allocation"
+  ],
+  "models": {
+    "activity": {
+      "features": [
+        "log_focal_papers_3y",
+        "log_candidate_papers_3y",
+        "log_candidate_observed_age"
+      ],
+      "mean": [
+        1.6372566297935731,
+        0.4547584054138707,
+        1.5623074223857207
+      ],
+      "scale": [
+        0.6758802319969134,
+        0.5724559854590854,
+        0.9161091316905788
+      ],
+      "coefficient": [
+        0.28438967535545306,
+        0.5861176191487298,
+        -0.4658448263655184
+      ],
+      "intercept": -6.6540564523043715,
+      "C": 1.0,
+      "iterations": 12,
+      "probabilities_calibrated": false
+    },
+    "activity_network": {
+      "features": [
+        "log_focal_papers_3y",
+        "log_candidate_papers_3y",
+        "log_candidate_observed_age",
+        "log_focal_degree",
+        "log_candidate_degree",
+        "log_common_neighbors",
+        "adamic_adar",
+        "resource_allocation"
+      ],
+      "mean": [
+        1.6372566297935673,
+        0.45475840541387136,
+        1.562307422385723,
+        2.400035782088186,
+        1.5898382276278389,
+        0.5103137637824445,
+        0.2605763118216286,
+        0.04092032840932763
+      ],
+      "scale": [
+        0.6758802319969129,
+        0.5724559854590857,
+        0.9161091316905765,
+        0.7863190566485666,
+        0.6125056243441966,
+        0.4006358291946959,
+        0.27917426809471396,
+        0.06652627471365727
+      ],
+      "coefficient": [
+        0.5184011875036206,
+        0.6450945668028152,
+        -0.40768948842091635,
+        -0.4710889809502383,
+        -0.23770979769970432,
+        0.8599388618368555,
+        0.031115287341466694,
+        -0.014932616979700232
+      ],
+      "intercept": -7.15974941112791,
+      "C": 1.0,
+      "iterations": 13,
+      "probabilities_calibrated": false
+    },
+    "activity_network_coverage": {
+      "features": [
+        "log_focal_papers_3y",
+        "log_candidate_papers_3y",
+        "log_candidate_observed_age",
+        "log_focal_degree",
+        "log_candidate_degree",
+        "log_common_neighbors",
+        "adamic_adar",
+        "resource_allocation",
+        "candidate_complete",
+        "focal_neighbors_queried_fraction",
+        "cn_interval_width"
+      ],
+      "mean": [
+        1.6372566297935673,
+        0.45475840541387136,
+        1.562307422385723,
+        2.400035782088186,
+        1.5898382276278389,
+        0.5103137637824445,
+        0.2605763118216286,
+        0.04092032840932763,
+        0.031037504622130452,
+        0.5962475183877229,
+        7.856566706238508
+      ],
+      "scale": [
+        0.6758802319969129,
+        0.5724559854590857,
+        0.9161091316905765,
+        0.7863190566485666,
+        0.6125056243441966,
+        0.4006358291946959,
+        0.27917426809471396,
+        0.06652627471365727,
+        0.17341908179021603,
+        0.37506615394958337,
+        15.58724984827036
+      ],
+      "coefficient": [
+        0.5348676369739551,
+        0.6215890251051763,
+        -0.40788880080451184,
+        -0.5242700960282456,
+        -0.23325227285896416,
+        0.9299246724198065,
+        -0.04137483850497556,
+        0.027252520487646113,
+        0.038153595285900996,
+        0.02487589740796556,
+        0.06933027024052253
+      ],
+      "intercept": -7.190967256383463,
+      "C": 1.0,
+      "iterations": 13,
+      "probabilities_calibrated": false
+    }
+  },
+  "training_report_sha256": "cce305c16b6a3b3cf808ccfd02221c977660fc0fcd0c61a86b89a5a9c8f7b8d0",
+  "source_sha256": {
+    "coauth-DBLP": "421e6747a3ec2f8aaad404a706d7c25904d7b42df7b81db3380bc1255efd10c8",
+    "coauth-MAG-History": "4d0383b1cc0fe5d86e0d85902c72376ed173735fd8170192d5bb355c1fc8b6e0"
+  },
+  "components_sha256": {
+    "research/frozen_forecast.py": "7a6fb73928ae97408d480c61bc9e2573ae1c2e9d5ed7457f83a3a4e76814dbf1",
+    "research/temporal_benchmark.py": "994d1e6482cabfe813869fd02eb4cdb1d72b878d9d32044ff2e16b5cadd181f6",
+    "research/event_data.py": "3002f1f40229e61fa71243efa3097144ab3bc284c04a7a37593383c6fcae5965",
+    "research/forecast_features.py": "5512329591e602b14d916d5142dabedbb672641261795c3f8f4f9e69a3e37688",
+    "scholartrace/acquisition.py": "5e312f37a30eb323c3f6fd0ec59d3fcecc912df342dd8ce2cfce8d507806d753",
+    "scholartrace/forecasting.py": "5da5a0b543e0380cc091902f3f3cff19309b378ad196e337e61383611336f5d5",
+    "scholartrace/evaluation.py": "f4328a87199668fdd03a1543660db29c7f15fb9d713546d08286383d27a0e5b7"
+  },
+  "primary_reporting": "Show each domain/year and equal-year final-test recall differences separately per domain; no edge-level pooled independence or picking favorable years.",
+  "no_retuning": "Run all validation and final-test years under this immutable selection. Validation is diagnostic, not an opportunity to change this protocol. Any later method requires a new explicitly exploratory evaluation; do not reuse this final test for model selection.",
+  "activation": "A holdout score does not validate mentor identity, degree, promotion or OpenAlex-domain personal probabilities. No automatic identity or production prediction gate is opened."
+}

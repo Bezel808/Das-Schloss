@@ -1,0 +1,60 @@
+{
+  "verified_at": "2026-11-16T10:48:00.181109+00:00",
+  "version": "group-cohorts-2",
+  "unit_api_tests": 82,
+  "browser": {
+    "status": "passed",
+    "desktop_mobile_export": true,
+    "non_focal_evidence_checked": true,
+    "filters": true,
+    "error_retry": true,
+    "parameter_and_profile_isolation": true,
+    "collection_preview": true
+  },
+  "automatic_refresh_ui": "passed on isolated live-database copy with intercepted collection requests",
+  "live_queue": {
+    "status": "complete",
+    "mode": "automatic",
+    "completed": 103,
+    "total": 103,
+    "updated_at": "2026-11-16T10:55:46.035411+00:00"
+  },
+  "scope": "OpenAlex automatic collection and evidence-based career classification; not cross-platform identity resolution",
+  "source_sha256": {
+    "scholartrace/groups.py": "1b5440d9a3cf85dc7d5b17a55ed4e765882270858e4d779845b6199594c846c5",
+    "scholartrace/group_api.py": "a28ccfe39d8736285081505000be12c5a9f9d065f03c66a5c6e9045cebaa60de",
+    "scholartrace/static/groups.js": "4bb1c6358ce6928c99f442ebb5f45aafa8154d277402079dbb4761343d98d8e0"
+  },
+  "completed_summary": {
+    "entrants": 107,
+    "early_career": 31,
+    "experienced": 74,
+    "unknown": 2,
+    "age_classification_coverage": 0.9813084112149533,
+    "early_career_share_of_classified": 0.29523809523809524,
+    "early_career_count_bounds": [
+      31,
+      33
+    ],
+    "assessed": 17,
+    "right_censored": 14,
+    "assessment_counts": {
+      "not_early_career": 74,
+      "assessed": 17,
+      "right_censored": 14,
+      "unknown_career_history": 2
+    },
+    "unknown_reasons": {
+      "author_mismatch": 2
+    },
+    "focal_mean_share": 0.6470588235294118,
+    "peer_supported_count": 5,
+    "peer_supported_rate": 0.29411764705882354,
+    "persistent_peer_count": 2,
+    "persistent_peer_rate": 0.11764705882352941,
+    "circle_continuation_count": 2,
+    "circle_continuation_rate": 0.11764705882352941,
+    "publication_continuation_count": 5,
+    "publication_continuation_rate": 0.29411764705882354
+  }
+}

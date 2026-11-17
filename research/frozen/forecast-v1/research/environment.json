@@ -1,0 +1,18 @@
+{
+  "python": "3.12.11",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "machine": "arm64",
+  "logical_cpus": 10,
+  "packages": {
+    "fastapi": "0.163.1",
+    "uvicorn": "0.54.0",
+    "httpx": "0.28.1",
+    "networkx": "3.7",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "pydantic": "2.14.3",
+    "starlette": "1.10.0"
+  },
+  "note": "Actual runtime used for reported tests; Python 3.12 requirements.lock pins these runtime dependencies with hashes."
+}

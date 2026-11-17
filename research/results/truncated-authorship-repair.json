@@ -1,0 +1,24 @@
+{
+  "status": "verified",
+  "prior_records": "Only first 100 authors, is_authors_truncated=true, no authors_count. Old collector failed to detect truncation.",
+  "checks": [
+    {
+      "author": "A5101928623",
+      "work": "W4281690148",
+      "full_list_authors": 451,
+      "target_present": true
+    },
+    {
+      "author": "A5110500992",
+      "work": "W1548640886",
+      "full_list_authors": 123,
+      "target_present": true
+    },
+    {
+      "author": "A5110500992",
+      "work": "W2159946869",
+      "full_list_authors": 123,
+      "target_present": true
+    }
+  ]
+}

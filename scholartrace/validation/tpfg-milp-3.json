@@ -1,0 +1,70 @@
+{
+  "model_version": "tpfg-milp-3",
+  "cohort_sha256": "debf3f8d2ea2bbb1b828ccd94d47ec7f6fc74be6587a9a53bf7a9ce01da528fb",
+  "metadata_sha256": "ccc327233d5d6dc8b8046e9dc853b62385becd45856df9e0e2611f34d87fc08d",
+  "aliases_sha256": "1cb7142f4fac14e2a0439264842b36185ece018c5577edb69416b5a9c329c027",
+  "source": "https://doi.org/10.5281/zenodo.4917086",
+  "feature_cutoff": 2020,
+  "candidate_sampling": "top 12 AFT-indexed coauthors by shared papers; gold labels never inserted",
+  "counts": {
+    "profiles_retained": 273,
+    "profiles_rejected_for_metadata_coverage": 415,
+    "requested_papers": 98019,
+    "dated_papers": 83535,
+    "resolved_legacy_aliases": 110,
+    "papers_with_year_after_alias_repair": 83645,
+    "canonical_unique_papers": 97933,
+    "known_mentors_in_candidates": 24
+  },
+  "all_targets": {
+    "n": 120,
+    "tpfg": {
+      "recall_at_1": 0.16666666666666666,
+      "recall_at_2": 0.19166666666666668,
+      "mrr": 0.18194444444444444
+    },
+    "independent_local": {
+      "recall_at_1": 0.16666666666666666,
+      "recall_at_2": 0.19166666666666668,
+      "mrr": 0.18194444444444444
+    },
+    "most_coauthored": {
+      "recall_at_1": 0.18333333333333332,
+      "recall_at_2": 0.19166666666666668,
+      "mrr": 0.18916666666666665
+    }
+  },
+  "at_least_three_candidates_with_known_mentor": {
+    "n": 8,
+    "tpfg": {
+      "recall_at_1": 0.5,
+      "recall_at_2": 0.875,
+      "mrr": 0.7291666666666666
+    },
+    "independent_local": {
+      "recall_at_1": 0.5,
+      "recall_at_2": 0.875,
+      "mrr": 0.7291666666666666
+    },
+    "most_coauthored": {
+      "recall_at_1": 0.75,
+      "recall_at_2": 0.875,
+      "mrr": 0.8375
+    }
+  },
+  "tpfg_minus_frequency_recall_at_1_cluster_bootstrap_95": [
+    -0.058333333333333334,
+    0.016666666666666666
+  ],
+  "limitations": [
+    "Restricted AFT researcher cohort, not a complete global collaborator candidate universe.",
+    "AFT-to-MAG identity matching partly used mentor coauthorship; validation is not fully independent of identity resolution.",
+    "Missing mentorship labels are not negative labels; metrics evaluate retrieval of recorded mentors only.",
+    "Year metadata reconstructed from current OpenAlex; source publication lists are from the AFT-MAG snapshot.",
+    "Official legacy merge ledger ends in 2025; later merges or deletions may still leave missing metadata.",
+    "No extrapolation of bioscience-dominated results to computer science or degree identification."
+  ],
+  "status": "insufficient_evidence_for_reliable_identification",
+  "message": "真实数据验收未支持可靠师生识别；以下为待核实候选，不能作为学位、任职或晋升的事实依据。",
+  "comparison": "未证明优于合作次数基线"
+}

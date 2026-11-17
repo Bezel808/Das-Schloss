@@ -1,0 +1,11 @@
+{
+  "comparison": "Two empty-local-memory runs of the same author and cohort; same 232 upstream requests and final summary. External OpenAlex cache state/network latency not controlled; no general speed guarantee.",
+  "author": "A5078337825",
+  "before_full_authorship_parallelism_seconds": 77.80369358299868,
+  "after_full_authorship_parallelism_seconds": 46.92715887500162,
+  "reduction_fraction": 0.39685178538546995,
+  "initial_author_papers_seconds": 5.028602999998839,
+  "complete_histories": 82,
+  "summary_equal": true,
+  "tests_passed": 101
+}
